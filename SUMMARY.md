@@ -32,4 +32,5 @@
    * Static analysis: editing rules
    * Continuous integration: android
 * Section 6
+   * Monitoring: analytics
 
