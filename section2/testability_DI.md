@@ -1,4 +1,4 @@
-# DI
+# Testability: dependency injection
 
 ## Write
 
