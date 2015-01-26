@@ -23,6 +23,6 @@
    * Rolling back
 * Section 4
    * Android
-   * Android testing
+   * Testing: android
    * Testability: android
 
