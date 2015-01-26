@@ -7,7 +7,6 @@
    * [Static analysis: style](section1/static_analysis.md)
 * [Static analysis](section2/README.md)
    * [Code review](section1/code_review.md)
-   * [Testing: integration](section2/testing_integration.md)
    * [Testability: spaghetti code](section2/testability_spaghetti.md)
    * [Testability: single responsability principle](section2/testability_srp.md)
    * [Testability: dependecy injection](section2/testability_di.md)
@@ -22,6 +21,7 @@
    * Monitoring
    * Rolling back
 * Testing
+   * [Testing: integration](section2/testing_integration.md)
    * Android
    * Testing: android
    * Testability: android
