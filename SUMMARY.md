@@ -16,7 +16,7 @@
    * [Testability: communicating intent](section2/testability_intent.md)
    * [Complexity analysis](section2/static_analysis_complexity.md)
 * Section 3
-   * Pairing
+   * Code review: pairing
    * Continuous integration
    * Deployment
    * Monitoring
