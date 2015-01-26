@@ -19,4 +19,5 @@
    * Pairing
    * Continuous integration
    * Deployment
+   * Monitoring
 
