@@ -1,4 +1,4 @@
-# Pattern
+# Testability: refactoring to pattern
 
 ## Write
 
