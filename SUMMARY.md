@@ -20,4 +20,5 @@
    * Continuous integration
    * Deployment
    * Monitoring
+   * Rolling back
 
