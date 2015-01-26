@@ -1,4 +1,4 @@
-# SRP
+# Testability: single responsibility principle
 
 ## Write
 
