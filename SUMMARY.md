@@ -8,4 +8,5 @@
    * [Unit testing](section1/testing.md)
    * [Static analysis](section1/static_analysis.md)
 * [Section 2](section2/README.md)
+   * Integration testing
 
