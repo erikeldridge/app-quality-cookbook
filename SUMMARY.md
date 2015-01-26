@@ -9,5 +9,8 @@
    * [Static analysis](section1/static_analysis.md)
 * [Section 2](section2/README.md)
    * [Integration testing](section2/testing_integration.md)
-   * [Spaghetti code](section2/testability_spaghetti.md)
+   * Testability
+     * [Spaghetti code](section2/testability_spaghetti.md)
+     * [Single responsability principle](section2/testability_srp.md)
+     * [Dependecy injection](section2/testability_di.md)
 
