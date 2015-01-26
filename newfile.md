@@ -6,7 +6,7 @@ Version control
 Unit testing
 Static analysis
 
-## Java 1
+## Java
 
 ### Write
 
