@@ -27,4 +27,5 @@
    * Testability: android
    * Static analysis: code coverage
 * Section 5
+   * Monitoring: crash reporting
 
