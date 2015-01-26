@@ -1,21 +1,21 @@
 # Summary
 
 * [Introduction](README.md)
-* [Syntax](section1/README.md)
+* [Syntax](syntax/README.md)
    * [Java](syntax/java.md)
    * Android
    * JUnit
    * Checkstyle
    * PMD
-* [Static analysis](section2/README.md)
-   * [Code review](section1/code_review.md)
+* [Static analysis](static_analysis/README.md)
+   * [Code review](static_analysis/code_review.md)
    * Code review: pairing
-   * [Style](section1/static_analysis.md)
+   * [Style](static_analysis/style.md)
    * Code coverage
-   * [Complexity analysis](section2/static_analysis_complexity.md)
+   * [Complexity analysis](static_analysis/complexity.md)
 * Testing
-   * [Testing: unit](section1/testing.md)
-   * [Testing: integration](section2/testing_integration.md)
+   * [Testing: unit](testing/unit.md)
+   * [Testing: integration](testing/integration.md)
    * Testing: android
 * Testability
    * Android
