@@ -33,4 +33,5 @@
    * Continuous integration: android
 * Section 6
    * Monitoring: analytics
+   * Deployment: fractional rollout
 
