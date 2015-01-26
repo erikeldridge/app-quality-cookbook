@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Tools](tools/README.md)
-   * [Java](syntax/java.md)
+   * [Java](tools/java.md)
    * Android
    * JUnit
    * Checkstyle
