@@ -21,7 +21,7 @@
    * Deployment
    * Monitoring
    * Rolling back
-* Section 4
+* Testing
    * Android
    * Testing: android
    * Testability: android
