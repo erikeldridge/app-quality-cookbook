@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Syntax](section1/README.md)
-   * [Java](section1/java.md)
+   * [Java](syntax/java.md)
    * Android
    * JUnit
    * Checkstyle
@@ -38,3 +38,4 @@
    * Services
    * Android crash reporting
    * Android usage
+
