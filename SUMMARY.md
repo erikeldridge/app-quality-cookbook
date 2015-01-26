@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [skldjf](newfile.md)
-   * Java
+   * [Java](newfile.md#java)
 
