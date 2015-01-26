@@ -1,4 +1,4 @@
-# Static analysis
+# Static analysis: style
 
 ## Write
 
