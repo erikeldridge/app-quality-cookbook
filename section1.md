@@ -1,10 +1,4 @@
-## Reflect
 
-- Philosophy: distributed liability
-- Accomplishment: everyone should have a review generator by the end
-- Accomplishment: everyone should have at least one review by the end
-- Survey: how confident are you?
-- Note: I can't scale myself, so we'll move to vcs
 
 # Version control 1
 
