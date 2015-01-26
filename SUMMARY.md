@@ -25,4 +25,5 @@
    * Android
    * Testing: android
    * Testability: android
+   * Static analysis: code coverage
 
