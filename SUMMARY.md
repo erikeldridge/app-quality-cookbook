@@ -1,7 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
-* [Syntax](syntax/README.md)
+* [Tools](tools/README.md)
    * [Java](syntax/java.md)
    * Android
    * JUnit
