@@ -1,4 +1,4 @@
-# Static analysis: complexity analysis
+# Static analysis: complexity
 
 ## Write
 
