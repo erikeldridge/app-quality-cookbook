@@ -28,4 +28,5 @@
    * Static analysis: code coverage
 * Section 5
    * Monitoring: crash reporting
+   * Deployment: staged rollout
 
