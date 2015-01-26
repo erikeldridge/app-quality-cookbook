@@ -3,7 +3,6 @@
 * [Introduction](README.md)
 * [Syntax](section1/README.md)
    * [Java](section1/java.md)
-   * [Version control](section1/version_control.md)
    * [Testing: unit](section1/testing.md)
    * [Static analysis: style](section1/static_analysis.md)
 * [Static analysis](section2/README.md)
@@ -16,6 +15,7 @@
    * [Testability: communicating intent](section2/testability_intent.md)
    * [Complexity analysis](section2/static_analysis_complexity.md)
 * Deployment
+   * [Version control](section1/version_control.md)
    * Code review: pairing
    * Continuous integration
    * Deployment
