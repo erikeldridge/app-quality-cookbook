@@ -34,4 +34,5 @@
 * Section 6
    * Monitoring: analytics
    * Deployment: fractional rollout
+   * Static analysis: adding rules
 
