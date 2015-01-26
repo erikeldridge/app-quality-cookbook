@@ -13,4 +13,6 @@
      * [Spaghetti code](section2/testability_spaghetti.md)
      * [Single responsability principle](section2/testability_srp.md)
      * [Dependecy injection](section2/testability_di.md)
+     * [Refactoring to patterns](section2/testability_pattern.md)
+     * [Communicating intent](section2/testability_intent.md)
 
