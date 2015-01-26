@@ -6,5 +6,5 @@
    * [Code review](section1/code_review.md)
    * [Version control](section1/version_control.md)
    * [Testing](section1/testing.md)
-   * Static analysis
+   * [Static analysis](section1/static_analysis.md)
 
