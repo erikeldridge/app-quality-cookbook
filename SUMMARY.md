@@ -29,4 +29,5 @@
 * Section 5
    * Monitoring: crash reporting
    * Deployment: staged rollout
+   * Static analysis: editing rules
 
