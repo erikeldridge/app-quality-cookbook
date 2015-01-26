@@ -17,4 +17,5 @@
    * [Complexity analysis](section2/static_analysis_complexity.md)
 * Section 3
    * Pairing
+   * Continuous integration
 
