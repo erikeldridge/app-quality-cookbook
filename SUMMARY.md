@@ -3,18 +3,15 @@
 * [Introduction](README.md)
 * [Syntax](section1/README.md)
    * [Java](section1/java.md)
-   * [Static analysis: style](section1/static_analysis.md)
+   * Android
 * [Static analysis](section2/README.md)
-   * [Code review](section1/code_review.md)
-   * [Testability: spaghetti code](section2/testability_spaghetti.md)
-   * [Testability: single responsability principle](section2/testability_srp.md)
-   * [Testability: dependecy injection](section2/testability_di.md)
-   * [Testability: refactoring to patterns](section2/testability_pattern.md)
-   * [Testability: communicating intent](section2/testability_intent.md)
+    * [Code review](section1/code_review.md)
+    * Code review: pairing
+   * [Static analysis: style](section1/static_analysis.md)
+   * Static analysis: code coverage
    * [Complexity analysis](section2/static_analysis_complexity.md)
 * Deployment
    * [Version control](section1/version_control.md)
-   * Code review: pairing
    * Continuous integration
    * Deployment
    * Monitoring
@@ -22,10 +19,14 @@
 * Testing
    * [Testing: unit](section1/testing.md)
    * [Testing: integration](section2/testing_integration.md)
-   * Android
    * Testing: android
-   * Testability: android
-   * Static analysis: code coverage
+* Testability
+    * Android
+   * [Testability: spaghetti code](section2/testability_spaghetti.md)
+   * [Testability: single responsability principle](section2/testability_srp.md)
+   * [Testability: dependecy injection](section2/testability_di.md)
+   * [Testability: refactoring to patterns](section2/testability_pattern.md)
+   * [Testability: communicating intent](section2/testability_intent.md)
 * Section 5
    * Monitoring: crash reporting
    * Deployment: staged rollout
