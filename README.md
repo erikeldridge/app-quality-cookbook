@@ -1,4 +1,4 @@
-GitBook Example
+Quality Engineering
 =======
 
-Welcome in your GitBook!
+Shipping code with confidence
