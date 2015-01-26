@@ -15,4 +15,5 @@
      * [Dependecy injection](section2/testability_di.md)
      * [Refactoring to patterns](section2/testability_pattern.md)
      * [Communicating intent](section2/testability_intent.md)
+  * [Complexity analysis](section2/static_analysis_complexity.md)
 
