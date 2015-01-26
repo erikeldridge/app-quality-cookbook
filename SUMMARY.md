@@ -31,4 +31,5 @@
    * Deployment: staged rollout
    * Static analysis: editing rules
    * Continuous integration: android
+* Section 6
 
