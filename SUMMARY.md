@@ -3,7 +3,6 @@
 * [Introduction](README.md)
 * [Syntax](section1/README.md)
    * [Java](section1/java.md)
-   * [Testing: unit](section1/testing.md)
    * [Static analysis: style](section1/static_analysis.md)
 * [Static analysis](section2/README.md)
    * [Code review](section1/code_review.md)
@@ -21,6 +20,7 @@
    * Monitoring
    * Rolling back
 * Testing
+   * [Testing: unit](section1/testing.md)
    * [Testing: integration](section2/testing_integration.md)
    * Android
    * Testing: android
