@@ -15,4 +15,5 @@
    * [Testability: refactoring to patterns](section2/testability_pattern.md)
    * [Testability: communicating intent](section2/testability_intent.md)
    * [Complexity analysis](section2/static_analysis_complexity.md)
+* Section 3
 
