@@ -19,17 +19,17 @@
    * Testing: android
 * Testability
    * Android
-   * [Spaghetti code](section2/testability_spaghetti.md)
-   * [Single responsability principle](section2/testability_srp.md)
-   * [Dependecy injection](section2/testability_di.md)
-   * [Refactoring to patterns](section2/testability_pattern.md)
-   * [Communicating intent](section2/testability_intent.md)
+   * [Spaghetti code](testability/spaghetti.md)
+   * [Single responsability principle](testability/srp.md)
+   * [Dependecy injection](testability/di.md)
+   * [Refactoring to patterns](testability/pattern.md)
+   * [Communicating intent](testability/intent.md)
 * Continuous integration
    * Services
    * Android
 * Deployment
    * Email
-   * [Version control](section1/version_control.md)
+   * [Version control](deployment/version_control.md)
    * Service deployment
    * Rolling back services
    * Staged deployment
