@@ -24,4 +24,5 @@
 * Section 4
    * Android
    * Android testing
+   * Testability: android
 
