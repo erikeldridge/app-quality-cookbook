@@ -7,7 +7,7 @@
    * [Version control](section1/version_control.md)
    * [Testing: unit](section1/testing.md)
    * [Static analysis: style](section1/static_analysis.md)
-* [Section 2](section2/README.md)
+* [Static analysis](section2/README.md)
    * [Testing: integration](section2/testing_integration.md)
    * [Testability: spaghetti code](section2/testability_spaghetti.md)
    * [Testability: single responsability principle](section2/testability_srp.md)
