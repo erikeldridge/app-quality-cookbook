@@ -18,4 +18,5 @@
 * Section 3
    * Pairing
    * Continuous integration
+   * Deployment
 
