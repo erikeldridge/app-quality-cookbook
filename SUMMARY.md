@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](section1/README.md)
+* [Introduction](README.md)
 * [skldjf](section1/newfile.md)
    * Java
 
