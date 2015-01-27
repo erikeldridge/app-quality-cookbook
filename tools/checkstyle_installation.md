@@ -13,7 +13,7 @@ We’ll use checkstyle to define an objective standard for code syntax.
 ```
 java -jar checkstyle-6.1.1-all.jar -c google_checks.xml hi.java
 ```
-2. observe:
+2. Observe:
 ```
 warning: The name of the outer type and the file do not match.
 ```
