@@ -31,6 +31,10 @@
    * [Dependecy injection](testability/di.md)
    * [Refactoring to patterns](testability/pattern.md)
    * [Communicating intent](testability/intent.md)
+* Configuration
+   * Build
+   * Launch
+   * Dynamic
 * Continuous integration
    * Services
    * Android
