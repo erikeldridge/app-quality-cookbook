@@ -4,8 +4,8 @@ We’ll use checkstyle to define an objective standard for code syntax.
 
 ## Install
 
-1. download checkstyle
-2. download Google’s style config
+1. Download [checkstyle](http://checkstyle.sourceforge.net/)
+2. Download [Google’s style config](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml)
 
 ## Verify
 
