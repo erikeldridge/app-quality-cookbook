@@ -7,11 +7,6 @@
 Install Java
 
 
-### Lesson
-
-Java syntax overview
-
-
 ### Exercise
 
 Verify installation:
@@ -33,8 +28,12 @@ $ javac hi.java
 ```
 $ java Hi
 ```
+5. observe “hi” printed to the console
 
-observe “hi” printed to the console
+
+### Lesson
+
+Java syntax overview
 
 
 ### Exercise
