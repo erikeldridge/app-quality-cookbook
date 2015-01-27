@@ -2,16 +2,14 @@
 
 We’ll use checkstyle to define an objective standard for code syntax. 
 
-## Write
-
-### Exercise
+## Install
 
 1. download checkstyle
 2. download Google’s style config
 
 ## Verify
 
-1. Run it on the hi.java file created in the [java tools introduction](tools/java.md):
+1. Run checkstyle on the hi.java file created in the [java tools introduction](tools/java.md):
 ```
 java -jar checkstyle-6.1.1-all.jar -c google_checks.xml hi.java
 ```
