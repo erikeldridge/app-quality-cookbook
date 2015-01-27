@@ -1,13 +1,12 @@
 # Java
 
-## Write
+## Exercise
 
-### Exercise
+### Change
 
-Install Java
+Install java
 
-
-### Exercise
+### Test
 
 Verify installation:
 
