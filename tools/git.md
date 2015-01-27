@@ -4,7 +4,7 @@ We use git for version control
 
 ## Install
 
-Download and install git. 
+[Download](http://git-scm.com/downloads) and install git. 
 
 ## Verify
 
