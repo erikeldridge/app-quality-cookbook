@@ -45,7 +45,7 @@ Java code review group generator
 ## Test
 
 - Self-review
-- Exercise: deploy code to me via email
+- "Deploy" code to me via email
 
 
 ## Reflect
