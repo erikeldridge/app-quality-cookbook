@@ -2,7 +2,6 @@
 
 * [Introduction](README.md)
 * [Tools](tools/README.md)
-   * Android
    * Android Studio
    * Checkstyle
    * IntelliJ
