@@ -20,7 +20,7 @@
 * Testing
    * [Unit testing](testing/unit.md)
    * [Integration testing](testing/integration.md)
-   * Android
+   * UI testing
 * Testability
    * Android
    * [Spaghetti code](testability/spaghetti.md)
