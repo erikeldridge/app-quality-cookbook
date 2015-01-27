@@ -7,27 +7,34 @@
 Install Java
 
 
+### Lesson
+
+Java syntax overview
+
+
 ### Exercise
 
 Verify installation:
 
-create a file called hi.java
-put hello word into it:
-class Hi {
-    public static void main(String[] args) {
-        System.out.println("hi");
+1. create a file called hi.java
+2. put hello world into it:
+```
+    class Hi {
+        public static void main(String[] args) {
+            System.out.println("hi");
+        }
     }
-}
-compile the file: 
+```
+3. compile: 
+```
 $ javac hi.java
-run the code: 
+```
+4. run: 
+```
 $ java Hi
+```
+
 observe “hi” printed to the console
-
-
-### Lesson
-
-Java syntax overview
 
 
 ### Exercise
