@@ -2,21 +2,27 @@
 
 * [Introduction](README.md)
 * [Tools](tools/README.md)
-   * [Java](syntax/java.md)
    * Android
-   * JUnit
+   * Android Studio
    * Checkstyle
+   * IntelliJ
+   * [Java](tools/java.md)
+   * JUnit
    * PMD
 * [Static analysis](static_analysis/README.md)
    * [Code review](static_analysis/code_review.md)
-   * Code review: pairing
    * [Style](static_analysis/style.md)
    * Code coverage
    * [Complexity analysis](static_analysis/complexity.md)
+   * Integrated development environment
+* Collaboration
+   * Communication
+   * Engineering principles
+   * Pairing
 * Testing
-   * [Testing: unit](testing/unit.md)
-   * [Testing: integration](testing/integration.md)
-   * Testing: android
+   * [Unit](testing/unit.md)
+   * [Integration](testing/integration.md)
+   * UI
 * Testability
    * Android
    * [Spaghetti code](testability/spaghetti.md)
