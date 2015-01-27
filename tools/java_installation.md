@@ -1,10 +1,8 @@
 # Java
 
-## Exercise
+## Install
 
-Install java
-
-### Test
+## Verify
 
 1. create a file called hi.java
 2. put hello world into it:
