@@ -9,11 +9,12 @@
    * PMD
 * [Static analysis](static_analysis/README.md)
    * [Code review](static_analysis/code_review.md)
-   * Code review: pairing
    * [Style](static_analysis/style.md)
    * Code coverage
    * [Complexity analysis](static_analysis/complexity.md)
    * Integrated development environment
+* Collaboration
+   * Pairing
 * Testing
    * [Testing: unit](testing/unit.md)
    * [Testing: integration](testing/integration.md)
