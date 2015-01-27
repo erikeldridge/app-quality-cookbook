@@ -13,6 +13,7 @@
    * [Style](static_analysis/style.md)
    * Code coverage
    * [Complexity analysis](static_analysis/complexity.md)
+   * Integrated development environment
 * Testing
    * [Testing: unit](testing/unit.md)
    * [Testing: integration](testing/integration.md)
