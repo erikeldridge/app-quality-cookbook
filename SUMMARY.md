@@ -2,10 +2,12 @@
 
 * [Introduction](README.md)
 * [Tools](tools/README.md)
-   * [Java](tools/java.md)
    * Android
-   * JUnit
+   * Android Studio
    * Checkstyle
+   * IntelliJ
+   * [Java](tools/java.md)
+   * JUnit
    * PMD
 * [Static analysis](static_analysis/README.md)
    * [Code review](static_analysis/code_review.md)
