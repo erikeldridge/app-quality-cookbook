@@ -4,7 +4,7 @@
 
 Install java
 
-Verify installation:
+### Test
 
 1. create a file called hi.java
 2. put hello world into it:
