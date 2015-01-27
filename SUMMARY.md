@@ -42,7 +42,6 @@
    * Staged deployment
    * Fractional deployment
 * Monitoring
-   * Services
    * Android crash reporting
    * Android usage
    * Tracing
