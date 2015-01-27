@@ -2,11 +2,7 @@
 
 ## Exercise
 
-### Change
-
 Install java
-
-### Test
 
 Verify installation:
 
