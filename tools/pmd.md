@@ -2,10 +2,12 @@
 
 We’ll use PMD to help detect problems with our code. 
 
+
 ## Install
 
 1. Download [PMD](http://pmd.sourceforge.net/)
 1. Unzip it
+
 
 ## Verify
 
