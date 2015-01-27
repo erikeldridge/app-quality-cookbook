@@ -43,7 +43,7 @@
    * Fractional deployment
 * Monitoring
    * Android crash reporting
-   * Android usage
+   * Product usage
    * Tracing
    * Resource usage
 
