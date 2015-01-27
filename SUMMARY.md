@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [Preface](preface.md)
 * [Tools](tools/README.md)
    * Android
@@ -44,4 +45,5 @@
    * Services
    * Android crash reporting
    * Android usage
+   * Tracing
 
