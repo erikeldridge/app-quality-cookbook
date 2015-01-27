@@ -46,4 +46,5 @@
    * Android crash reporting
    * Android usage
    * Tracing
+   * Resource usage
 
