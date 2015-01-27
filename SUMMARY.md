@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [Preface](preface.md)
 * [Tools](tools/README.md)
    * Android
    * Android Studio
