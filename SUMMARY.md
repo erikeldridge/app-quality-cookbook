@@ -18,9 +18,9 @@
    * Engineering principles
    * Pairing
 * Testing
-   * [Testing: unit](testing/unit.md)
-   * [Testing: integration](testing/integration.md)
-   * Testing: android
+   * [Unit testing](testing/unit.md)
+   * [Integration testing](testing/integration.md)
+   * Android
 * Testability
    * Android
    * [Spaghetti code](testability/spaghetti.md)
