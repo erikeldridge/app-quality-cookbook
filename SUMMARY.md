@@ -14,6 +14,8 @@
    * [Complexity analysis](static_analysis/complexity.md)
    * Integrated development environment
 * Collaboration
+   * Communication
+   * Engineering principles
    * Pairing
 * Testing
    * [Testing: unit](testing/unit.md)
