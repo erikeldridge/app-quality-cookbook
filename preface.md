@@ -1,10 +1,10 @@
 # Forward
 
-This book introduces a few common tools we can use to improve the engineering quality.
+This book introduces a few common tools we can use to improve engineering quality.
 
 By tools, I mean software as well as approaches to software development.
 
-By engineering quality, I mean tools used to improve quality during development, as opposed to quality assurance, which I define as a set of manual steps performed to assert a finished product works correctly.
+By engineering quality, I mean tools used to maintain quality during development, as opposed to quality assurance, which I define as a set of manual steps performed to assert a finished product works correctly.
 
 This book biases toward developing applications, cutting scope over quality, holding systems responsible, collaboration, and iteration.
 
