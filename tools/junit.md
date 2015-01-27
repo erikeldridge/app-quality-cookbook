@@ -1,6 +1,6 @@
 # JUnit
 
-We’ll use junit for unit testing. 
+We’ll use JUnit for unit testing. 
 
 ## Install
 
