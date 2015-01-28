@@ -2,7 +2,11 @@
 
 ## Motivation
 
-Version control provides us with the ability to "freeze" a code base in a known working state.
+Version control provides us with the ability to "freeze" a code base in a known working state. 
+
+In other words, it enables us to define a named, immutable state, which simplifies reasoning.
+
+Best-practice: only commit working code; the main branch should always be deployable.
 
 
 ## Goals
