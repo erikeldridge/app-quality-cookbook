@@ -1,6 +1,18 @@
 # PMD
 
-We’ll use PMD to help detect problems with our code. 
+## Motivation
+
+We can use complexity analysis tools to objectively measure flaws in our code.
+
+This objective analysis can make code review more efficient by weeding out problems before they reach review, and catching issues uniformly.
+
+PMD provides a robust complexity analysis that is relatively easy to configure.
+
+
+## Goals
+
+* Install PMD
+* Gain experience using PMD on a simple piece of code
 
 
 ## Install

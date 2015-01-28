@@ -1,13 +1,16 @@
 # Heroku
 
-## Goal
+## Motivation
 
 Heroku provides an excellent deployment environment.
 
-By following the steps in this section, you will gain:
-* a Heroku account
-* experience with the Heroku command line tools
-* experience deploying to Heroku
+
+## Goals
+
+* Obtain a Heroku account
+* Gain experience with:
+	* the Heroku command line tools
+	* deploying to Heroku
 
 
 ## Steps

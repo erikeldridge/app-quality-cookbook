@@ -1,10 +1,23 @@
 # JUnit
 
-We’ll use JUnit for unit testing. 
+## Motivation
 
-## Install
+Tests for small, single-purpose pieces, aka units, of code are called unite tests.
+
+JUnit is a widely used framework for unit testing Java.
+
+Experience with JUnit can be applied to many other testing frameworks.
+
+## Goals
+
+* Install JUnit
+* Gain experience defining and running a test
+
+
+## Steps
 
 1. [Download the jars](https://github.com/junit-team/junit/wiki/Download-and-Install)
+
 
 ## Verify
 

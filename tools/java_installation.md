@@ -1,11 +1,27 @@
 # Java
 
+## Motivation
+
+Java provides a mature, widely used programming language and runtime
+
+In terms of quality engineering, many tools are written in Java and/or are designed to support it.
+
+
+## Goals
+
+* Install Java
+* Gain experience with building software with it
+
+
 ## Install
+
+Java comes bundled with most systems.
+
 
 ## Verify
 
-1. create a file called hi.java
-2. put hello world into it:
+1. Create a file called hi.java
+1. Put hello world into it:
 ```
     class Hi {
         public static void main(String[] args) {
@@ -13,11 +29,11 @@
         }
     }
 ```
-3. compile: 
+3. Compile: 
 ```
 $ javac hi.java
 ```
-4. run: 
+4. Run: 
 ```
 $ java Hi
 ```

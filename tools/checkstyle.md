@@ -1,11 +1,25 @@
 # Checkstyle
 
-We’ll use checkstyle to define an objective standard for code syntax. 
+## Motivation
 
-## Install
+We can use style analysis tools to define an objective standard for code syntax.
+
+Having a standard style can make code easier to read and avoid subjective debates.
+
+Checkstyle is effective, widely used, and can be run in an IDE and CI.
+
+
+## Goals
+
+* Install checkstyle
+* Use checkstyle to analyze a piece of code
+
+
+## Steps
 
 1. Download [checkstyle](http://checkstyle.sourceforge.net/)
-2. Download [Google’s style config](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml)
+1. Download [Google’s style config](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml)
+
 
 ## Verify
 

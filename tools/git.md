@@ -1,10 +1,20 @@
 # Git
 
-We use git for version control
+## Motivation
 
-## Install
+Git is a widely used version control system, supported by many excellent products, like Github and Heroku.
 
-[Download](http://git-scm.com/downloads) and install git. 
+
+## Goal
+
+* Install git
+* Gain experience using git for version control
+
+
+## Steps
+
+1. [Download](http://git-scm.com/downloads) and install git. 
+
 
 ## Verify
 

@@ -1,5 +1,7 @@
 # Android Studio
 
+## Motivation
+
 Android Studio is a solid IDE. It’s based on IntelliJ, so your IntelliJ experience is portable.
 
 
