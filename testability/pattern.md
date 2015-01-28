@@ -1,16 +1,28 @@
-# Testability: refactoring to pattern
+# Refactoring to patterns
 
-## Write
+## Motivation
+
+The culture of design patterns provides us with not only institutional knowledge, but also a shared language we can use to identify issues and approach fixes.
+
+
+## Goals
+
+Gain experience identifying a code smell, resolving a pattern, and refactoring
+
+
+## Steps
 
 - Exercise: refactor the fn to:
 -- accept a third type of contact identifier, eg username
 -- look up the identifier in the appropriate map
 -- use factory pattern to alleviate conditional complexity
 
-## Test
+
+## Verify
 
 - Exercise: run tests
 - Exercise: update tests to cover all three types
+
 
 ## Reflect
 

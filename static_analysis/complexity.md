@@ -1,13 +1,24 @@
-# Static analysis: complexity
+# Complexity analysis
 
-## Write
+## Motivation
 
-- Lesson: PMD
-- Exercise: check out the commit from Testable 1
+We can use a complexity analysis tool to help catch flaws in our code.
 
-## Test
 
-- Exercise: run PMD
+## Goals
+
+Gain experience performing complexity analysis
+
+
+## Steps
+
+Run PMD on the commit from Testable 1
+
+
+## Verify
+
+Observe output from PMD
+
 
 ## Reflect
 

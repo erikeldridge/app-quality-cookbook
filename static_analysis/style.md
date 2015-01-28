@@ -1,10 +1,14 @@
-# Static analysis: style
+# Style analysis
 
-## Write
+## Motivation
+
+## Goals
+
+## Steps
 
 - Lesson: checkstyle
 
-## Test
+## Verify
 
 - Exercise: run checkstyle
 

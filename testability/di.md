@@ -1,13 +1,22 @@
-# Testability: dependency injection
+# Dependency injection
 
-## Write
+## Motivation
+
+## Goals
+
+Gain experience with dependency injection
+
+
+## Steps
 
 - Exercise: refactor the service's request class to accept the lookup maps as arguments
 
-## Test
+
+## Verify
 
 - Exercise: update and run tests
 - Exercise: push to review
+
 
 ## Reflect
 

@@ -1,6 +1,17 @@
-# Testability: spaghetti
+# Spaghetti code
 
-## Write
+## Motivation
+
+Some code is unpleasant to work with because it's dependencies and influences are poorly defined. Because it is difficult to understand, it is difficult to modify without side effects. A common term for such code is spaghetti.
+
+
+## Goals
+
+* Write spaghetti code
+* Clean up spaghetti code using common best-practices
+
+
+## Steps
 
 Exercise: modify the web service to:
 - accept email address or phone number
@@ -21,7 +32,8 @@ Exercise: write a header comment describing:
 - the inputs it takes
 - the output it produces
 
-## Test
+
+## Verify
 
 - Exercise: assert the original test still runs
 - Exercise: define a new test for the additional identifier
@@ -29,6 +41,7 @@ Exercise: write a header comment describing:
 - Exercise: review code noting:
 -- what type of contact identifier was used?
 - Exercise: merge code
+
 
 ## Reflect
 

@@ -38,6 +38,5 @@ $ git status
 ```
 On branch master
 Initial commit
-```
-
 nothing to commit
+```
