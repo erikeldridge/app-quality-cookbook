@@ -1,10 +1,12 @@
 # Preface
 
-This book introduces a few common tools we can use to improve engineering quality.
+This book introduces a few common tools we can use to improve engineering quality for app development.
 
 By tools, I mean software as well as approaches to software development.
 
 By engineering quality, I mean tools used to maintain quality, with an emphasis on automation.
+
+I call this a "cookbook" because it focuses on a set of verifyable outcomes, like the recipes in a cookbook.
 
 This book biases toward accomodating inexperienced developers, developing applications, cutting scope over quality, holding systems responsible, collaborating, iterating, and having fun.
 
