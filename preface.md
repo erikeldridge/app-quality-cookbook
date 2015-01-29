@@ -6,9 +6,9 @@ By tools, I mean software as well as approaches to software development.
 
 By engineering quality, I mean tools used to maintain quality, with an emphasis on automation.
 
-I call this a "cookbook" because it focuses on a set of verifyable outcomes, like the recipes in a cookbook.
+I call this a "cookbook" because it focuses on a set of verifiable outcomes, like the recipes in a cookbook.
 
-This book biases toward accomodating inexperienced developers, developing applications, cutting scope over quality, holding systems responsible, collaborating, iterating, and having fun.
+This book biases toward accommodating inexperienced developers, developing applications, cutting scope over quality, holding systems responsible, collaborating, iterating, and having fun.
 
 A broad range of developers can use the tools in this book, but to ensure accessibility, I include the basics for getting started.
 
