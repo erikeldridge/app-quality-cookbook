@@ -15,8 +15,8 @@ Certain types of configuration can be made at build time. For example, when buil
 ## Steps
 
 1. Launch Android Studio
-1. Define internal and external [gradle flavors](https://developer.android.com/tools/building/configuring-gradle.html#workBuildVariants)
-
+2. Define internal and external [gradle flavors](https://developer.android.com/tools/building/configuring-gradle.html#workBuildVariants)
+3. Define application-level helpers to access configuration
 
 ## Verify
 
