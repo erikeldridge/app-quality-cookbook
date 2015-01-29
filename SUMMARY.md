@@ -7,9 +7,9 @@
    * Engineering principles
    * Pairing
 * Configuration
-   * Build
-   * Launch
-   * Dynamic
+   * [Build](configuration/build.md)
+   * [Launch](configuration/launch.md)
+   * [Dynamic](configuration/dynamic.md)
 * Continuous integration
    * Services
    * Android
