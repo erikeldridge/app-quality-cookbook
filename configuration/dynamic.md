@@ -23,5 +23,9 @@ Note: dynamic configuration involves mutating a system.
 4. Validate the configuration
 5. Define a controller to serve the configuration
 6. Modify the previously created Android app to call this endpoint
-7. Define a 
+7. Define application-layer helpers to access the configuration
+
+
 ## Verify
+
+
