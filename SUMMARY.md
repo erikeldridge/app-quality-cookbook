@@ -22,7 +22,7 @@
 * [Static analysis](static_analysis/README.md)
    * [Code review](static_analysis/code_review.md)
    * [Style](static_analysis/style.md)
-   * Code coverage
+   * [Code coverage](static_analysis/coverage.md)
    * [Complexity analysis](static_analysis/complexity.md)
    * Integrated development environment
 * Testability
