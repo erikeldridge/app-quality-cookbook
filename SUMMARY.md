@@ -13,12 +13,16 @@
 * Continuous integration
    * Services
    * Android
+* Damage control
+   * [Configuration-based](damage_control/configure.md)
+   * [Investigation](damage_control/investigation.md)
+   * [Post-mortem](damage_control/postmortem.md)
+   * [Practice](damage_control/practice.md)
+   * [Rollback](damage_control/rollback.md)
 * Deployment
-   * Email
-   * Service deployment
-   * Rolling back services
-   * Staged deployment
-   * Fractional deployment
+   * [Continuous](deployment/continuous.md)
+   * [Fractional](deployment/fractional.md)
+   * [Staged](deployment/staged.md)
 * [Static analysis](static_analysis/README.md)
    * [Code review](static_analysis/code_review.md)
    * [Style](static_analysis/style.md)
