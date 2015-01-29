@@ -35,7 +35,7 @@
 * Testing
    * [Unit](testing/unit.md)
    * [Integration](testing/integration.md)
-   * UI
+   * [UI](testing/ui.md)
 * [Tools](tools/README.md)
    * Android
    * [Android Studio](tools/android_studio.md)
