@@ -1,4 +1,3 @@
-```
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -107,4 +106,3 @@ DesktopConfig
     # log into terminal and run `startx`
   SHELL
 end
-```
