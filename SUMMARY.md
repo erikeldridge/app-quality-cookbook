@@ -40,10 +40,16 @@
    * Android
    * [Android Studio](tools/android_studio.md)
    * [Checkstyle](tools/checkstyle.md)
+   * [EMMA](tools/emma.md)
+   * [Git](tools/git.md)
+   * [Github](tools/github.md)
+   * [Heroku](tools/heroku.md)
    * [IntelliJ](tools/intellij.md)
    * [Java](tools/java_installation.md)
    * [JUnit](tools/junit.md)
+   * [Mockito](tools/mockito.md)
    * [PMD](tools/pmd.md)
+   * [Vagrant](tools/vagrant.md)
 * Monitoring
    * Crash reporting
    * Product usage
