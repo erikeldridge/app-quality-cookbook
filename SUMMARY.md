@@ -51,8 +51,9 @@
    * [PMD](tools/pmd.md)
    * [Vagrant](tools/vagrant.md)
 * Monitoring
-   * Crash reporting
-   * Product usage
-   * Tracing
-   * Resource usage
+   * [Alerting](monitoring/alerting.md)
+   * [Crash reporting](monitoring/crash.md)
+   * [On call](monitoring/oncall.md)
+   * [Product usage](monitoring/product_usage.md)
+   * [Resource usage](monitoring/resource_usage.md)
 * [Version control](version_control/README.md)
