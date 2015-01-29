@@ -18,7 +18,7 @@ Another side benefit is Vagrant's use of Virtualbox, which is also used by Genym
 ## Steps
 
 1. Follow the instructions on Vagrant's site to install it
-1. Download this book's [Vagrantfile](Vagrantfile)
+1. Download this book's [Vagrantfile](../Vagrantfile)
 1. Create the virtual machine:
 ```
 vagrant up
