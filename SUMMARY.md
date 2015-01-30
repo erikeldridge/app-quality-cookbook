@@ -44,7 +44,7 @@
    * Android
    * [Android Studio](tools/android_studio.md)
    * [Checkstyle](tools/checkstyle.md)
-   * [EMMA](tools/emma.md)
+   * [JaCoCo](tools/jacoco.md)
    * [Git](tools/git.md)
    * [Github](tools/github.md)
    * [Heroku](tools/heroku.md)
