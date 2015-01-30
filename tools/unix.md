@@ -15,31 +15,31 @@ Gain experience with Unix syntax
 ## Steps
 
 1. Open a terminal
-2. SSH into your vagrant instance
+1. SSH into your vagrant instance
 ```
 vagrant ssh
 ```
-3. Print the current working directory
+1. Print the current working directory
 ```
 $ pwd
 ```
-4. List contents of directory
+1. List contents of directory
 ```
 $ ls
 ```
-5. Make a directory
+1. Make a directory
 ```
 $ mkdir foo
 ```
-6. Change directory
+1. Change directory
 ```
 $ cd foo
 ```
-7. Go to your home directory
+1. Go to your home directory
 ```
 $ cd ~
 ```
-8. Exit the ssh session
+1. Exit the ssh session
 ```
 $ exit
 ```
