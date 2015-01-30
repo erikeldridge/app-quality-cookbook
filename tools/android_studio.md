@@ -8,9 +8,8 @@ Android Studio is a solid IDE. It’s based on IntelliJ, so your IntelliJ experi
 ## Goals
 
 * Install Android Studio
-* Gain experience with:
-  * building a simple Android app
-  * the Android emulator
+* Building a simple Android app
+* See the app in the Android emulator
 
 
 ## Steps 
