@@ -9,8 +9,8 @@ In terms of quality engineering, many tools are written in Java and/or are desig
 
 ## Goals
 
-* Install Java
-* Gain experience with building software with it
+* Write Java
+* Compile Java
 
 
 ## Install
