@@ -37,23 +37,31 @@ Insert mode
 
     :i
 
-
 Command mode
 
     esc
 
-
-Write command
+Save
 
     :w
-
 
 Quit command
 
     :q
 
 
-h2. Exercise
+### SSH
+
+Access a machine
+
+    $ ssh <hostname>
+
+Exit the machine
+
+    $ exit
+
+
+### Exercise
 
 Create a directory
 
