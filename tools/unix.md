@@ -14,20 +14,33 @@ Gain experience with Unix syntax
 
 ## Steps
 
-1. 
-1. Read through the [Unix syntax overview](appendix/unix.md)
+1. Open a terminal
 2. SSH into your vagrant instance
-3. Create a directory
-4. Create a file in that directory
-5. Renam
-
-
-### Exercise
-
-
-
-Create file
-
-Rename the file
-
+```
+vagrant ssh
+```
+3. Print the current working directory
+```
+$ pwd
+```
+4. List contents of directory
+```
+$ ls
+```
+5. Make a directory
+```
+$ mkdir foo
+```
+6. Change directory
+```
+$ cd foo
+```
+7. Go to your home directory
+```
+$ cd ~
+```
+8. Exit the ssh session
+```
+$ exit
+```
 Delete the directory and file
