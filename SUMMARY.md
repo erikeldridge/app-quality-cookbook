@@ -44,7 +44,7 @@
    * Android
    * [Android Studio](tools/android_studio.md)
    * [Checkstyle](tools/checkstyle.md)
-   * [EMMA](tools/emma.md)
+   * [JaCoCo](tools/jacoco.md)
    * [Git](tools/git.md)
    * [Github](tools/github.md)
    * [Heroku](tools/heroku.md)
@@ -53,7 +53,9 @@
    * [JUnit](tools/junit.md)
    * [Mockito](tools/mockito.md)
    * [PMD](tools/pmd.md)
+   * [Unix](tools/unix.md)
    * [Vagrant](tools/vagrant.md)
+   * [Vim](tools/vim.md)
 * Monitoring
    * [Alerting](monitoring/alerting.md)
    * [Crash reporting](monitoring/crash.md)
