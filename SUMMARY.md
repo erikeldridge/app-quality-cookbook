@@ -54,6 +54,7 @@
    * [Mockito](tools/mockito.md)
    * [PMD](tools/pmd.md)
    * [Vagrant](tools/vagrant.md)
+   * [Vim](tools/vim.md)
 * Monitoring
    * [Alerting](monitoring/alerting.md)
    * [Crash reporting](monitoring/crash.md)
