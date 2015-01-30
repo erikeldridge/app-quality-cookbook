@@ -2,17 +2,18 @@
 
 ## Motivation
 
-EMMA is a popular code coverage tool
+JaCoCo is a popular code coverage tool
 
 
 ## Goals
 
-Install EMMA
+* Install JaCoCo
 
 
 ## Steps
 
-1. http://emma.sourceforge.net/
+1. http://www.eclemma.org/jacoco/
+
 
 ## Verify
 
