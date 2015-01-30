@@ -43,4 +43,3 @@ $ cd ~
 ```
 $ exit
 ```
-Delete the directory and file
