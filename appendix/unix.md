@@ -1,5 +1,15 @@
 # Unix syntax
 
+## Motivation
+
+This book assumes Unix syntax and utilizes Unix command line tools.
+
+
+## Goals
+
+* Quickly gain familiarity with the Unix command line
+
+
 ## Navigation
 
 Current directory
