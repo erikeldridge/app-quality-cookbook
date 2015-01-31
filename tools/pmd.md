@@ -32,11 +32,13 @@ class Hi {
     }
 }
 ```
+
 1. Run pmd:
 
 ```
 ./pmd-bin-5.2.2/bin/run.sh pmd -R java-basic,java-unusedcode -d ./
 ```
+
 1. Observe PMD’s output:
 
 ```
