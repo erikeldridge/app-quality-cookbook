@@ -32,12 +32,11 @@ import org.junit.runners.JUnit4;
 public class FooTest {
     @Test
     public void thisAlwaysPasses() {
-        bool isTrue = true;
-        assertEquals(true, false);
+        assertEquals(true, true);
     }
 }
 ```
-1. Define a [passing test](https://github.com/junit-team/junit/wiki/Getting-started)
+1. Define a [passing test](
 1. Compile the test:
 ```
 javac -cp "./*" HiTest.java
@@ -52,3 +51,9 @@ JUnit version 4.12-beta-3
 Time: 0.008
 OK (1 test)
 ```
+
+## Related
+
+* https://github.com/junit-team/junit/wiki/Getting-started
+
+
