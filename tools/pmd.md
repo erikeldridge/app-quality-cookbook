@@ -23,18 +23,22 @@ PMD provides a robust complexity analysis that is relatively easy to configure.
 
 ## Verify
 
-1. Add an unused variable to hi.java created in the [Java installation](tools/java_installation.md) section
+1. Add an unused variable to Hi.java created in the [Java installation](tools/java_installation.md) section
+
 ```
 class Hi {
     public static void main(String[] args) {
-        String unused = “unused”;
-        ...
+        String unused = "unused";
+    }
+}
 ```
 1. Run pmd:
+
 ```
 ./pmd-bin-5.2.2/bin/run.sh pmd -R java-basic,java-unusedcode -d ./
 ```
 1. Observe PMD’s output:
+
 ```
 Avoid unused local variables such as 'unused'.
 ```
