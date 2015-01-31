@@ -67,10 +67,7 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
 
-     # java
-    sudo apt-get install -y default-jre default-jdk
-
-     # virtualbox gui
+    # virtualbox gui
     sudo apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
     sudo VBoxClient --clipboard --draganddrop --seamless --display --checkhostversion
 
@@ -79,6 +76,27 @@ Vagrant.configure(2) do |config|
 
     # allow vagrant user to log into gui
     sed -ie 's/allowed_users=.*/allowed_users=anybody/' /etc/X11/Xwrapper.config
+
+    # java
+    sudo apt-get install -y default-jre default-jdk
+
+    # checkstyle
+    wget http://downloads.sourceforge.net/project/checkstyle/checkstyle/6.2/checkstyle-6.2-all.jar
+
+    # junit
+    wget -O junit-4.12.jar http://search.maven.org/remotecontent?filepath=junit/junit/4.12/junit-4.12.jar
+    wget -O hamcrest-core-1.3.jar http://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+
+    # mockito
+    wget https://bintray.com/artifact/download/szczepiq/maven/org/mockito/mockito-all/1.10.14/mockito-all-1.10.14.jar
+
+    # pmd
+    wget -O pmd-bin-5.2.3.zip http://downloads.sourceforge.net/project/pmd/pmd/5.2.3/pmd-bin-5.2.3.zip
+    unzip pmd-bin-5.2.3.zip
+    rm pmd-bin-5.2.3.zip
+
+    # git
+    sudo apt-get install git
 
     # intellij
     # http://askubuntu.com/a/353948
