@@ -11,7 +11,7 @@ Experience with JUnit can be applied to many other testing frameworks.
 ## Goals
 
 * Install JUnit
-* Gain experience defining and running a test
+* Define and run a test
 
 
 ## Steps
@@ -36,7 +36,6 @@ public class FooTest {
     }
 }
 ```
-1. Define a [passing test](
 1. Compile the test:
 ```
 javac -cp "./*" HiTest.java
