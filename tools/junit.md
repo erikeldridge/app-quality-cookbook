@@ -22,6 +22,7 @@ Experience with JUnit can be applied to many other testing frameworks.
 ## Verify
 
 1. Create a file called FooTest.java
+
 ```
 import static org.junit.Assert.assertEquals;
 
@@ -37,14 +38,17 @@ public class FooTest {
 }
 ```
 1. Compile the test:
+
 ```
 javac -cp "./*" HiTest.java
 ```
 1. Run the test:
+
 ```
 java -cp ".:./*" org.junit.runner.JUnitCore HiTest
 ```
 1. Observe output:
+
 ```
 JUnit version 4.12-beta-3
 Time: 0.008
