@@ -21,7 +21,22 @@ Experience with JUnit can be applied to many other testing frameworks.
 
 ## Verify
 
-1. Create a file called HiTest.java
+1. Create a file called FooTest.java
+```
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.JUnit4;
+
+public class FooTest {
+    @Test
+    public void thisAlwaysPasses() {
+        bool isTrue = true;
+        assertEquals(true, false);
+    }
+}
+```
 1. Define a [passing test](https://github.com/junit-team/junit/wiki/Getting-started)
 1. Compile the test:
 ```
