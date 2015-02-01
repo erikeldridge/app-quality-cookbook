@@ -46,5 +46,12 @@ $ javac
 $ git
 ```
 1. Search for Firefox and launch to verify you have a browser
+1. Shut down the virtual machine:
+
+```
+$ vagrant halt
+```
+
+
 
 
