@@ -3,9 +3,9 @@
 * [Introduction](README.md)
 * [Preface](preface.md)
 * Collaboration
-   * Communication
-   * Engineering principles
-   * Pairing
+   * [Communication](collaboration/communication.md)
+   * [Engineering principles](collaboration/principles.md)
+   * [Pairing](collaboration/pairing.md)
 * Configuration
    * [Build](configuration/build.md)
    * [Launch](configuration/launch.md)
