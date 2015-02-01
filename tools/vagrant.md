@@ -2,11 +2,11 @@
 
 ## Motivation
 
-This book covers many tools. We can use Vagrant to create a virtual machine and install all the tools onto it.
+This book uses many tools. To establish a consistent environment and simplify installation of these tools, we can use [Vagrant](https://www.vagrantup.com) to create and set up a virtual machine.
 
-As a side benefit, Vagrant is widely used for virtual machine automation. One of the principles of quality engineering is to minimize changes between environments. Vagrant helps us do this with respect to the virtual machines that run our services in a datacenter.
+As a side benefit, Vagrant is widely used for virtual machine automation. One of the principles of quality engineering is to minimize changes between environments. Vagrant helps us do this with respect to the virtual machines that run our services in a data center.
 
-Another side benefit is Vagrant's use of Virtualbox, which is also used by Genymotion.
+Another side benefit is Vagrant's use of [VirtualBox](https://www.virtualbox.org/), which is also used by [Genymotion](https://www.genymotion.com).
 
 
 ## Goals
