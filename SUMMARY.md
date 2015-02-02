@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Preface](preface.md)
-* Collaboration
+* [Collaboration](collaboration/README.md)
    * [Communication](collaboration/communication.md)
    * [Engineering principles](collaboration/principles.md)
    * [Pairing](collaboration/pairing.md)
@@ -13,13 +13,13 @@
 * Continuous integration
    * Services
    * Android
-* Damage control
+* [Damage control](damage_control/README.md)
    * [Configuration-based](damage_control/configure.md)
    * [Investigation](damage_control/investigation.md)
    * [Post-mortem](damage_control/postmortem.md)
    * [Practice](damage_control/practice.md)
    * [Rollback](damage_control/rollback.md)
-* Deployment
+* [Deployment](deployment/README.md)
    * [Continuous](deployment/continuous.md)
    * [Fractional](deployment/fractional.md)
    * [Staged](deployment/staged.md)
@@ -28,15 +28,15 @@
    * [Style](static_analysis/style.md)
    * [Code coverage](static_analysis/coverage.md)
    * [Complexity analysis](static_analysis/complexity.md)
-   * Integrated development environment
-* Testability
+   * [Integrated development environment](static_analysis/ide.md)
+* [Testability](testability/README.md)
    * Android
    * [Spaghetti code](testability/spaghetti.md)
    * [Single responsability principle](testability/srp.md)
    * [Dependecy injection](testability/di.md)
    * [Refactoring to patterns](testability/pattern.md)
    * [Communicating intent](testability/intent.md) 
-* Testing
+* [Testing](testing/README.md)
    * [Unit](testing/unit.md)
    * [Integration](testing/integration.md)
    * [UI](testing/ui.md)
@@ -56,7 +56,7 @@
    * [Unix](tools/unix.md)
    * [Vagrant](tools/vagrant.md)
    * [Vim](tools/vim.md)
-* Monitoring
+* [Monitoring](monitoring/README.md)
    * [Alerting](monitoring/alerting.md)
    * [Crash reporting](monitoring/crash.md)
    * [On call](monitoring/oncall.md)

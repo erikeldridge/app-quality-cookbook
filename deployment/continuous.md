@@ -2,7 +2,7 @@
 
 ## Motivation
 
-We can improve quality and productivity by decreasing the size of changes and increasing the frequency of changes.
+We can improve quality and productivity by decreasing the size of changes and increasing the frequency of changes. This is summed up in the phrase "release early, release often".
 
 ## Goals
 
@@ -44,4 +44,5 @@ For example:
 
 ## Related
 
+* http://education.sys-con.com/node/318776
 * http://www.startuplessonslearned.com/2009/06/why-continuous-deployment.html

@@ -2,7 +2,7 @@
 
 ## Motivation
 
-Development can be stressful if the people involved have different priorities
+Development can be stressful if the people involved have different priorities. To alleviate this, we can agree on a set of "engineering principles".
 
 For example, Twitter has 10 engineering principles:
 * Portfolio Approach
