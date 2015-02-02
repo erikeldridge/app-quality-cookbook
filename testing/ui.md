@@ -4,17 +4,19 @@
 
 We write user interface (UI) tests to verify our UI is working correctly
 
-
 ## Goals
 
-Gain experience with UI testing
+* Identify appropriate ui tests
+* Write UI tests
 
+## Prerequisites
+
+* Android
 
 ## Steps
 
-Exercise: verify the correctness of our Android app
+### Determine a feature to test
 
+### Write tests
 
-## Verify
-
-Observe our tests pass
+### Run tests

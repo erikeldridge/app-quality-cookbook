@@ -4,19 +4,22 @@
 
 Git is a widely used version control system, supported by many excellent products, like Github and Heroku.
 
-
 ## Goal
 
-* Install git
-* Gain experience using git for version control
+* Install
+* Verify installation
 
+## Prerequisites
+
+* Vagrant
 
 ## Steps
 
-1. [Download](http://git-scm.com/downloads) and install git. 
+### Install
 
+The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
 
-## Verify
+### Verify
 
 1. Create a new directory:
 ```
@@ -40,3 +43,6 @@ On branch master
 Initial commit
 nothing to commit
 ```
+
+## Related
+

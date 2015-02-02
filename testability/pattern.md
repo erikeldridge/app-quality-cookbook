@@ -4,31 +4,34 @@
 
 The culture of design patterns provides us with not only institutional knowledge, but also a shared language we can use to identify issues and approach fixes.
 
+Some static analysis tools will identify standard "code smells" associated with known patterns.
+
+Note: dogmatic adherence to patterns can introduce complexity, so tread lightly
 
 ## Goals
 
-Gain experience identifying a code smell, resolving a pattern, and refactoring
+* Identify a code smell
+* Determine an appropriate pattern
+* Refactoring the code to a pattern
 
+## Prerequisites
 
-## Steps
+* Spaghetti code
 
-- Exercise: refactor the fn to:
--- accept a third type of contact identifier, eg username
--- look up the identifier in the appropriate map
--- use factory pattern to alleviate conditional complexity
+## Identifying a smell
 
-
-## Verify
-
-- Exercise: run tests
-- Exercise: update tests to cover all three types
-
+## Refactor
 
 ## Reflect
 
-- Writer: was it difficult or easy to modify this fn?
-- Writer: was it difficult or easy to test this fn?
-- Reviewer: are the comments still accurate?
-- Note: comment drift
-- Accomplishment: experience with self-documenting code
-- Accomplishment: experience with refactoring code smell to pattern
+* Was it difficult or easy to modify the code before and after the change?
+* Was the code smell and resulting change intuitive?
+* Was the resulting change an improvement?
+
+## Related
+
+* Industrial Logic's [Smells to Refactorings cheatsheet](http://www.industriallogic.com/wp-content/uploads/2005/09/smellstorefactorings.pdf)
+* Martin Fowler's [Catalog of Refactorings](http://www.refactoring.com/catalog/)
+* Martin Fowler's [Code Smell article](http://martinfowler.com/bliki/CodeSmell.html)
+* J. Kerievsky's [Refactoring to Patterns](http://www.amazon.com/Refactoring-Patterns-Joshua-Kerievsky/dp/0321213351)
+* [Wikipedia's article on code smells](http://en.wikipedia.org/wiki/Code_smell)

@@ -2,14 +2,19 @@
 
 ## Motivation
 
-An IDE can run style and complexity analysis automatically
-
+An IDE can assist with writing quality code and run style and complexity analysis automatically
 
 ## Goals
 
-Gain experience configuring and using static analysis tools within our IDE
-
+* Edit code in an IDE
+* Configure static analysis tools
 
 ## Steps
 
-## Verify
+### Editing
+
+### Configuring static analysis
+
+## Reflect
+
+* Do you feel more confident about the code you wrote in an IDE vs what you wrote in a text editor?

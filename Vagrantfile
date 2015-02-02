@@ -12,7 +12,7 @@ Vagrant.configure(2) do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
-  config.vm.box = "ubuntu/trusty64"
+  config.vm.box = "ubuntu/trusty32"
 
   # Disable automatic box update checking. If you disable this, then
   # boxes will only be checked for updates when the user runs
@@ -105,7 +105,7 @@ Vagrant.configure(2) do |config|
     tar xfz /tmp/intellij.tar.gz -C idea
     sudo mv idea/* /opt/idea
     rm -rf idea
-    sudo desktop-file-install  <<- DesktopConfig
+    cat <<- DesktopConfig > idea.desktop
 [Desktop Entry]
 Name=IntelliJ IDEA 
 Type=Application
@@ -117,6 +117,8 @@ NoDisplay=false
 Categories=Development;IDE;
 Name[en]=IntelliJ IDEA
 DesktopConfig
+    sudo desktop-file-install idea.desktop
+    rm idea.desktop
     cd /usr/local/bin
     sudo ln -s /opt/idea/bin/idea.sh
     sudo cp /opt/idea/bin/idea.png /usr/share/pixmaps/idea.png

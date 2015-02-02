@@ -2,28 +2,24 @@
 
 ## Motivation
 
+We can improve the quality of the code base by reviewing changes before they are submitted.
+
+Code reviews also serve to distribute liability, facilitating change.
 
 ## Goals
 
+* Identify appropriate tooling
+* Create a review
+* Perform a review
 
 ## Steps
 
-- Lesson: oracle java syntax guide
-- Lesson: checklist
-- Exercise: generate review group
+### Over-the-shoulder
 
+### Email
 
-## Verify
+### Github
 
-- Exercise: deploy to review group via email
-- Exercise: review code & respond by email, ccing me
-- Exercise: incorporate feedback
-- Exercise: deploy code and tests to me via email
+### Reviewers
 
-
-## Reflect
-
-- Philosophy: distributed liability
-- Accomplishment: everyone should have a review generator by the end
-- Accomplishment: everyone should have at least one review by the end
-- Survey: how confident are you?
+### Reviewing

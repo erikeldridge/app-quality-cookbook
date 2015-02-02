@@ -22,9 +22,17 @@ For example, Twitter has 10 engineering principles:
 
 ## Steps
 
-1. Work with your team to identify ~5 qualities you would like in your development environment
+### Identify principles
 
-2. Practice refering to them when coordinating activities
+Work with your team to identify ~5 qualities you would like in your development environment
+
+### Use principles
+
+Practice refering to them when coordinating activities
+
+## Reflect
+
+Did this have an effect on your communication?
 
 ## Related
 

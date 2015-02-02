@@ -2,20 +2,29 @@
 
 ## Motivation
 
-Unix and the Unix-like Linux are widely used
+Unix and the Unix-like Linux are widely used.
 
-For example, Mac OS X is a Unix operating system, and web servers commonly use a Linux OS.
-
+For example, Mac's are commonly used for development, and OS X is a Unix operating system.
 
 ## Goals
 
-Gain experience with Unix syntax
+* Install
+* Dive in
 
+## Prerequisites
+
+* Vagrant
 
 ## Steps
 
+### Install
+
+The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
+
+### Dive in
+
 1. Open a terminal
-1. SSH into your vagrant instance
+1. SSH into your virtual machine
 ```
 vagrant ssh
 ```

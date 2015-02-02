@@ -2,28 +2,53 @@
 
 ## Motivation
 
-We can use a complexity analysis tool to help catch flaws in our code.
+We can use complexity analysis tools to objectively measure flaws in our code.
 
+This objective analysis can make code review more efficient by weeding out problems before they reach review, and catching issues uniformly.
 
 ## Goals
 
-Gain experience performing complexity analysis
+* Identify appropriate tooling
+* Command line usage
+* IDE integration
 
+## Prerequisites
+
+* Java
 
 ## Steps
 
-Run PMD on the commit from Testable 1
+### Tooling
 
+An appropriate tool should:
+* be configurable
+* generate machine-readable output for CI
+* ideally, it will use a common descriptions to pair the code smells with appropriate solutions.
 
-## Verify
+### Command line
 
-Observe output from PMD
+Add an unused variable to Hi.java created in the [Java installation](tools/java_installation.md) section
 
+```
+class Hi {
+    public static void main(String[] args) {
+        String unused = "unused";
+    }
+}
+```
 
-## Reflect
+Run pmd:
 
-- Philosophy: compilation and self- and team-review are forms of static analysis
-- Did analysis catch anything?
-- If so, what? // this should overlap w/ the refactors made above
-- Accomplishment: experience with programmatic complexity analysis
-- Accomplishment: experience w/ git history
+```
+./pmd-bin-5.2.2/bin/run.sh pmd -R java-basic,java-unusedcode -d ./
+```
+
+Observe PMD’s output:
+
+```
+Avoid unused local variables such as 'unused'.
+```
+
+### IDE
+
+IntelliJ has a [plugin for PMD](http://pmd.sourceforge.net/pmd-4.3.0/integrations.html#idea).

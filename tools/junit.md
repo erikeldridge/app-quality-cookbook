@@ -2,8 +2,6 @@
 
 ## Motivation
 
-Tests for small, single-purpose pieces, aka units, of code are called unite tests.
-
 JUnit is a widely used framework for unit testing Java.
 
 Experience with JUnit can be applied to many other testing frameworks.
@@ -11,13 +9,17 @@ Experience with JUnit can be applied to many other testing frameworks.
 ## Goals
 
 * Install JUnit
-* Define and run a test
+* Dive into JUnit syntax
 
+## Prerequisites
+
+* Vagrant
 
 ## Steps
 
-1. [Download the jars](https://github.com/junit-team/junit/wiki/Download-and-Install)
+### Install
 
+The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
 
 ## Verify
 

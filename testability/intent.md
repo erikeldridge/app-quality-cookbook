@@ -2,27 +2,29 @@
 
 ## Motivation
 
-Code that is easier to read is easier to understand. Code that is easier to understand is easier to maintain. Code that is easier to maintain has less bugs. Code that has few bugs is less frightening to deploy. Credit: Javi
-
+"Code that is easier to read is easier to understand. Code that is easier to understand is easier to maintain. Code that is easier to maintain has less bugs. Code that has few bugs is less frightening to deploy." – [Javi](https://twitter.com/javi)
 
 ## Goals
 
-Gain experience writing code that communicates its intent
+* Identify intent
+* Write code that communicates its intent
 
+## Prerequisites
+
+* Spaghetti code
 
 ## Steps
 
-- Exercise: refactor the code to fn and variable names instead of comments to communicate the intent
+### Identifying intent
 
+What is this code intending to do?
 
-## Verify
+If you had an ideal language, how would you express this intent?
 
-- Exercise: run tests
-- Exercise: push to review
+### Communicating intent
 
+Translate that idealized form into self-documenting code. If the code is going to be reused, consider creating a domain specific language (DSL).
 
 ## Reflect
 
-- Reviewer: review code noting if you can still tell what the code does
-- Accomplishment: experience with self-documenting code
-- Philosophy: simple code is easier to review; reviewed code is easier to maintain; maintained code has fewer bugs; code w/ fewer bugs is less frightening to ship // credit: Javi
+* When reviewing code, can you tell what it does?

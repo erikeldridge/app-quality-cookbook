@@ -4,14 +4,12 @@
 
 Heroku provides an excellent deployment environment.
 
-
 ## Goals
 
 * Obtain a Heroku account
 * Gain experience with:
 	* the Heroku command line tools
 	* deploying to Heroku
-
 
 ## Steps
 
@@ -22,14 +20,12 @@ Heroku provides an excellent deployment environment.
 1. Commit the change
 1. Deploy the change
 
-
 ## Verify
 
 1. Query the deployment log
 1. Observe your change is listed
 1. Query the web service
 1. Observe the expected response
-
 
 ## Reflect
 

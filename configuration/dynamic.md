@@ -6,7 +6,6 @@ Some configuration can be served to an app after it is deployed. For example, we
 
 Note: dynamic configuration involves mutating a system.
 
-
 ## Goals
 
 * Define a dynamic configuration provider
@@ -14,18 +13,23 @@ Note: dynamic configuration involves mutating a system.
 * Deploy a build with a feature disabled
 * Enable the feature dynamically
 
-
 ## Steps
 
-1. Add a new endpoint to the previously created web service
-2. Define a configuration provider
-3. Ingest and parse the configuration
-4. Validate the configuration
-5. Define a controller to serve the configuration
-6. Modify the previously created Android app to call this endpoint
-7. Define application-layer helpers to access the configuration
-8. Use the helpers to guard a code path
+### Define configuration service
 
+1. Define a controller to serve the configuration
+
+### Provide configuration
+
+1. Define a configuration provider
+1. Ingest and parse the configuration
+1. Validate the configuration
+
+### Client integration
+
+1. Modify client to call configuration service
+1. Define application-layer helpers to access the configuration
+1. Use the helpers to guard a code path
 
 ## Verify
 

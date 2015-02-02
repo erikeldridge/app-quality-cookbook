@@ -4,17 +4,25 @@
 
 JaCoCo is a popular code coverage tool
 
-
 ## Goals
 
-* Install JaCoCo
+* Install
+* Verify
 
+## Prerequisites
+
+* Vagrant
 
 ## Steps
 
-1. http://www.eclemma.org/jacoco/
+### Install
 
+The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
 
-## Verify
+### Verify
 
-Observe code coverage output
+Run and observe code coverage output
+
+## Related
+
+[JaCoCo's website](http://www.eclemma.org/jacoco/)

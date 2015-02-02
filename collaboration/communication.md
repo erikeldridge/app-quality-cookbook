@@ -18,22 +18,31 @@ Issues can be resolved more quickly if the person experiencing the issue can com
 
 ## Steps
 
-1. Edit your code to introduce an issue.
+### Introduce an issue
 
-2. Submit your change to review:
+### Create review
+
 * quick summary
 * problem to solve
 * testing details
 
-3. Identify yourself as "release manager" who will prepare, build, and deploy the release, and serve as a single point of contact.
+### Identify release manager
 
-4. Before deploying, announce the deploy by sending an email with the following:
+The release manager will prepare, build, and deploy the release, and serve as a single point of contact.
+
+### Announce deploy
+
+Before deploying, announce the deploy by sending an email with the following:
 * changes list
 * planned time
 
-5. After deploying, announce the status of the deploy by replying on the announcement thread.
+### Announce deploy status
 
-6. Report an issue:
+After deploying, announce the status of the deploy by replying on the announcement thread.
+
+### Report issue
+
+Report an issue:
 * quick summary
 * estimated impact
 * steps to reproduce the issue

@@ -12,10 +12,17 @@ Pairing can be more fun, fault tolerant, and produce higher quality results, but
 
 ## Steps
 
-1. Pair up
-1. Identify the person who will "drive"
-1. Implement a change
-1. Post the change for review by a third person
+### Pair up
+
+### Identify driver
+
+Identify the person who will "drive"
+
+### Implement a change
+
+### Create review
+
+Post the change for review by a third person
 
 ## Reflect
 

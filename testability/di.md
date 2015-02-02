@@ -2,23 +2,57 @@
 
 ## Motivation
 
+Dependency injection can help us simplify our app and testing code.
+
 ## Goals
 
-Gain experience with dependency injection
+* Identify appropriate tooling
+* Use DI in our code
 
+## Prerequisites
+
+* Spaghetti code
 
 ## Steps
 
-- Exercise: refactor the service's request class to accept the lookup maps as arguments
+### Tooling
 
+DI can be a concept and a framework.
 
-## Verify
+A simple conceptual example:
 
-- Exercise: update and run tests
-- Exercise: push to review
+```
+Env env = Env.DEV;
+// ...
+void isEnabled(){ // not injected
+	if (env.equals(Env.PROD)) {
+		// ...
+	}
+}
+// vs
+void isEnabled(Env env){ // injected
+	if (env.equals(Env.DEV)) {
+		// ...
+	}
+}
+```
 
+Frameworks like Guice and Dagger provide more sophisticated approaches to injection.
+
+For example:
+```
+@Provides Env provideEnv() {
+  return Env.DEV;
+}
+// ...
+class Foo {
+	@Inject
+	public Foo(String env){ // injected
+		// ...
+	}
+}
+```
 
 ## Reflect
 
-- Writer: did this change make it more easy or difficult to test?
-- Accomplishment: experience with DI
+* Did DI make it more easy or difficult to test?

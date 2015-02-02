@@ -2,45 +2,23 @@
 
 ## Motivation
 
-We can use complexity analysis tools to objectively measure flaws in our code.
-
-This objective analysis can make code review more efficient by weeding out problems before they reach review, and catching issues uniformly.
-
 PMD provides a robust complexity analysis that is relatively easy to configure.
-
 
 ## Goals
 
 * Install PMD
-* Gain experience using PMD on a simple piece of code
+* Dive in
 
+## Prerequisites
 
-## Install
+* Vagrant
 
-1. Download [PMD](http://pmd.sourceforge.net/)
-1. Unzip it
+## Steps
 
+### Install
 
-## Verify
+The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
 
-1. Add an unused variable to Hi.java created in the [Java installation](tools/java_installation.md) section
+### Diving in
 
-```
-class Hi {
-    public static void main(String[] args) {
-        String unused = "unused";
-    }
-}
-```
-
-1. Run pmd:
-
-```
-./pmd-bin-5.2.2/bin/run.sh pmd -R java-basic,java-unusedcode -d ./
-```
-
-1. Observe PMD’s output:
-
-```
-Avoid unused local variables such as 'unused'.
-```
+Please refer to the [complexity analysis](static_analysis/complexity.md) section to dive in.

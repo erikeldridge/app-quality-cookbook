@@ -8,26 +8,21 @@ Having a standard style can make code easier to read and avoid subjective debate
 
 Checkstyle is effective, widely used, and can be run in an IDE and CI.
 
-
 ## Goals
 
-* Install checkstyle
-* Use checkstyle to analyze a piece of code
+* Install
+* Dive in
 
+## Prerequisites
+
+* Vagrant
 
 ## Steps
 
-1. Download [checkstyle](http://checkstyle.sourceforge.net/)
-1. Download [Google’s style config](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml)
+### Install
 
+The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
 
-## Verify
+### Diving in
 
-1. Run checkstyle on the hi.java file created in the [java tools introduction](tools/java.md):
-```
-java -jar checkstyle-6.1.1-all.jar -c google_checks.xml hi.java
-```
-2. Observe:
-```
-warning: The name of the outer type and the file do not match.
-```
+Please refer to the [style analysis](static_analysis/style.md) section to dive in.

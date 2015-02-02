@@ -14,11 +14,21 @@ Some configuration can be defined when an app is launched. For example, if we wa
 
 ## Steps
 
-1. Define a command line argument we can use to communicate the runtime environment to the previously created web service
-2. Identify an appropriate feature to configure
-3. Launch the app locally, passing env=development
-4. Stage the app, passing env=staging
-5. Deploy the app to production, passing env=production
+### Define flags
+
+Define a command line argument we can use to communicate the runtime environment to the previously created web service
+
+### Define application helpers
+
+Identify an appropriate feature to configure
+
+### Set flags
+
+Launch the app locally, passing env=development
+
+Stage the app, passing env=staging
+
+Deploy the app to production, passing env=production
 
 
 ## Verify

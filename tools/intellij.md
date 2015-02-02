@@ -4,18 +4,21 @@
 
 IntelliJ is widely used, so we'll benefit from a large community. It's also best-of-breed, so it's advantageous to use. It provides syntax parsing, and it can be configured to run external tools, which will help us write better code, more quickly.
 
-
 ## Goals
 
-* Install IntelliJ
-* Gain experience with IntelliJ
+* Install
+* Verify installation
 
+## Prerequisites
+
+* Vagrant
 
 ## Steps
 
-1. [Download](https://www.jetbrains.com/idea/download/) the free community edition. 
+### Install
 
+The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
 
-## Verify 
+### Verify
 
-1. Follow [Jetbrain’s instructions for a hello world app](https://www.jetbrains.com/idea/help/creating-and-running-your-first-java-application.html).
+Follow [Jetbrain’s instructions for a hello world app](https://www.jetbrains.com/idea/help/creating-and-running-your-first-java-application.html).

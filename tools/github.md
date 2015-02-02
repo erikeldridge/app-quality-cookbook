@@ -4,17 +4,21 @@
 
 Github is widely used and provides an excellent interface for working with a repository
 
+## Prerequisites
+
+* Familiarity with git
 
 ## Goal
 
-* Create a github account
-* Use github to host our a repository
-
+* Obtain a github account
+* Create a repository
+* Clone a repository
 
 ## Steps
 
 1. Create an account if you don’t have one already
-
+1. Create a new repository
+1. Clone your repository
 
 ## Verify
 
