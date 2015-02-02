@@ -29,7 +29,7 @@
    * [Code coverage](static_analysis/coverage.md)
    * [Complexity analysis](static_analysis/complexity.md)
    * [Integrated development environment](static_analysis/ide.md)
-* Testability
+* [Testability](testability/README.md)
    * Android
    * [Spaghetti code](testability/spaghetti.md)
    * [Single responsability principle](testability/srp.md)
