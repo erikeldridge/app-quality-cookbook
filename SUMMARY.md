@@ -28,7 +28,7 @@
    * [Style](static_analysis/style.md)
    * [Code coverage](static_analysis/coverage.md)
    * [Complexity analysis](static_analysis/complexity.md)
-   * Integrated development environment
+   * [Integrated development environment](static_analysis/ide.md)
 * Testability
    * Android
    * [Spaghetti code](testability/spaghetti.md)
