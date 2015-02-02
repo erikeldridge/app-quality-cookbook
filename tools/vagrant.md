@@ -20,14 +20,12 @@ Another side benefit is Vagrant's use of [VirtualBox](https://www.virtualbox.org
 1. Follow the [instructions](http://docs.vagrantup.com/v2/getting-started/index.html) on Vagrant's site to install it
 1. Download this book's [Vagrantfile](../Vagrantfile)
 1. Create the virtual machine:
-
 ```
 vagrant up
 ```
 1. Observe the virtual machine has created a terminal
 1. Log into the terminal using "vagrant" for the username and password
 1. Launch Ubuntu's desktop:
-
 ```
 startx
 ```
@@ -37,18 +35,15 @@ startx
 ```
 $ ls ~
 ```
-
 1. Verify you have checkstyle, junit, mockito jars
 1. Verify you have the installed apps:
 ```
 $ javac
 $ git
 ```
-
 1. Search for Firefox and launch to verify you have a browser
 1. Search for IntelliJ and launch to verify IntelliJ installation
 1. Shut down the virtual machine:
-
 ```
 $ vagrant halt
 ```
