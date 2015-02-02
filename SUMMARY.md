@@ -36,7 +36,7 @@
    * [Dependecy injection](testability/di.md)
    * [Refactoring to patterns](testability/pattern.md)
    * [Communicating intent](testability/intent.md) 
-* Testing
+* [Testing](testing/README.md)
    * [Unit](testing/unit.md)
    * [Integration](testing/integration.md)
    * [UI](testing/ui.md)
