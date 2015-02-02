@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Preface](preface.md)
-* Collaboration
+* [Collaboration](collaboration/README.md)
    * [Communication](collaboration/communication.md)
    * [Engineering principles](collaboration/principles.md)
    * [Pairing](collaboration/pairing.md)
