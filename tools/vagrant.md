@@ -2,7 +2,7 @@
 
 ## Motivation
 
-This book uses many tools. To establish a consistent environment and simplify installation, we can use [Vagrant](https://www.vagrantup.com) to create and set up a virtual machine.
+This book uses many tools. To establish a consistent environment and simplify installation, we can use a virtual machine. First you install [Vagrant](https://www.vagrantup.com), and then use the configuration linked below to generate the virtual machine.
 
 As a side benefit, Vagrant is widely used for virtual machine automation. One of the principles of quality engineering is to minimize changes between environments. Vagrant helps us do this with respect to the virtual machines that run our services in a data center.
 
