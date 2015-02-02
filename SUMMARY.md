@@ -13,7 +13,7 @@
 * Continuous integration
    * Services
    * Android
-* Damage control
+* [Damage control](damage_control/README.md)
    * [Configuration-based](damage_control/configure.md)
    * [Investigation](damage_control/investigation.md)
    * [Post-mortem](damage_control/postmortem.md)
