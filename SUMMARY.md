@@ -19,7 +19,7 @@
    * [Post-mortem](damage_control/postmortem.md)
    * [Practice](damage_control/practice.md)
    * [Rollback](damage_control/rollback.md)
-* Deployment
+* [Deployment](deployment/README.md)
    * [Continuous](deployment/continuous.md)
    * [Fractional](deployment/fractional.md)
    * [Staged](deployment/staged.md)
