@@ -56,7 +56,7 @@
    * [Unix](tools/unix.md)
    * [Vagrant](tools/vagrant.md)
    * [Vim](tools/vim.md)
-* Monitoring
+* [Monitoring](monitoring/README.md)
    * [Alerting](monitoring/alerting.md)
    * [Crash reporting](monitoring/crash.md)
    * [On call](monitoring/oncall.md)
