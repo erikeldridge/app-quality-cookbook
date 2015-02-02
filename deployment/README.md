@@ -1,4 +1,4 @@
 # Deployment
 
-"Release early. Release often. And listen to your customers."
+"Release early. Release often."
 – Eric Raymond
