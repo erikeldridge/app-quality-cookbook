@@ -55,4 +55,5 @@ class Foo {
 
 ## Reflect
 
-* Did DI make it more easy or difficult to test?
+* Best-practice: let DI manage singletons, or just pass them as constructor args
+* * Did DI make it more easy or difficult toest?
