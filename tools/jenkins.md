@@ -14,6 +14,7 @@
 * Configure Global security
 * Enable security
 * Jenkins' own database
+* Allow users to sign up
 
 ## Related
 
