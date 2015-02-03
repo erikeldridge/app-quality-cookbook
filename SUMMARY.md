@@ -62,4 +62,4 @@
    * [On call](monitoring/oncall.md)
    * [Product usage](monitoring/product_usage.md)
    * [Resource usage](monitoring/resource_usage.md)
-* [Version control](version_control/README.md)
+* [Version control](versioning/README.md)
