@@ -40,6 +40,8 @@ I recommend shipping small changes frequently to reduce risk and facilitate main
 
 I think of software development as a series of fundamental activities, reminiscent of the scientific method: making a change, observing the result, reflecting on the outcome, planning for the next change. Each section in this book is organized in this way.
 
+### Enjoyment
+
 Building products can be enjoyable, but shipping unpredictable applications via unforgiving systems is a terrible experience. Quality engineering helps me focus on the former.
 
 I hope this book helps more developers ship code with confidence.
