@@ -65,3 +65,4 @@
 * [Versioning](versioning/README.md)
    * [Strategies](versioning/strategies.md)
    * [Backwards compatibility](versioning/compatibility.md)
+   * [Version control](versioning/version_control.md)
