@@ -44,4 +44,6 @@ I think of software development as a series of fundamental activities, reminisce
 
 Building products can be enjoyable, but shipping unpredictable applications via unforgiving systems is a terrible experience. Quality engineering helps me focus on the former.
 
+### Confidence
+
 I hope this book helps more developers ship code with confidence.
