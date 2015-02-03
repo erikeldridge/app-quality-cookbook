@@ -17,6 +17,21 @@
 * Allow users to sign up
 * Logged-in users can do anything
 
+### Plugins
+
+* Install github plugin
+
+### Configure
+
+* JDK
+```
+readlink -f `which javac`
+```
+* Maven
+```
+readlink -f `which mvn`
+```
+
 ## Related
 
 * [Jenkins' Ubuntu installation docs](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu)
