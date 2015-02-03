@@ -10,6 +10,8 @@ This book introduces a few common tools and concepts we can use to improve engin
 
 I call this a "cookbook" because it focuses on a set of verifiable outcomes, like the recipes in a cookbook.
 
+I hope this book helps more developers ship code with confidence.
+
 ## Biases
 
 This book biases toward accommodating inexperienced developers, developing applications, cutting scope over quality, holding systems responsible, collaborating, iterating, and having fun.
@@ -43,4 +45,3 @@ I think of software development as a series of fundamental activities, reminisce
 ### Enjoyment
 
 Building products can be enjoyable, but shipping unpredictable applications via unforgiving systems is a terrible experience. Quality engineering helps me focus on the former.
- confidence.
