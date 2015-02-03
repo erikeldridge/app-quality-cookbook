@@ -51,3 +51,8 @@ Consistency:
 1. Deploy to canary
 1. Monitor
 1. Deploy to full production
+
+## Related
+
+* [Google's article on hermetic servers]( http://googletesting.blogspot.com/2012/10/hermetic-servers.html)
+
