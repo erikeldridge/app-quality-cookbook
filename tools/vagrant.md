@@ -23,6 +23,8 @@ Another side benefit is Vagrant's use of [VirtualBox](https://www.virtualbox.org
 ```
 vagrant up
 ```
+1. Observe vagrant starts logging virtual machine configuration.
+1. Wait for configuration to complete.
 1. Observe the virtual machine has created a terminal
 1. Log into the terminal using "vagrant" for the username and password
 1. Launch Ubuntu's desktop:
