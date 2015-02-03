@@ -15,6 +15,7 @@
 * Enable security
 * Jenkins' own database
 * Allow users to sign up
+* Logged-in users can do anything
 
 ## Related
 
