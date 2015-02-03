@@ -6,6 +6,8 @@ Building a product that works correctly on a variety of devices is a significant
 
 Device testing can help ensure our app will work well everywhere it is installed.
 
+Best-practice: testing on live devices is failure-prone due to updates. Prefer emulators.
+
 ## Goals
 
 * Identify appropriate device tests
