@@ -62,4 +62,6 @@
    * [On call](monitoring/oncall.md)
    * [Product usage](monitoring/product_usage.md)
    * [Resource usage](monitoring/resource_usage.md)
-* [Version control](versioning/README.md)
+* [Versioning](versioning/README.md)
+   * [Strategies](versioning/strategies.md)
+   * [Backwards compatibility](versioning/compatibility.md)
