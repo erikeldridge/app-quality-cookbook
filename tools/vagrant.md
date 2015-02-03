@@ -17,7 +17,7 @@ Another side benefit is Vagrant's use of [VirtualBox](https://www.virtualbox.org
 
 ## Steps
 
-1. Follow the [instructions](http://docs.vagrantup.com/v2/getting-started/index.html) on Vagrant's site to install it
+1. Follow the [instructions](http://docs.vagrantup.com/v2/installation/index.html) on Vagrant's site to install it
 1. Download this book's [Vagrantfile](../Vagrantfile)
 1. In the same directory as you saved the Vagrantfile, run the following to create the virtual machine:
 ```
