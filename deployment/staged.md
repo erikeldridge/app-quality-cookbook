@@ -13,27 +13,27 @@ Decrease risk.
 
 ### Strategies
 
-Alpha/Beta:
+#### Alpha/Beta
 
 * opt-in pools
 * deploy to alpha, then to beta, then to prod
 * Example: Play store
 
-Staging:
+#### Staging
 
 * deploy to staging, then to prod
 * aka "nightly"
 
-Canary:
+#### Canary
 
 * deploy to a percentage of prod traffic
 
-Fractional:
+#### Fractional
 
 * deploy to prod, but gradually increase exposure
 * explored in more depth in the [fractional deployment section](deployment/fractional.md)
 
-Consistency:
+#### Consistency
 
 * the less we change between stages, the more we can predict the behavior of each stage
 
