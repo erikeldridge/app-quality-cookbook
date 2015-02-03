@@ -45,3 +45,7 @@ I think of software development as a series of fundamental activities, reminisce
 ### Enjoyment
 
 Building products can be enjoyable, but shipping unpredictable applications via unforgiving systems is a terrible experience. Quality engineering helps me focus on the former.
+
+## Acknowledgements
+
+I consulted with a number of people when researching this topic. Thank you, @noahlt, @EricFrohnhoefer, @markroseboom, @ashwinraghav, @cweider, @rallat, @mhernand40, @lientm, @pufferfish, and @jcasts.
