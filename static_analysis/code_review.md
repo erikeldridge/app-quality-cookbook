@@ -23,3 +23,7 @@ Code reviews also serve to distribute liability, facilitating change.
 ### Reviewers
 
 ### Reviewing
+
+## Related
+
+* [Misko Hevery's code reviewers guide](http://misko.hevery.com/code-reviewers-guide/)
