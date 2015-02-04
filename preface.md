@@ -6,13 +6,13 @@
 
 ## Purpose
 
-This book is intended to introduce a few common tools and concepts we can use to improve engineering quality for app development.
+This book is intended to introduce a few common tools and concepts we can use to high-quality applications.
 
 My goal is to help more developers ship code with confidence.
 
 ## Methodology
 
-The recommendations in this book come from my personal experience, interviews with colleagues, production-readiness recommendations from site reliability engineers, guidelines from architecture groups, and publications.
+The recommendations in this book come from my personal experience, interviews with colleagues, recommendations from site reliability engineers, guidelines from architecture groups, and publications.
 
 ## Structure
 
