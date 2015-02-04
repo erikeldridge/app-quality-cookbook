@@ -10,9 +10,7 @@
    * [Build](configuration/build.md)
    * [Launch](configuration/launch.md)
    * [Dynamic](configuration/dynamic.md)
-* Continuous integration
-   * Services
-   * Android
+* [Continuous integration](ci/README.md)
 * [Damage control](damage_control/README.md)
    * [Configuration-based](damage_control/configure.md)
    * [Investigation](damage_control/investigation.md)
