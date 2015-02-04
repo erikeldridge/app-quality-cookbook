@@ -13,5 +13,5 @@ Discover incompatibilities sooner than later
 * Martin Fowler's article [Continuous Integration](http://www.martinfowler.com/articles/continuousIntegration.html)
 * Extreme programming
 * Jenkins
-* TeamCity
+* [TeamCity](https://www.jetbrains.com/teamcity/)
 * Travis
