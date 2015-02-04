@@ -20,7 +20,7 @@
    * [Failover](damage_control/failover.md)
    * [Investigation](damage_control/investigation.md)
    * [Network-related](damage_control/network.md)
-   * [Post-mortem](damage_control/postmortem.md)
+   * [Postmortem](damage_control/postmortem.md)
    * [Practice](damage_control/practice.md)
    * [Rollback](damage_control/rollback.md)
 * [Deployment](deployment/README.md)
