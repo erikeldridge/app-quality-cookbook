@@ -16,6 +16,7 @@
    * [Code search](damage_control/code_search.md)
    * [Configuration-based](damage_control/configure.md)
    * [Debugging with JDB](damage_control/debugger_jdb.md)
+   * [Graceful degradation](damage_control/degradation.md)
    * [Investigation](damage_control/investigation.md)
    * [Post-mortem](damage_control/postmortem.md)
    * [Practice](damage_control/practice.md)
