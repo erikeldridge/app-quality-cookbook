@@ -90,6 +90,9 @@ Vagrant.configure(2) do |config|
     # git
     sudo apt-get install git
 
+    # heroku
+    wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+    
     # intellij
     # http://askubuntu.com/a/353948
     wget -O /tmp/intellij.tar.gz http://download.jetbrains.com/idea/ideaIC-14.0.3.tar.gz
