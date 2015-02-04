@@ -1,3 +1,3 @@
 # Configuration
 
-"Controlling complexity is the essence of computer programming." - Brian Kernighan
+"The central enemy of reliability is complexity" -  Geer et al.
