@@ -56,4 +56,15 @@ Building products can be enjoyable, but shipping unpredictable applications via 
 
 ## Acknowledgements
 
-I consulted with several engineers while researching quality engineering. Thank you, @noahlt, @EricFrohnhoefer, @markroseboom, @ashwinraghav, @cweider, @rallat, @mhernand40, @lientm, @pufferfish, and @jcasts for taking time to talk, and for maintaining a high bar.
+I consulted with several engineers while researching quality engineering. I thank the following people in particular for maintaining a high bar and taking time to talk:
+
+* Ashwin Raghav (@ashwinraghav)
+* Chad Weider (@cweider)
+* Eric Frohnhoefer (@EricFrohnhoefer)
+* Israel Camacho (@rallat)
+* Jeremie Castagna (@jcasts)
+* Jon Bettcher (@pufferfish)
+* Lien Tran (@lientm)
+* Marcelo Hernandez (@mhernand40)
+* Mark Roseboom (@markroseboom)
+* Noah Tye (@noahlt)
