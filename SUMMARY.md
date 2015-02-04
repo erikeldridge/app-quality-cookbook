@@ -7,7 +7,7 @@
    * [Documentatoin](collaboration/documentation.md)
    * [Engineering principles](collaboration/principles.md)
    * [Pairing](collaboration/pairing.md)
-* Configuration
+* [Configuration](configuration/README.md)
    * [Build](configuration/build.md)
    * [Launch](configuration/launch.md)
    * [Dynamic](configuration/dynamic.md)
