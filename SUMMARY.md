@@ -23,6 +23,7 @@
    * [Postmortem](damage_control/postmortem.md)
    * [Practice](damage_control/practice.md)
    * [Rollback](damage_control/rollback.md)
+   * [Root cause](damage_control/root_cause.md)
 * [Deployment](deployment/README.md)
    * [Continuous](deployment/continuous.md)
    * [Fractional](deployment/fractional.md)
