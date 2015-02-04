@@ -10,4 +10,4 @@ Rather than require all services to be deployed in the same env, "compose" servi
 
 ## Related
 
-* [Finagle's Wily routing](http://iwishtoinform.blogspot.com/2014/09/finagle-promises-local-and-dtab.html) gets full credit for this idea
+* [Finagle's Dtab routing](http://iwishtoinform.blogspot.com/2014/09/finagle-promises-local-and-dtab.html) gets full credit for this idea
