@@ -24,6 +24,30 @@ Code reviews also serve to distribute liability, facilitating change.
 
 ### Reviewing
 
+### Checklist
+
+* prefer consistency
+* adhere to style guide and shared principles
+* pay special attention to:
+	* security-related changes
+	* integrations with remote services
+	* 3rd-party code
+* localization
+* accessibility
+* no dead code
+* design review for significant changes
+* prefer smaller, stable-checkpoint commits over monolithic changes
+* code coverage
+* no surprising changes
+* add recurring issues to this checklist and static analysis
+
+## Two-step
+
+## Understanding large changes
+
+* Run locally
+* Participate in design review
+
 ## Related
 
 * [Misko Hevery's code reviewers guide](http://misko.hevery.com/code-reviewers-guide/)

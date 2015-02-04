@@ -4,6 +4,8 @@
 
 Defining a set of people to automatically add to reviews can facilitate reviewer selection, debugging, and code standardization.
 
+Owners are responsible for the code they own and should provide timely feedback for contributors.
+
 ## Goals
 
 * Identify appropriate tooling

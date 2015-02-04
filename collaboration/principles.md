@@ -2,9 +2,9 @@
 
 ## Motivation
 
-Development can be stressful if the people involved have different priorities. To alleviate this, we can agree on a set of "engineering principles".
+Development can be stressful if the people involved have different priorities, and/or no objective standard. To alleviate this, we can agree on a set of guidelines.
 
-For example, Twitter has 10 engineering principles:
+For example, Twitter has 10 high-level "engineering principles":
 * Portfolio Approach
 * Automation
 * Ownership
@@ -15,6 +15,8 @@ For example, Twitter has 10 engineering principles:
 * Flexibility
 * Appropriate re-use
 * Customer Focus
+
+Best-practice: automate enforcement as much as possible to increase objectivity.
 
 ## Goals
 

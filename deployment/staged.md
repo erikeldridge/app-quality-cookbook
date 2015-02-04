@@ -7,7 +7,8 @@ Decrease risk.
 ## Goals
 
 * Identify staged deployment strategies
-* Deploy to risk-tolerant audiences before deploying to risk-averse audiences.
+* Deploy to risk-tolerant audiences before deploying to risk-averse audiences, eg enable a feature for alpha
+* No new changes in beta; single, promoted build
 
 ## Steps
 

@@ -18,11 +18,10 @@ Prerequisites:
 
 ### Tooling
 
-An appropriate tool should:
-* be configurable
-* be runnable from the command line
-* produce machine-readable output for CI
-* ideally, plug into an IDE
+An appropriate tool should be:
+* easily available
+* configurable
+* usable from development and CI machines
 
 ### Using
 

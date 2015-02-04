@@ -12,10 +12,8 @@ Best-practice: only commit working code; the main branch should always be deploy
 
 ## Goals
 
-* commit a change
-* revert a change
-* merge in your team's changes
-* resolve a conflict
+* Explore repository strategy
+* Explore workflow syntax, eg committing, reverting, merging, conflict resolution, tagging
 
 ## Prerequisites
 
@@ -23,6 +21,16 @@ Best-practice: only commit working code; the main branch should always be deploy
 * Github
 
 ## Steps
+
+### Strategy
+
+Opinion alert!
+
+* Master shippable at all times
+* Prefer small commits over monolithic changes
+* Do not commit dead code
+* Style commit messages according to git guidelines
+* Include bug ticket, when available
 
 ### Cloning a repo
 

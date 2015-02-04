@@ -1,16 +1,24 @@
 # Preface
 
-## Tl;dr
+## Tldr
 
 "Simplicity is a prerequisite for reliability" – Edsger Dijkstra
 
-## Introduction
+## Purpose
 
-This book introduces a few common tools and concepts we can use to improve engineering quality for app development.
+This book is intended to introduce a few common tools and concepts we can use to improve engineering quality for app development.
+
+My goal is to help more developers ship code with confidence.
+
+## Methodology
+
+The recommendations in this book come from my personal experience, interviews with colleagues, production-readiness recommendations from site reliability engineers, guidelines from architecture groups, and publications.
+
+## Structure
 
 I call this a "cookbook" because it focuses on a set of verifiable outcomes, like the recipes in a cookbook.
 
-I hope this book helps more developers ship code with confidence.
+Each section of this book defines the why, what, and how for a given topic, expressed as "motivation", "goals", and "steps".
 
 ## Biases
 
@@ -48,4 +56,4 @@ Building products can be enjoyable, but shipping unpredictable applications via 
 
 ## Acknowledgements
 
-I consulted with a number of people when researching this topic. Thank you, @noahlt, @EricFrohnhoefer, @markroseboom, @ashwinraghav, @cweider, @rallat, @mhernand40, @lientm, @pufferfish, and @jcasts.
+I consulted with several engineers while researching quality engineering. Thank you, @noahlt, @EricFrohnhoefer, @markroseboom, @ashwinraghav, @cweider, @rallat, @mhernand40, @lientm, @pufferfish, and @jcasts for taking time to talk, and for maintaining a high bar.
