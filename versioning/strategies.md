@@ -1,15 +1,17 @@
 # Strategies
 
-## Motivation
-
 ## Goals
 
 * Learn about versioning strategies
 * Explore versioned vs non-versioned changes
 
+## Motivation
+
+Gain experience various versioning strategies
+
 ## Steps
 
-### Learning
+### Strategies
 
 * Semantic versioning
 * API versioning

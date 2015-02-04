@@ -1,5 +1,11 @@
 # Communication
 
+## Goals
+
+* Submit a code change with an informative description
+* Announce a release effectively
+* Triage an issue
+
 ## Motivation
 
 Effective communication can help build confidence.
@@ -9,12 +15,6 @@ Code reviews will be more efficient if the reviewer understands the intent of th
 Releases will be more calm if everyone knows what is being released, when the deploy is happening, and who is managing the deploy.
 
 Issues can be resolved more quickly if the person experiencing the issue can communicate with people who can implement a fix.
-
-## Goals
-
-* Submit a code change with an informative description
-* Announce a release effectively
-* Triage an issue
 
 ## Steps
 

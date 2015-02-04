@@ -1,13 +1,13 @@
 # On-call rotation
 
-## Motivation
-
-Serving as a point of contact for app bugs is stressful. To reduce stress and increase availability, define an "on-call" rotation.
-
 ## Goals
 
 * Identify people involved in rotation
 * Identify appropriate tool for coordination
+
+## Motivation
+
+Serving as a point of contact for app bugs is stressful. To reduce stress and increase availability, define an "on-call" rotation.
 
 ## Steps
 

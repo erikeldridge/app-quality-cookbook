@@ -1,13 +1,13 @@
 # Fractional deployment
 
-## Motivation
-
-Fractional deployment will let us deploy a feature in an "off" state and then gradually expose it.
-
 ## Goals
 
 * Define fractional deployment mechanism
 * Use fractional deployment mechanism
+
+## Motivation
+
+Fractional deployment will let us deploy a feature in an "off" state and then gradually expose it.
 
 ## Prerequisites
 

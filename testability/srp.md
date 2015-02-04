@@ -1,12 +1,12 @@
 # Single responsibility principle
 
+## Goals
+
+* Refactor code to express SRP
+
 ## Motivation
 
 The single responsibility principle (SRP) is a powerful tool for keeping code clean and easy to understand.
-
-## Goals
-
-Gain experience refactoring code to express SRP
 
 ## Prerequisites
 

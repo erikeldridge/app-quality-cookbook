@@ -1,15 +1,15 @@
 # Java
 
+## Goals
+
+* Install
+* Dive into Java syntax
+
 ## Motivation
 
 Java provides a mature, widely used programming language and runtime
 
 In terms of quality engineering, many tools are written in Java and/or are designed to support it.
-
-## Goals
-
-* Install
-* Dive into Java syntax
 
 ## Prerequisites
 

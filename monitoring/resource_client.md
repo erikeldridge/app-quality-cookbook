@@ -1,14 +1,14 @@
 # Resource monitoring in the client
 
-## Motivation
-
-We want to monitor the health of our client to avoid outages.
-
 ## Goals
 
 * Identify an appropriate tool
 * Integrate tooling
 * Monitor bandwidth usage
+
+## Motivation
+
+We want to monitor the health of our client to avoid outages
 
 ## Steps
 

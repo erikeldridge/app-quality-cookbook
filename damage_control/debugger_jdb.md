@@ -1,14 +1,14 @@
 # Debugging
 
-## Motivation
-
-If possible, being able to step through code execution can be a quick way to identify the cause of a bug.
-
 ## Goals
 
 * Debug Java on the command line
 * Debug Java from IntelliJ
 * Debug Android from Android Studio
+
+## Motivation
+
+If possible, being able to step through code execution can be a quick way to identify the cause of a bug.
 
 ## Prerequisites
 

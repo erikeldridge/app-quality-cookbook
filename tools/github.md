@@ -1,5 +1,11 @@
 # Github
 
+## Goal
+
+* Obtain a github account
+* Create a repository
+* Clone a repository
+
 ## Motivation
 
 Github is widely used and provides an excellent interface for working with a repository
@@ -7,12 +13,6 @@ Github is widely used and provides an excellent interface for working with a rep
 ## Prerequisites
 
 * Familiarity with git
-
-## Goal
-
-* Obtain a github account
-* Create a repository
-* Clone a repository
 
 ## Steps
 

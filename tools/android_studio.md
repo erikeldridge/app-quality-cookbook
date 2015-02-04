@@ -1,5 +1,10 @@
 # Android Studio
 
+## Goals
+
+* Install Android Studio
+* Verify installation
+
 ## Motivation
 
 Android Studio is a solid IDE. It’s based on IntelliJ, so your IntelliJ experience is portable.
@@ -7,11 +12,6 @@ Android Studio is a solid IDE. It’s based on IntelliJ, so your IntelliJ experi
 ## Prerequisites
 
 * [Java](tools/java_installation.md)
-
-## Goals
-
-* Install Android Studio
-* Verify installation
 
 ## Prerequisites
 

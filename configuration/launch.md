@@ -1,16 +1,14 @@
 # Launch configuration
 
-## Motivation
-
-Some configuration can be defined when an app is launched. For example, if we want to disable caching in local development, we can communicate an app's environment to the app via command line arguments.
-
-
 ## Goals
 
 * Define launch configuration
 * Define an appropriate feature to configure
 * Launch an app with configuration
 
+## Motivation
+
+Some configuration can be defined when an app is launched. For example, if we want to disable caching in local development, we can communicate an app's environment to the app via command line arguments.
 
 ## Steps
 

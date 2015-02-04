@@ -1,15 +1,14 @@
 # Build configuration
 
-## Motivation
-
-Certain types of configuration can be made at build time. For example, when building an app for internal testing, we can set a flag to enable certain features, and then rebuild the app with the flag off to disable and compile away the features before production launch.
-
-
 ## Goals
 
 * Define build configuration
 * Define a feature to use build configuration
 * Create a configured build
+
+## Motivation
+
+Certain types of configuration can be made at build time. For example, when building an app for internal testing, we can set a flag to enable certain features, and then rebuild the app with the flag off to disable and compile away the features before production launch.
 
 ## Prerequisites
 

@@ -1,5 +1,12 @@
 # Documentation
 
+## Goals
+
+* Balance documentation with maintainability
+* Implement class and method level header comments
+* Use JavaDoc to generate documentation
+* Tie a TODO comment with a tracking ticket
+
 ## Motivation
 
 We spend time during development to obtain full understanding of the problem. Documentation preserves this investment.

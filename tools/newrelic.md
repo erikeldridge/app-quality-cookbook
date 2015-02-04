@@ -1,5 +1,10 @@
 # New Relic
 
+## Goals
+
+* Create a New Relic account
+* Integrate New Relic in a simple app
+
 ## Motivation
 
 We need to be able to monitor our deployed services.
@@ -7,11 +12,6 @@ We need to be able to monitor our deployed services.
 New Relic provides a solid platform to explore this functionality.
 
 We can use our experience with New Relic to explore other monitoring tools.
-
-## Goals
-
-* Create a New Relic account
-* Integrate New Relic in a simple app
 
 ## Steps
 

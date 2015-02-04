@@ -1,13 +1,13 @@
 # Mockito
 
-## Motivation
-
-Mockito is a Java testing tool that allows us to assert and override how objects in our code are used.
-
 ## Goals
 
 * Install Mockito
 * Dive into Mockito syntax
+
+## Motivation
+
+Mockito is a Java testing tool that allows us to assert and override how objects in our code are used.
 
 ## Prerequisites
 

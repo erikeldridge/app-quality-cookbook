@@ -1,13 +1,13 @@
 # PMD
 
-## Motivation
-
-PMD provides a robust complexity analysis that is relatively easy to configure.
-
 ## Goals
 
 * Install PMD
 * Dive in
+
+## Motivation
+
+PMD provides a robust complexity analysis that is relatively easy to configure.
 
 ## Prerequisites
 

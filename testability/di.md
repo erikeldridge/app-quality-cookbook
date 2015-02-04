@@ -1,13 +1,13 @@
 # Dependency injection
 
-## Motivation
-
-Dependency injection can help us simplify our app and testing code.
-
 ## Goals
 
 * Identify appropriate tooling
 * Use DI in our code
+
+## Motivation
+
+Dependency injection can help us simplify our app and testing code
 
 ## Prerequisites
 

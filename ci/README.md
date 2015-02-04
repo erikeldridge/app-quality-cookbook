@@ -1,11 +1,16 @@
 # Continuous integration
 
+## Goals
+
+* Build code base periodically
+
 ## Motivation
 
-Build code base periodically to discover incompatabilities sooner than later.
+Discover incompatabilities sooner than later
 
 ## Related
 
+* Extreme programming
 * Jenkins
 * TeamCity
 * Travis

@@ -1,17 +1,17 @@
 # Dynamic configuration
 
-## Motivation
-
-Some configuration can be served to an app after it is deployed. For example, we may want to deploy a risky change disabled and then gradually enable it.
-
-Note: dynamic configuration involves mutating a system.
-
 ## Goals
 
 * Define a dynamic configuration provider
 * Define configuration parsing
 * Deploy a build with a feature disabled
 * Enable the feature dynamically
+
+## Motivation
+
+Some configuration can be served to an app after it is deployed. For example, we may want to deploy a risky change disabled and then gradually enable it.
+
+Note: dynamic configuration involves mutating a system.
 
 ## Steps
 

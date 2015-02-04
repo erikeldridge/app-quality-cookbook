@@ -1,5 +1,11 @@
 # Refactoring to patterns
 
+## Goals
+
+* Identify a code smell
+* Determine an appropriate pattern
+* Refactoring the code to a pattern
+
 ## Motivation
 
 The culture of design patterns provides us with not only institutional knowledge, but also a shared language we can use to identify issues and approach fixes.
@@ -7,12 +13,6 @@ The culture of design patterns provides us with not only institutional knowledge
 Some static analysis tools will identify standard "code smells" associated with known patterns.
 
 Note: dogmatic adherence to patterns can introduce complexity, so tread lightly
-
-## Goals
-
-* Identify a code smell
-* Determine an appropriate pattern
-* Refactoring the code to a pattern
 
 ## Prerequisites
 

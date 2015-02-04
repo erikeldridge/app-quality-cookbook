@@ -1,5 +1,10 @@
 # Checkstyle
 
+## Goals
+
+* Install
+* Dive in
+
 ## Motivation
 
 We can use style analysis tools to define an objective standard for code syntax.
@@ -7,11 +12,6 @@ We can use style analysis tools to define an objective standard for code syntax.
 Having a standard style can make code easier to read and avoid subjective debates.
 
 Checkstyle is effective, widely used, and can be run in an IDE and CI.
-
-## Goals
-
-* Install
-* Dive in
 
 ## Prerequisites
 

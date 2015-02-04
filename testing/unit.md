@@ -1,13 +1,13 @@
 # Unit testing
 
-## Motivation
-
-When functionality becomes complex, it can be difficult to determine if it is working correctly. Unit tests can help assert the correctness of the units of code comprising a complex system.
-
 ## Goals
 
 * Identify appropriate unit tests
 * Gain experience writing and reading unit tests
+
+## Motivation
+
+When functionality becomes complex, it can be difficult to determine if it is working correctly. Unit tests can help assert the correctness of the units of code comprising a complex system.
 
 ## Prerequisites
 

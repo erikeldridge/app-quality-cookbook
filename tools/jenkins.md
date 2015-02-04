@@ -1,5 +1,10 @@
 # Jenkins
 
+## Goals
+
+* Install
+* Configure
+
 ## Steps
 
 ### Install

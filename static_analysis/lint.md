@@ -1,13 +1,13 @@
 # Linting
 
-## Motivation
-
-We can use linting to identify syntactic issues in our code.
-
 ## Goals
 
 * Lint Java
 * Lint Android
+
+## Motivation
+
+We can use linting to identify syntactic issues in our code
 
 ## Steps
 

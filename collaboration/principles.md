@@ -1,5 +1,9 @@
 # Shared principles
 
+## Goals
+
+* List shared principles
+
 ## Motivation
 
 Development can be stressful if the people involved have different priorities, and/or no objective standard. To alleviate this, we can agree on a set of guidelines.
@@ -17,10 +21,6 @@ For example, Twitter has 10 high-level "engineering principles":
 * Customer Focus
 
 Best-practice: automate enforcement as much as possible to increase objectivity.
-
-## Goals
-
-* List shared principles
 
 ## Steps
 

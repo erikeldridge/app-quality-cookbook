@@ -1,16 +1,16 @@
 # Complexity analysis
 
-## Motivation
-
-We can use complexity analysis tools to objectively measure flaws in our code.
-
-This objective analysis can make code review more efficient by weeding out problems before they reach review, and catching issues uniformly.
-
 ## Goals
 
 * Identify appropriate tooling
 * Command line usage
 * IDE integration
+
+## Motivation
+
+We can use complexity analysis tools to objectively measure flaws in our code.
+
+This objective analysis can make code review more efficient by weeding out problems before they reach review, and catching issues uniformly.
 
 ## Prerequisites
 

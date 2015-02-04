@@ -1,13 +1,13 @@
 # Integrated development environment (IDE)
 
-## Motivation
-
-An IDE can assist with writing quality code and run style and complexity analysis automatically
-
 ## Goals
 
 * Edit code in an IDE
 * Configure static analysis tools
+
+## Motivation
+
+An IDE can assist with writing quality code and run style and complexity analysis automatically
 
 ## Steps
 

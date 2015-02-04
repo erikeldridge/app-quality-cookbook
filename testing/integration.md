@@ -1,14 +1,14 @@
 # Integration testing
 
-## Motivation
-
-Verifying correct interoperability of a collection of units is called integration testing.
-
 ## Goals
 
 * Identify appropriate integration tests
 * Learn about the role of integration testing and how it relates to unit and UI testing
 * Gain experience writing integration tests
+
+## Motivation
+
+Verifying correct interoperability of a collection of units is called integration testing.
 
 ## Steps
 

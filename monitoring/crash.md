@@ -1,14 +1,14 @@
 # Crash analytics
 
-## Motivation
-
-Many factors can contribute to a mobile app crash. We can use a crash analytics tool to monitor and aggregate crashes.
-
 ## Goals
 
 * Identify appropriate tool
 * Incorporate tool
 * Use tool when investigating a bug
+
+## Motivation
+
+Many factors can contribute to a mobile app crash. We can use a crash analytics tool to monitor and aggregate crashes.
 
 ## Steps
 

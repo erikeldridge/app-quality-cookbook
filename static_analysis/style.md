@@ -1,14 +1,14 @@
 # Style analysis
 
-## Motivation
-
-Having an objective style definition can simplify reviews and improve standardization in the code base.
-
 ## Goals
 
 * Identify appropriate tooling
 * Use style analysis on the command line
 * Incorporate style analysis into your IDE
+
+## Motivation
+
+Having an objective style definition can simplify reviews and improve standardization in the code base
 
 Prerequisites:
 

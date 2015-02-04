@@ -1,13 +1,13 @@
 # JaCoCo
 
-## Motivation
-
-JaCoCo is a popular code coverage tool
-
 ## Goals
 
 * Install
 * Verify
+
+## Motivation
+
+JaCoCo is a popular code coverage tool
 
 ## Prerequisites
 

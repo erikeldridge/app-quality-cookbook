@@ -1,13 +1,13 @@
 # Communicating intent
 
-## Motivation
-
-"Code that is easier to read is easier to understand. Code that is easier to understand is easier to maintain. Code that is easier to maintain has less bugs. Code that has few bugs is less frightening to deploy." – [Javi](https://twitter.com/javi)
-
 ## Goals
 
 * Identify intent
 * Write code that communicates its intent
+
+## Motivation
+
+"Code that is easier to read is easier to understand. Code that is easier to understand is easier to maintain. Code that is easier to maintain has less bugs. Code that has few bugs is less frightening to deploy." – [Javi](https://twitter.com/javi)
 
 ## Prerequisites
 

@@ -1,13 +1,13 @@
 # IntelliJ
 
-## Motivation
-
-IntelliJ is widely used, so we'll benefit from a large community. It's also best-of-breed, so it's advantageous to use. It provides syntax parsing, and it can be configured to run external tools, which will help us write better code, more quickly.
-
 ## Goals
 
 * Install
 * Verify installation
+
+## Motivation
+
+IntelliJ is widely used, so we'll benefit from a large community. It's also best-of-breed, so it's advantageous to use. It provides syntax parsing, and it can be configured to run external tools, which will help us write better code, more quickly.
 
 ## Prerequisites
 

@@ -1,12 +1,12 @@
 # Code search
 
-## Motivation
-
-When investigating an issue, eg finding an unexpected string in output, it is helpful to be able to search your code base, especially across repositories.
-
 ## Goals
 
 * Gain experience with a code search tool, eg github's search
+
+## Motivation
+
+When investigating an issue, eg finding an unexpected string in output, it is helpful to be able to search your code base, especially across repositories.
 
 ## Steps
 

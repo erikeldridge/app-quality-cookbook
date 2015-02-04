@@ -1,14 +1,14 @@
 # Pairing
 
+## Goals
+
+* Gain experience with pair programming
+
 ## Motivation
 
 We often write software in close conjunction with another person. Extreme programming introduced formal pair programming, which some businesses, eg Pivotal, Thought Works, etc., adhere to more closely than others.
 
 Pairing can be more fun, fault tolerant, and produce higher quality results, but it may not always be appropriate.
-
-## Goals
-
-* Gain experience with pair programming
 
 ## Steps
 

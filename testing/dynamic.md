@@ -1,4 +1,8 @@
-# Dynamic
+# Dynamic routing
+
+## Goals
+
+* Simplify integration testing by specifying underlying service locations at request time
 
 ## Motivation
 

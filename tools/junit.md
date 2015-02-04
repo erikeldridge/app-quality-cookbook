@@ -1,15 +1,15 @@
 # JUnit
 
+## Goals
+
+* Install JUnit
+* Dive into JUnit syntax
+
 ## Motivation
 
 JUnit is a widely used framework for unit testing Java.
 
 Experience with JUnit can be applied to many other testing frameworks.
-
-## Goals
-
-* Install JUnit
-* Dive into JUnit syntax
 
 ## Prerequisites
 

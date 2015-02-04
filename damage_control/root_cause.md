@@ -1,10 +1,5 @@
 # Investigation
 
-## Motivation
-
-We investigate bugs as they are discovered to determine the _root cause_.
-
-
 ## Goals
 
 * Identify a bug at runtime
@@ -12,6 +7,9 @@ We investigate bugs as they are discovered to determine the _root cause_.
 * Determine the change responsible
 * Identify remediation
 
+## Motivation
+
+We investigate bugs as they are discovered to determine the _root cause_.
 
 ## Steps
 
@@ -25,7 +23,6 @@ We investigate bugs as they are discovered to determine the _root cause_.
 ### 5 whys
 
 The investigator asks "why" repeatedly, iteratively drilling into the answers. Usually the root cause is identified after five iterations
-
 
 ## Related
 

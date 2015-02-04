@@ -1,13 +1,13 @@
 # Continuous deployment
 
-## Motivation
-
-We can improve quality and productivity by decreasing the size of changes and increasing the frequency of changes. This is summed up in the phrase "release early, release often".
-
 ## Goals
 
 * Define deployment strategy
 * Configure CI to deploy automatically
+
+## Motivation
+
+We can improve quality and productivity by decreasing the size of changes and increasing the frequency of changes. This is summed up in the phrase "release early, release often".
 
 ## Prerequisites
 

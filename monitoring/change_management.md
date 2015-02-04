@@ -1,14 +1,14 @@
 # Change management
 
-## Motivation
-
-A change management (CM) system helps a team know what is changing, coordinate changes, and determine what's changed recently if there's an issue.
-
 ## Goals
 
 * Define a CM system
 * Coordinate changes via CM
 * Use CM when investigating a bug
+
+## Motivation
+
+A change management (CM) system helps a team know what is changing, coordinate changes, and determine what's changed recently if there's an issue.
 
 ## Steps
 
