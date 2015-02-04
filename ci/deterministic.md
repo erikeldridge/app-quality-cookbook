@@ -1,4 +1,4 @@
-# Dependable
+# Deterministic build environment
 
 ## Goals
 
