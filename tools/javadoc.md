@@ -1,4 +1,4 @@
-# JavaDoc
+# Javadoc
 
 ## Goals
 
