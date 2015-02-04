@@ -4,6 +4,7 @@
 * [Preface](preface.md)
 * [Collaboration](collaboration/README.md)
    * [Communication](collaboration/communication.md)
+   * [Documentatoin](collaboration/documentation.md)
    * [Engineering principles](collaboration/principles.md)
    * [Pairing](collaboration/pairing.md)
 * Configuration
