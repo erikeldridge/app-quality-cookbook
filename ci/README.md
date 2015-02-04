@@ -6,7 +6,7 @@
 
 ## Motivation
 
-Discover incompatabilities sooner than later
+Discover incompatibilities sooner than later
 
 ## Related
 
