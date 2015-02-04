@@ -1,3 +1,3 @@
 # Configuration
 
-"Do The Simplest Thing That Could Possibly Work" - Kent Beck
+"Controlling complexity is the essence of computer programming." - Brian Kernighan
