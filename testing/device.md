@@ -5,6 +5,7 @@
 * Identify appropriate device tests
 * Use the Android Emulator to define multiple devices
 * Run tests on multiple devices
+* Network testing
 * Automate device testing
 
 ## Motivation
