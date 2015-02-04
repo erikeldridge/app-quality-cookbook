@@ -26,6 +26,7 @@
    * [Root cause](damage_control/root_cause.md)
    * [Tracing](damage_control/tracing.md)
 * [Deployment](deployment/README.md)
+   * [Automation](deployment/automation.md)
    * [Continuous](deployment/continuous.md)
    * [Fractional](deployment/fractional.md)
    * [Staged](deployment/staged.md)
