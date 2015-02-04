@@ -18,7 +18,7 @@ The recommendations in this book come from my personal experience, interviews wi
 
 I call this a "cookbook" because it focuses on a set of verifiable outcomes, like the recipes in a cookbook.
 
-Each section of this book defines the why, what, and how for a given topic, expressed as "motivation", "goals", and "steps".
+Each section of this book defines the what, why, and how for a given topic, expressed as "goals", "motivation", and "steps".
 
 ## Biases
 
