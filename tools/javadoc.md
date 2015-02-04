@@ -2,9 +2,9 @@
 
 ## Goals
 
-* Install JavaDoc
+* Install Javadoc
 * Verify installation
 
 ## Motivation
 
-JavaDoc provides a near-industry-standard framework for programmatically generating documentation.
+Javadoc provides a near-industry-standard framework for programmatically generating documentation.
