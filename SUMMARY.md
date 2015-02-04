@@ -24,6 +24,7 @@
    * [Practice](damage_control/practice.md)
    * [Rollback](damage_control/rollback.md)
    * [Root cause](damage_control/root_cause.md)
+   * [Tracing](damage_control/tracing.md)
 * [Deployment](deployment/README.md)
    * [Continuous](deployment/continuous.md)
    * [Fractional](deployment/fractional.md)
