@@ -13,6 +13,7 @@
    * [Dynamic](configuration/dynamic.md)
 * [Continuous integration](ci/README.md)
 * [Damage control](damage_control/README.md)
+   * [Code search](damage_control/code_search.md)
    * [Configuration-based](damage_control/configure.md)
    * [Investigation](damage_control/investigation.md)
    * [Post-mortem](damage_control/postmortem.md)
