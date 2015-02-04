@@ -77,7 +77,7 @@
    * [Crash reporting](monitoring/crash.md)
    * [On call](monitoring/oncall.md)
    * [Product usage](monitoring/product_usage.md)
-   * [Resource usage](monitoring/resource_usage.md)
+   * [Resource usage in a client](monitoring/resource_client.md)
 * [Versioning](versioning/README.md)
    * [Strategies](versioning/strategies.md)
    * [Backwards compatibility](versioning/compatibility.md)
