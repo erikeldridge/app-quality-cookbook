@@ -32,6 +32,11 @@
    * [Continuous](deployment/continuous.md)
    * [Fractional](deployment/fractional.md)
    * [Staged](deployment/staged.md)
+* Exercises
+   * [Fractional availability](exercises/fractional.md)
+   * [Review group generator](exercises/grouper.md)
+   * [Java syntax](exercises/java.md)
+   * [Web service](exercises/service.md)
 * [Monitoring](monitoring/README.md)
    * [Alerting](monitoring/alerting.md)
    * [Change management](monitoring/change_management.md)
