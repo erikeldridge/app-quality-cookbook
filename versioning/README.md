@@ -10,4 +10,4 @@ For example:
 * we need to be able to respond quickly to customer feedback (mutability)
 * we can reason about something much easier if it does not change (immutability)
 
-Versioning is the act of creating a unique identifier for a given state. We can then create a new name when making a change, while preserving the functionality of other versions.
+Versioning is the act of creating a unique name for a given state. We can then refer to a state by name to preserve functionality.
