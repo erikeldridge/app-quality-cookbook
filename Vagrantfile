@@ -87,17 +87,12 @@ Vagrant.configure(2) do |config|
     wget -O junit-4.12.jar http://search.maven.org/remotecontent?filepath=junit/junit/4.12/junit-4.12.jar
     wget -O hamcrest-core-1.3.jar http://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
 
-    # mockito
-    wget https://bintray.com/artifact/download/szczepiq/maven/org/mockito/mockito-all/1.10.14/mockito-all-1.10.14.jar
-
-    # pmd
-    wget -O pmd-bin-5.2.3.zip http://downloads.sourceforge.net/project/pmd/pmd/5.2.3/pmd-bin-5.2.3.zip
-    unzip pmd-bin-5.2.3.zip
-    rm pmd-bin-5.2.3.zip
-
     # git
     sudo apt-get install git
 
+    # heroku
+    wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+    
     # intellij
     # http://askubuntu.com/a/353948
     wget -O /tmp/intellij.tar.gz http://download.jetbrains.com/idea/ideaIC-14.0.3.tar.gz
@@ -123,6 +118,15 @@ DesktopConfig
     sudo ln -s /opt/idea/bin/idea.sh
     sudo cp /opt/idea/bin/idea.png /usr/share/pixmaps/idea.png
 
-    # log into terminal and run `startx`
+    # maven
+    sudo apt-get install maven
+
+    # mockito
+    wget https://bintray.com/artifact/download/szczepiq/maven/org/mockito/mockito-all/1.10.14/mockito-all-1.10.14.jar
+
+    # pmd
+    wget -O pmd-bin-5.2.3.zip http://downloads.sourceforge.net/project/pmd/pmd/5.2.3/pmd-bin-5.2.3.zip
+    unzip pmd-bin-5.2.3.zip
+    rm pmd-bin-5.2.3.zip
   SHELL
 end

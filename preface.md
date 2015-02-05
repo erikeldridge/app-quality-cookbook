@@ -1,8 +1,8 @@
 # Preface
 
-## Tldr
+## tl;dr
 
-"Simplicity is a prerequisite for reliability" – Edsger Dijkstra
+Simplify & automate
 
 ## Purpose
 
