@@ -1,3 +1,3 @@
 # Automation
 
-"Simplicity is a prerequisite for reliability" – Edsger Dijkstra
+Simplicity is a prerequisite for reliability. – Edsger Dijkstra
