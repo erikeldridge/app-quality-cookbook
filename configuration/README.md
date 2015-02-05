@@ -1,3 +1,14 @@
 # Configuration
 
-"The central enemy of reliability is complexity" -  Geer et al.
+The Eight Fallacies of Distributed Computing
+
+* The network is reliable
+* Latency is zero
+* Bandwidth is infinite
+* The network is secure
+* Topology doesn’t change
+* There is one administrator
+* Transport cost is zero
+* The network is homogeneous
+
+– Peter Deutsch
