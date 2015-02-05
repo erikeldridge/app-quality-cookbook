@@ -11,6 +11,10 @@
 
 Heroku provides an excellent deployment environment.
 
+## Prerequisites
+
+* Git
+
 ## Steps
 
 1. Create an account
