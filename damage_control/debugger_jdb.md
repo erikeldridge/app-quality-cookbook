@@ -32,7 +32,7 @@ JDB is Java's command line debugger.
 
 For example:
 ```
-class Runner {
+class Main {
 	public static void main(String[] args) {
 		System.out.print(args);
 	}
@@ -42,13 +42,13 @@ class Runner {
 ### Compile with debug flag
 
 ```
-$ javac -g Runner.java
+$ javac -g Main.java
 ```
 
 ### Launch debugger
 
 ```
-$ jdb Runner
+$ jdb Main
 ```
 
 ### Breakpoints
@@ -56,7 +56,7 @@ $ jdb Runner
 Stop execution at a given line:
 
 ```
-> stop at Runner:3
+> stop at Main:3
 ```
 
 ### Start execution

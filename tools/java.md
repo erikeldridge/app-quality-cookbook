@@ -23,12 +23,12 @@ The [virtual machine associated with this book](tools/vagrant.md) will manage in
 
 ### Diving in
 
-Create a file called Hi.java
+Create a file called Main.java
 
 Put hello world into it:
 
 ```
-    class Hi {
+    class Main {
         public static void main(String[] args) {
             System.out.println("hi");
         }
@@ -38,18 +38,18 @@ Put hello world into it:
 Compile: 
 
 ```
-$ javac hi.java
+$ javac Main.java
 ```
 
 Run:
 
 ```
-$ java Hi
+$ java Main
 ```
 
 Observe “hi” printed to the console
 
-Modify the Hi.java file you created to explore anything you're unfamiliar with below.
+Modify the Main.java file you created to explore anything you're unfamiliar with below.
 
 #### Variables
 
@@ -144,7 +144,7 @@ Imports let us include encapsulated code:
 ```
 import java.util.ArrayList
 … 
-class Hi {
+class Main {
     public static void main(String[] args) {
       ArrayList<String> emails = new ArrayList<String>();
       emails.add("a@csumb.edu");

@@ -27,10 +27,10 @@ An appropriate tool should:
 
 ### Command line
 
-Add an unused variable to Hi.java created in the [Java installation](tools/java_installation.md) section
+Add an unused variable to Main.java created in the [Java installation](tools/java_installation.md) section
 
 ```
-class Hi {
+class Main {
     public static void main(String[] args) {
         String unused = "unused";
     }

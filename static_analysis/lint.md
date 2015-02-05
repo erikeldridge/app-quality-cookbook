@@ -13,10 +13,10 @@ We can use linting to identify syntactic issues in our code
 
 ### Linting Java
 
-1. Create a file Runner.java:
+1. Create a file Main.java:
 
 ```
-class Runner {
+class Main {
 	public static void main(String[] args) {
 	}
 }
@@ -25,7 +25,7 @@ class Runner {
 2. Compile
 
 ```
-javac Runner.java -Xlint
+javac Main.java -Xlint
 ```
 
 ### Linting Android

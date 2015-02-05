@@ -25,10 +25,10 @@ An appropriate tool should be:
 
 ### Using
 
-Create a runner class foo.java:
+Create a Main class foo.java:
 
 ```
-class Runner {
+class Main {
 	public static void main(String[] args) {
 	}
 }
