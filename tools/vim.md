@@ -78,4 +78,5 @@ Enter command mode by typing _esc_
 ## Related
 
 * There are many [vim cheatsheets](https://www.google.com/webhp?#q=vim+cheatsheet)
+* [Vim syntax for IntelliJ](https://plugins.jetbrains.com/plugin/164)
 
