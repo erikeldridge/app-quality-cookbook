@@ -10,7 +10,7 @@ Unix and the Unix-like Linux are widely used.
 
 Some examples:
 * Mac's are commonly used for development, and OS X is a Unix operating system
-* Linux is widely used for services
+* Linux is widely used for server machines
 * Android is based on Linux
 
 ## Prerequisites
