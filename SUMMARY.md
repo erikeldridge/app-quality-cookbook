@@ -36,6 +36,7 @@
    * [Fractional availability](exercises/fractional.md)
    * [Review group generator](exercises/grouper.md)
    * [Java syntax](exercises/java.md)
+   * [Unix syntax](exercises/unix.md)
    * [Web service](exercises/service.md)
 * [Monitoring](monitoring/README.md)
    * [Alerting](monitoring/alerting.md)
