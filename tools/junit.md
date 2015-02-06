@@ -42,12 +42,12 @@ public class FooTest {
 1. Compile the test:
 
 ```
-javac -cp "./*" FooTest.java
+javac -cp junit-4.12.jar FooTest.java
 ```
 1. Run the test:
 
 ```
-java -cp ".:./*" org.junit.runner.JUnitCore FooTest
+java -cp junit-4.12.jar org.junit.runner.JUnitCore FooTest
 ```
 1. Observe output:
 
