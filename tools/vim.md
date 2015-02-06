@@ -31,7 +31,7 @@ Create a file with some text in it:
 echo "hi" > file.txt
 ```
 
-#### Opening
+#### Opening a file
 
 ```
 vim file.txt
