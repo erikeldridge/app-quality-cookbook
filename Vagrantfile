@@ -82,7 +82,8 @@ Vagrant.configure(2) do |config|
 
     # checkstyle
     wget http://downloads.sourceforge.net/project/checkstyle/checkstyle/6.2/checkstyle-6.2-all.jar
-
+    wget https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml
+    
     # junit
     wget -O junit-4.12.jar http://search.maven.org/remotecontent?filepath=junit/junit/4.12/junit-4.12.jar
     wget -O hamcrest-core-1.3.jar http://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
