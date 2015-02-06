@@ -23,7 +23,7 @@ Some code is unpleasant to work with because it's dependencies and influences ar
     	* phone number --> user id
     	* user id --> user name
     * accepts a contact identifier
-    * determines the appropriate map to look up the identifier
+    * determines the appropriate map to use based on the identifier structure
     * looks up the identifier to resolve the user id
     * returns null or user id
     * looks up the user id to resolve the name
