@@ -23,7 +23,7 @@ Modify doGet from our integration testing as follows:
 	* user id --> user name
 * accepts a contact identifier
 * determines the appropriate map to look up the identifier
-* looks up the identifer to resolve the user id
+* looks up the identifier to resolve the user id
 * returns null or user id
 * looks up the user id to resolve the name
 * returns an empty string or the name
