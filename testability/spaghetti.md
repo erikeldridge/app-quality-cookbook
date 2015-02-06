@@ -16,17 +16,18 @@ Some code is unpleasant to work with because it's dependencies and influences ar
 
 ### Writing spaghetti code
 
-Modify doGet from our integration testing as follows:
-* defines three maps:
-	* email --> user id
-	* phone number --> user id
-	* user id --> user name
-* accepts a contact identifier
-* determines the appropriate map to look up the identifier
-* looks up the identifier to resolve the user id
-* returns null or user id
-* looks up the user id to resolve the name
-* returns an empty string or the name
+1. Set up a [web service](exercises/service.md)
+2. Modify doGet from our integration testing as follows:
+    * defines three maps:
+    	* email --> user id
+    	* phone number --> user id
+    	* user id --> user name
+    * accepts a contact identifier
+    * determines the appropriate map to look up the identifier
+    * looks up the identifier to resolve the user id
+    * returns null or user id
+    * looks up the user id to resolve the name
+    * returns an empty string or the name
 
 ### Describe
 
