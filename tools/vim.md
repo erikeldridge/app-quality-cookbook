@@ -77,5 +77,5 @@ Enter command mode by typing _esc_
 
 ## Related
 
-* [Search online for "vim cheatsheet"](https://www.google.com/webhp?#q=vim+cheatsheet)
+* There are many [vim cheatsheets](https://www.google.com/webhp?#q=vim+cheatsheet)
 
