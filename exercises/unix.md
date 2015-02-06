@@ -6,7 +6,7 @@
 
 ## Motivation
 
-The virtual machine associated with this book uses Linux, a Unix-like operating system.
+Unix and Linux are commonly used for app development. We should know how to get around.
 
 ## Steps
 
