@@ -16,7 +16,7 @@ Some code is unpleasant to work with because it's dependencies and influences ar
 
 ### Writing spaghetti code
 
-2. Write a function that does the following:
+Write a function that accepts either an email or phone number as an identifier, and returns a user name, as follows:
     * defines three maps:
     	* email --> user id
     	* phone number --> user id
