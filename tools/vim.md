@@ -31,30 +31,51 @@ Create a file with some text in it:
 echo "hi" > file.txt
 ```
 
-Open the file:
+#### Opening
 
 ```
 vim file.txt
 ```
 
-Enter "insert mode" by typing _i_ and hitting enter
+#### Insert mode
 
-Delete the "hi" text
+Insert mode is how we add text
 
-Enter "command mode" by typing _esc_
+Enter insert mode by typing _i_
 
-Exit the file without saving by typing _:q!_ and _enter_
+#### Command mode
 
-Re-open the file
+Command mode is how we undo, save, exit, etc
 
-Enter insert mode
+Enter command mode by typing _esc_
 
-Add some text
+#### Editing a file
 
-Save the file by typing _:w_ and _enter_
+1. Open the file
+1. Enter insert mode
+1. Make changes
 
-Exit by typing _:q_ and _enter_
+#### Undoing a change
 
-Search online for "vim cheatsheet"
+1. Enter command mode
+1. Type _:u_ and enter
 
-Observe there are many more commands
+#### Saving
+
+1. Enter command mode
+1. Type _:w_ and hit enter
+
+#### Exit
+
+1. Enter command mode
+1. Type _:q_ and hit enter
+
+#### Exit without saving
+
+1. Enter command mode
+1. Type _:q!_ and hit enter
+
+## Related
+
+* [Search online for "vim cheatsheet"](https://www.google.com/webhp?#q=vim+cheatsheet)
+
