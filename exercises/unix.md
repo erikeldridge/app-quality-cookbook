@@ -2,11 +2,17 @@
 
 ## Goals
 
-* Dive in
+* SSH into a remote machine
+* Navigate the file system
+* Manipulate files
 
 ## Motivation
 
 Unix and Linux are commonly used for app development. We should know how to get around.
+
+## Prerequisites
+
+* Vagrant
 
 ## Steps
 
@@ -44,7 +50,7 @@ $ cd foo
 $ cd ~
 ```
 
-### Make a directory
+### File management
 
 1. Make a directory
 ```
