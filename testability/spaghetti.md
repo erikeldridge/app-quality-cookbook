@@ -16,7 +16,7 @@ Some code is unpleasant to work with because it's dependencies and influences ar
 
 ### Writing spaghetti code
 
-1. Set up a [web service](exercises/service.md)
+1. Set up a [web service](../exercises/service.md)
 2. Modify doGet from our integration testing as follows:
     * defines three maps:
     	* email --> user id
