@@ -21,9 +21,9 @@ Experience with JUnit can be applied to many other testing frameworks.
 
 The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
 
-## Verify
+### Creating tests
 
-1. Create a file called FooTest.java
+Create a file called FooTest.java
 
 ```
 import static org.junit.Assert.assertEquals;
@@ -39,19 +39,17 @@ public class FooTest {
     }
 }
 ```
-1. Compile the test:
+
+### Compiling tests
 
 ```
-javac -cp junit-4.12.jar FooTest.java
+$ javac -cp junit-4.12.jar FooTest.java
 ```
-1. Run the test:
+
+### Running tests
 
 ```
-java -cp junit-4.12.jar org.junit.runner.JUnitCore FooTest
-```
-1. Observe output:
-
-```
+$ java -cp .:junit-4.12.jar:hamcrest-core-1.3.jar org.junit.runner.JUnitCore FooTest
 JUnit version 4.12-beta-3
 Time: 0.008
 OK (1 test)
@@ -59,6 +57,6 @@ OK (1 test)
 
 ## Related
 
-* https://github.com/junit-team/junit/wiki/Getting-started
+* [JUnit's getting started docs](https://github.com/junit-team/junit/wiki/Getting-started)
 
 
