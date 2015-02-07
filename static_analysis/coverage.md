@@ -33,6 +33,12 @@ Incorporate JaCoCo's plugin:
             <version>0.7.2.201409121644</version>
             <executions>
                 <execution>
+                    <id>default-prepare-agent</id>
+                    <goals>
+                        <goal>prepare-agent</goal>
+                    </goals>
+                </execution>
+                <execution>
                     <id>default-check</id>
                     <goals>
                         <goal>check</goal>
