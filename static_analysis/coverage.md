@@ -40,25 +40,39 @@ Incorporate JaCoCo's plugin:
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.2.201409121644</version>
                 <executions>
-                <execution>
-                    <id>default-prepare-agent</id>
-                    <goals>
-                        <goal>prepare-agent</goal>
-                    </goals>
-                </execution>
-                <execution>
-                    <id>default-report</id>
-                    <phase>prepare-package</phase>
-                    <goals>
-                        <goal>report</goal>
-                    </goals>
-                </execution>
+                    <execution>
+                        <id>default-prepare-agent</id>
+                        <goals>
+                            <goal>prepare-agent</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>default-report</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>report</goal>
+                        </goals>
+                    </execution>
                 </executions>
             </plugin>
         </plugins>
     </build>
 </project>
 ```
+
+Run:
+```
+$ mvn clean verify
+...
+[INFO] --- jacoco-maven-plugin:0.7.2.201409121644:check (default-check) @ foo ---
+[INFO] Analyzed bundle 'foo' with 1 classes
+[WARNING] Rule violated for bundle foo: complexity covered ratio is 0.00, but expected minimum is 0.60
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+...
+```
+
 ## Related
 
 * [IntelliJ's Code Coverage documentation](https://www.jetbrains.com/idea/help/code-coverage.html)
