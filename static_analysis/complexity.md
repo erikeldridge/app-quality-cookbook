@@ -90,7 +90,7 @@ Note: the "ruleset" format is java-<ruleset file name>. For example, pass "java-
 
 ### IDE
 
-We can use the [QAPlug's PMD plugin for IntelliJ](http://qaplug.com/about/tutorials/) to integrate PMD.
+We can use the [QAPlug's PMD plugin for IntelliJ](http://qaplug.com/download/) to integrate PMD.
 
 Run the plugin via Tools > QAPlug > Analyze code
 
