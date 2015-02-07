@@ -72,6 +72,10 @@ $ mvn verify
 ...
 ```
 
+### Using JaCoCo in IntelliJ
+
+Create Maven project and run verify
+
 ## Related
 
 * [IntelliJ's Code Coverage documentation](https://www.jetbrains.com/idea/help/code-coverage.html)
