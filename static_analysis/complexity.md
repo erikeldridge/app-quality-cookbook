@@ -145,12 +145,9 @@ View output in target/site/pmd.html
 
 ### IDE
 
-We can use the [QAPlug's PMD plugin for IntelliJ](http://qaplug.com/download/) to integrate PMD.
-
-Run the plugin via Tools > QAPlug > Analyze code
-
-Configure via File > Settings ... > Other Settings > QAPlug
+Create project from Maven and build
 
 ## Related
 
 * [PMD rulesets](http://pmd.sourceforge.net/pmd-5.2.3/pmd-java/rules/index.html)
+* [Maven PMD plugin](http://maven.apache.org/plugins/maven-pmd-plugin/examples/usingRuleSets.html)
