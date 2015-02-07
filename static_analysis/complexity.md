@@ -86,6 +86,12 @@ $ ./pmd-bin-5.2.3/bin/run.sh pmd -R java-basic,java-codesize -d Foo.java
 /home/vagrant/Foo.java:3:	The method 'example' has a Standard Cyclomatic Complexity of 11.
 ```
 
+Note: the "ruleset" format is java-<ruleset file name>. For example, pass "java-strings" to use [java/strings.html](http://pmd.sourceforge.net/pmd-5.2.3/pmd-java/rules/java/codesize.html).
+
 ### IDE
 
 IntelliJ has a [plugin for PMD](http://pmd.sourceforge.net/pmd-4.3.0/integrations.html#idea).
+
+## Related
+
+* [PMD rulesets](http://pmd.sourceforge.net/pmd-5.2.3/pmd-java/rules/index.html)
