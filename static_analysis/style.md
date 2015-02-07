@@ -86,7 +86,7 @@ Configure maven to run checkstyle during the build:
                     <dependency>
                         <groupId>com.puppycrawl.tools</groupId>
                         <artifactId>checkstyle</artifactId>
-                        <version>6.3</version>
+                        <version>6.3</version><!-- support google checks -->
                     </dependency>
                 </dependencies>
                 <executions>
