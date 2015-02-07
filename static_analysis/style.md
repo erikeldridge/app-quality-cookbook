@@ -110,7 +110,13 @@ Configure maven to run checkstyle during the build:
 </project>
 ```
 
+### Using checkstyle in IntelliJ
+
+Create a Maven project in IntelliJ
+
 ## Related
 
 * [Checkstyle's Google style config](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml)
 * [Google's Java style guide](https://google-styleguide.googlecode.com/svn-history/r130/trunk/javaguide.html)
+* [Maven checkstyle plugin documentation](http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html)
+
