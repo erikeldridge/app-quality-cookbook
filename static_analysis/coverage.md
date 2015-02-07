@@ -20,6 +20,7 @@ An appropriate tool should:
 * be runnable in an IDE
 * generate machine-readable output for CI
 
+
 ## Related
 
 * [IntelliJ's Code Coverage documentation](https://www.jetbrains.com/idea/help/code-coverage.html)
