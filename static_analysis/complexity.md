@@ -88,6 +88,61 @@ $ ./pmd-bin-5.2.3/bin/run.sh pmd -R java-basic,java-codesize -d Foo.java
 
 Note: the "ruleset" format is java-<ruleset file name>. For example, pass "java-strings" to use [java/strings.html](http://pmd.sourceforge.net/pmd-5.2.3/pmd-java/rules/java/codesize.html).
 
+### Using PMD in Maven
+
+Edit pom.xml to run pmd when building:
+```
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.example.foo</groupId>
+  <artifactId>foo</artifactId>
+  <packaging>jar</packaging>
+  <version>1.0-SNAPSHOT</version>
+  <name>foo</name>
+  <url>http://maven.apache.org</url>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.4</version>
+                <executions>
+                    <execution>
+                        <id>pmd</id>
+                        <phase>validate</phase>
+                        <goals>
+                            <goal>pmd</goal>
+                        </goals>
+                        <configuration>
+                            <failOnViolation>true</failOnViolation>
+                            <verbose>true</verbose>
+                            <encoding>UTF-8</encoding>
+                            <rulesets>
+                                <!-- ruleset configuration -->
+                                <ruleset>/rulesets/java/codesize.xml</ruleset>
+                            </rulesets>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <reporting>
+        <plugins>
+            <!-- fix source XRef warning -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.3</version>
+            </plugin>
+        </plugins>
+    </reporting>
+</project>
+```
+
+View output in target/site/pmd.html
+
 ### IDE
 
 We can use the [QAPlug's PMD plugin for IntelliJ](http://qaplug.com/download/) to integrate PMD.
