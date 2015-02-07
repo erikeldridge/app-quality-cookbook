@@ -81,7 +81,7 @@ Vagrant.configure(2) do |config|
     sudo apt-get install -y default-jre default-jdk
 
     # checkstyle
-    wget http://downloads.sourceforge.net/project/checkstyle/checkstyle/6.2/checkstyle-6.2-all.jar
+    wget http://downloads.sourceforge.net/project/checkstyle/checkstyle/6.3/checkstyle-6.3-all.jar
     wget https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml
     
     # junit
