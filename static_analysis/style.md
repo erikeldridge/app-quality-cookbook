@@ -37,7 +37,7 @@ class Main {
 Run checkstyle:
 
 ```
-java -jar checkstyle-6.1.1-all.jar -c google_checks.xml foo.java
+java -jar checkstyle-6.3-all.jar -c google_checks.xml Foo.java
 ```
 
 Observe:
