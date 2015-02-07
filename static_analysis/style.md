@@ -112,7 +112,9 @@ Configure maven to run checkstyle during the build:
 
 ### Using checkstyle in IntelliJ
 
-Create a Maven project in IntelliJ
+1. Create a Maven project in IntelliJ
+2. Compile
+3. Observe checkstyle output
 
 ## Related
 
