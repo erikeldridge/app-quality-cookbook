@@ -61,7 +61,7 @@ Incorporate JaCoCo's plugin:
 
 Run:
 ```
-$ mvn clean verify
+$ mvn verify
 ...
 [INFO] --- jacoco-maven-plugin:0.7.2.201409121644:check (default-check) @ foo ---
 [INFO] Analyzed bundle 'foo' with 1 classes
