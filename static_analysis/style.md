@@ -74,6 +74,11 @@ Configure maven to run checkstyle during the build:
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-checkstyle-plugin</artifactId>
             <version>2.14</version>
+            <configuration>
+                <configLocation>../google_checks.xml</configLocation>
+                <consoleOutput>true</consoleOutput>
+                <encoding>UTF-8</encoding>
+            </configuration>
             <dependencies>
                 <dependency>
                     <groupId>com.puppycrawl.tools</groupId>
@@ -89,10 +94,7 @@ Configure maven to run checkstyle during the build:
                         <goal>check</goal>
                     </goals>
                     <configuration>
-                        <configLocation>../google_checks.xml</configLocation>
                         <failOnViolation>true</failOnViolation>
-                        <consoleOutput>true</consoleOutput>
-                        <encoding>UTF-8</encoding>
                     </configuration>
                 </execution>
             </executions>
