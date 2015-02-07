@@ -17,6 +17,10 @@ Having 100% coverage doesn't guarantee freedom from bugs, in part because our te
 
 An appropriate tool should:
 * be runnable from the command line
+* be runnable in an IDE
 * generate machine-readable output for CI
 
-### Reporting
+## Related
+
+* [IntelliJ's Code Coverage documentation](https://www.jetbrains.com/idea/help/code-coverage.html)
+
