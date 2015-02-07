@@ -23,14 +23,22 @@ An appropriate tool should be:
 * configurable
 * usable from development and CI machines
 
-### Using
+### Using checkstyle from the command line
 
 Create a Main class foo.java:
 
 ```
-class Main {
-	public static void main(String[] args) {
-	}
+import java.util.HashMap;
+import java.util.ArrayList;
+
+public class Foo {  
+  public Foo(int i){
+    this.i = i;
+  }
+  private int i;
+  public Foo(){
+    this(0);
+  }
 }
 ```
 
@@ -43,16 +51,19 @@ java -jar checkstyle-6.3-all.jar -c google_checks.xml Foo.java
 Observe:
 
 ```
-warning: The name of the outer type and the file do not match.
+Starting audit...
+/home/vagrant/Foo.java:2: warning: Wrong lexicographical order for 'java.util.ArrayList' import.
+/home/vagrant/Foo.java:5:18: warning: Parameter name 'i' must match pattern '^[a-z][a-z0-9][a-zA-Z0-9]*$'.
+/home/vagrant/Foo.java:5:20: warning: WhitespaceAround: '{' is not preceded with whitespace.
+/home/vagrant/Foo.java:8: warning: 'VARIABLE_DEF' should be separated from previous statement.
+/home/vagrant/Foo.java:8:15: warning: Member name 'i' must match pattern '^[a-z][a-z0-9][a-zA-Z0-9]*$'.
+/home/vagrant/Foo.java:9: warning: 'CTOR_DEF' should be separated from previous statement.
+/home/vagrant/Foo.java:9:15: warning: WhitespaceAround: '{' is not preceded with whitespace.
+Audit done.
+
 ```
 
-Review Checkstyle's list of code and implement a change that violates it.
-
-Incorporate checkstyle in your IDE
-
-## Reflect
-
-* Did analysis catch anything?
+### Using checkstyle in your IDE
 
 ## Related
 
