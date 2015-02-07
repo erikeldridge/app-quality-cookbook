@@ -65,6 +65,12 @@ Audit done.
 
 ### Using checkstyle in your IDE
 
+We can use the [QAPlug's Checkstyle plugin for IntelliJ](http://qaplug.com/download/) to integrate PMD.
+
+Run the plugin via Tools > QAPlug > Analyze code
+
+Configure via File > Settings ... > Other Settings > QAPlug
+
 ## Related
 
 * [Checkstyle's Google style config](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml)
