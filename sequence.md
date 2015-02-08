@@ -22,12 +22,12 @@ Concepts:
 1. [vim exercise](tools/vim.md)
 1. [Java description](tools/java.md)
 1. [Java exercise 1](exercises/java.md)
-1. Static analysis theory #static
-1. [Lint](static_analysis/lint.md) #static
-1. Testing theory 1
-1. Version control theory 1 #version
+1. [Static analysis theory](static_analysis/README.md)
+1. [Lint](static_analysis/lint.md)
+1. [Testing theory 1](testing/README.md)
+1. [Version control theory 1](version_control/README.md)
 1. [Java exercise 2](exercises/java.md)
-1. Over-the-shoulder code review exercise #static
+1. [Code review exercise 1](static_analysis/code_review.md)
 
 Concepts:
 
