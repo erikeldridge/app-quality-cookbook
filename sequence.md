@@ -17,17 +17,16 @@ Concepts:
 
 1. [preface](preface.md) bias toward scope over quality wrt solo development
 1. [Unix description](tools/unix.md)
-1. Unix fs & ssh exercise
-1. vim description
-1. vim exercise
-1. Java description
-1. Java exercise
+1. [Unix fs & ssh exercise](](exercises/unix.md))
+1. [vim description](tools/vim.md)
+1. [vim exercise](tools/vim.md)
+1. [Java description](tools/java.md)
+1. [Java exercise 1](exercises/java.md)
 1. Static analysis theory #static
 1. Compiler #static
 1. Testing theory 1
-1. Loop exercise 1
 1. Version control theory 1 #version
-1. Loop exercise 2
+1. [Java exercise 2](exercises/java.md)
 1. Over-the-shoulder code review exercise #static
 
 Concepts:
