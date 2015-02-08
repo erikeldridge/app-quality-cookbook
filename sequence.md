@@ -23,7 +23,7 @@ Concepts:
 1. [Java description](tools/java.md)
 1. [Java exercise 1](exercises/java.md)
 1. Static analysis theory #static
-1. Compiler #static
+1. [Lint](static_analysis/lint.md) #static
 1. Testing theory 1
 1. Version control theory 1 #version
 1. [Java exercise 2](exercises/java.md)
