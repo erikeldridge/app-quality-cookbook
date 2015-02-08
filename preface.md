@@ -14,7 +14,7 @@ My goal is to help more developers ship code with confidence.
 
 The recommendations in this book come from my personal experience, interviews with colleagues, recommendations from site reliability engineers, guidelines from architecture groups, and publications.
 
-I'd prefer to keep the book terse, providing enough theory and examples to ground a concept, but linking out for deeper dives. None of the ideas in the book are mine, and most have been explained in detail by talented authors many times, eg unix, git, java, etc. I want to provide references to these ideas with context.
+I'd prefer to keep the book terse, providing enough theory and examples to ground a concept, but linking out for deeper dives. None of the ideas in the book are mine, and most have been explained in detail by talented authors many times, eg unix, git, java, etc. I want to provide references to these ideas in the context of quality engineering.
 
 ## Structure
 
