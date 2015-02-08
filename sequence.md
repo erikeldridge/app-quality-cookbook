@@ -15,8 +15,8 @@ Concepts:
 
 ## 2
 
-1. preface bias toward scope over quality wrt solo development
-1. Unix description
+1. [preface](preface.md) bias toward scope over quality wrt solo development
+1. [Unix description](tools/unix.md)
 1. Unix fs & ssh exercise
 1. vim description
 1. vim exercise
