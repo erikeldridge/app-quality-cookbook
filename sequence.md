@@ -4,14 +4,14 @@ In the spirit of iteration, I'd recommend introducing core concepts and then bui
 
 ## 1
 
-1. preface tldr and goals
-2. Drawing exercises #collaboration #verification
+1. [preface](preface.md) tldr and goals
+1. Drawing exercises 1, 2, and 3
 
 Concepts:
 
 * How do you know if the shape is drawn correctly?
 * If we don't get feedback, how do we know if we've drawn a shape correctly?
-* If a shape was drawn incorrectly, how did you fix it?
+* Was it easier to draw the shape correctly with feedback?
 
 ## 2
 
@@ -38,4 +38,5 @@ Concepts:
 * Does the compiler help identify problems?
 * How do you know if our code is working correctly?
 * How do you fix issues as they are discovered?
+* Was it help
 
