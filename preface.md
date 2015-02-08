@@ -24,7 +24,7 @@ Each section of this book defines the what, why, and how for a given topic, expr
 
 ## Biases
 
-This book biases toward accommodating inexperienced developers, developing applications, cutting scope over quality, holding systems responsible, collaborating, iterating, and having fun.
+This book biases toward accommodating developers who may be inexperienced with a given topic, developing applications, cutting scope over quality, holding systems responsible, collaborating, iterating, and having fun.
 
 ### Accessibility
 
