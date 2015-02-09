@@ -43,7 +43,7 @@ Concepts:
 1. Maven intro
 1. [IntelliJ intro](tools/intellij)
 1. [Review group exercise](exercises/grouper.md)
-1. Over-the-shoulder code review
+1. Code review intro
 1. Github intro
 1. Bug report exercise
 1. IntelliJ debugger
