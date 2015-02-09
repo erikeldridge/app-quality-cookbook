@@ -109,6 +109,8 @@ Concepts:
 1. Monitoring intro
 1. New relic intro
 1. Monitoring exercise
+1. Log analysis intro
+1. Log analysis exercise
 
 ## 6
 
