@@ -44,7 +44,7 @@ Concepts:
 1. [IntelliJ intro](tools/intellij)
 1. [Review group exercise](exercises/grouper.md)
 1. [Code review intro](static_analysis/code_review.md)
-1. Hosted respository intro with [Github intro](tools/github.md)
+1. Hosted respository intro with [Github](tools/github.md)
 1. Bug report exercise
 1. [Unit testing intro](testing/unit.md) with [JUnit](tools/junit.md)
 1. [Integration testing intro](testing/integration.md)
