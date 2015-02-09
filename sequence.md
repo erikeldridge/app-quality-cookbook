@@ -116,13 +116,8 @@ Concepts:
 
 1. Continuous integration intro
 1. Jenkins intro
+1. Deployment automation
 1. Backwards compatibility
-1. Versioning
 1. Staged deployment
-
-
-
-
-
 
 
