@@ -25,7 +25,7 @@ Concepts:
 1. [Static analysis intro](static_analysis/README.md)
 1. [Lint intro](static_analysis/lint.md)
 1. [Testing theory 1](testing/README.md)
-1. [Version control intro 1](version_control/README.md)
+1. [Version control intro](version_control/README.md)
 1. [Java exercise 2](exercises/java.md)
 1. [Code review exercise 1](static_analysis/code_review.md)
 
@@ -41,7 +41,10 @@ Concepts:
 
 ## 3
 
-1. IntelliJ introduction
+1. [IntelliJ intro](tools/intellij)
+1. [Git intro](tools/git.md)
+1. [Review group exercise](exercises/grouper.md)
+1. Integration testing intro
 1. 
 
 
