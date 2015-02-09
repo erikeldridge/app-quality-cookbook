@@ -124,6 +124,10 @@ Concepts:
 1. [Practice](damage_control/practice.md)
 1. [Redline testing](testing/redline.md)
 
+Concepts:
+* Does continuous integration help you feel more confident about the code base?
+* 
+
 ## 7
 
 1. Android
