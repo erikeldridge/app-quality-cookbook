@@ -121,6 +121,7 @@ Concepts:
 1. Deployment automation
 1. Backwards compatibility
 1. Staged deployment
+1. Dynamic routing
 
 ## 7
 
@@ -130,14 +131,14 @@ Concepts:
 4. Robolectric
 5. Design by contract
 6. API integration
+7. Tracing
 
 ## 8
 
 1. Continuous integration for Android
 1. Staged deploy for Android
+1. Crash reporting
 
-## 9
 
-1. 
 
 
