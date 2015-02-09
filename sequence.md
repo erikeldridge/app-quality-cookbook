@@ -120,16 +120,15 @@ Concepts:
 ## 7
 
 1. Pairing
-1. Android
-1. Android Studio
-1. Android unit testing
-1. Robolectric
+1. Client development intro with Android
+1. Android development with Android Studio
+1. Android unit testing with Robolectric
 1. Test-driven development
 1. Native feature preference
 1. Dynamic configuration
 1. Design by contract
 1. API integration
-1. Versioning intro
+1. Versioning strategy
 1. Backwards compatibility
 1. Graceful degradation
 
