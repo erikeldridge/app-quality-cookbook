@@ -142,14 +142,14 @@ Concepts:
 
 ## 8
 
-1. Tracing
-1. Crash monitoring
+1. [Tracing](damage_control/tracing.md)
+1. [Crash monitoring](monitoring/crash.md)
 1. Continuous integration for Android
 1. Staged deploy for Android
-1. Performance monitoring
-1. Product usage monitoring
-1. Resource usage monitoring
-1. Fractional deployment
+1. [Performance monitoring](monitoring/performance.md)
+1. [Product usage monitoring](monitoring/product_usage.md)
+1. [Resource usage monitoring](monitoring/resource_usage.md)
+
 
 
 
