@@ -90,14 +90,14 @@ Concepts:
 1. Pre-push hook exercise
 1. Jetty
 1. Jersey
-1. Fractional config web service exercise
+1. [Fractional config web service exercise](exercises/service.md)
 1. Functional testing
-1. Build configuration
+1. [Build configuration](configuration/build.md)
 1. Immutable platforms
-1. Heroku
-1. Monitoring
-1. Alerting
-1. New relic
+1. [Heroku](tools/heroku.md)
+1. [Monitoring](monitoring/alerting.md)
+1. [Alerting](monitoring/alerting.md)
+1. [New relic](tools/newrelic.md)
 1. Monitoring exercise
 1. Log analysis
 1. Log analysis exercise
@@ -108,41 +108,40 @@ Concepts:
 
 ## 6
 
-1. Continuous integration intro
-1. Jenkins intro
-1. Deployment automation
-1. Staged deployment
-1. Dynamic routing
-1. Change management
-1. Alerting
-1. Oncall
-1. Configuration-based damage control
-1. Failover
-1. Rolling back
-1. Root cause
-1. Code search
-1. Postmortem
-1. Practice
-1. Redline testing
+1. [Continuous integration](automation/ci.md)
+1. [Jenkins](jenkins.md)
+1. [Deployment automation](automation/deployment.md)
+1. [Staged deployment](deployment/staged.md)
+1. [Dynamic routing](testing/dynamic.md)
+1. [Change management](monitoring/change_management.md)
+1. [Oncall](monitoring/oncall.md)
+1. [Configuration-based damage control](damage_control/configure.md)
+1. [Failover](damage_control/failover.md)
+1. [Rolling back](damage_control/rollback.md)
+1. [Root cause](damage_control/root_cause.md)
+1. [Code search](damage_control/code_search.md)
+1. [Postmortem](damage_control/postmortem.md)
+1. [Practice](damage_control/practice.md)
+1. [Redline testing](testing/redline.md)
 
 ## 7
 
-1. Pairing
-1. Client development intro with Android
-1. Android development with Android Studio
-1. Android unit testing with Robolectric
-1. Test-driven development
-1. Native feature preference
-1. Dynamic configuration
+1. Android
+1. [Android Studio](tools/android_studio.md)
+1. Robolectric
+1. [Test-driven development](testing/tdd.md)
+1. [Native feature preference](testability/native.md)
+1. [UI testing](testing/ui.md)
+1. [Dynamic configuration](configuration/dynamic.md)
 1. Design by contract
 1. API integration
-1. Versioning strategy
-1. Backwards compatibility
-1. Graceful degradation
+1. [Versioning strategy](versioning/strategy.md)
+1. [Backwards compatibility](versioning/compatibility.md)
+1. [Graceful degradation](damage_control/degradation.md)
+1. Fractional availability exercise
 
 ## 8
 
-1. UI testing
 1. Tracing
 1. Crash monitoring
 1. Continuous integration for Android
