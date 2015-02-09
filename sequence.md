@@ -128,7 +128,10 @@ Concepts:
 1. Failover
 1. Rolling back
 1. Root cause
+1. Code search
 1. Postmortem
+1. Practice
+1. Redline testing
 
 ## 7
 
@@ -137,20 +140,26 @@ Concepts:
 1. Android Studio
 1. Android unit testing
 1. Robolectric
+1. Test-driven development
+1. Native feature preference
+1. Build configuration
+1. Dynamic configuration
 1. Design by contract
 1. API integration
+1. Backwards compatibility
+1. Graceful degradation
+
+## 8
+
+1. UI testing
 1. Tracing
 1. Crash monitoring
 1. Continuous integration for Android
 1. Staged deploy for Android
-
-## 8
-
 1. Performance monitoring
 1. Product usage monitoring
 1. Resource usage monitoring
 1. Fractional deployment
-
 
 
 
