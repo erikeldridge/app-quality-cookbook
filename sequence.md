@@ -74,6 +74,7 @@ Concepts:
 1. Single responsibility intro
 1. Single responsibility exercise
 1. Dependency injection intro
+1. Dagger intro
 1. Dependency injection exercise
 1. Refactoring to patterns intro
 1. Refactoring to patterns exercise
@@ -94,7 +95,6 @@ Concepts:
 1. Automation intro
 1. Bash scripting intro
 1. Pre-push hook exercise
-1. Continuous integration intro
 1. Web service intro
 1. Fractional config service exercise
 1. Functional test intro
@@ -109,7 +109,10 @@ Concepts:
 
 ## 6
 
+1. Continuous integration intro
+1. Jenkins intro
 1. Backwards compatibility intro
+1. 
 
 
 
