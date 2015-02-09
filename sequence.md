@@ -99,6 +99,8 @@ Concepts:
 1. Bash scripting intro
 1. Pre-push hook exercise
 1. Web service intro
+1. Jetty intro
+1. Jersey intro
 1. Fractional config service exercise
 1. Functional test intro
 1. Functional test exercise
@@ -119,5 +121,23 @@ Concepts:
 1. Deployment automation
 1. Backwards compatibility
 1. Staged deployment
+
+## 7
+
+1. Android
+2. Android Studio
+3. Android unit testing
+4. Robolectric
+5. Design by contract
+6. API integration
+
+## 8
+
+1. Continuous integration for Android
+1. Staged deploy for Android
+
+## 9
+
+1. 
 
 
