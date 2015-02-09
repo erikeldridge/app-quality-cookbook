@@ -91,33 +91,26 @@ Concepts:
 
 ## 5
 
-Automation
-bash scripting
-exercise: run tests and static analysis as a pre-push hook
-Deployment
-staged (local, remote)
-note: more on staged rollout (canary, alpha, beta) in next session
-note: immutable platform, consistent environments
-exercise: heroku intro ← note: will need to install heroku & maven
-exercise: web app wrapping fractional config
-exercise: web app tests
-Monitoring
-does it work?
-Exercise: new relic
-Exercise: configure app to use new relic
-Configuration
-Exercise: build config
-dynamic config
-Damage control
-rollback
-exercise: adjust fractional availability up via build config
-exercise: adapt app to ingest dynamic config
-exercise: adjust fractional availability up via dynamic config
-Testing
-Integration
-Backwards compatibility
-intro
-exercise: refactor config endpoint from / to /1/config
+1. Automation intro
+1. Bash scripting intro
+1. Pre-push hook exercise
+1. Continuous integration intro
+1. Web service intro
+1. Fractional config service exercise
+1. Functional test intro
+1. Functional test exercise
+1. Build config intro
+1. Dynamic config intro
+1. Immutable platform intro
+1. Heroku intro
+1. Monitoring intro
+1. New relic intro
+1. Monitoring exercise
+
+## 6
+
+1. Backwards compatibility intro
+
 
 
 
