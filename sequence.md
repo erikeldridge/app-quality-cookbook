@@ -65,6 +65,8 @@ Concepts:
 
 ## 4
 
+1. Communication
+1. Shared principles
 1. Testability intro
 1. Spaghetti code exercise
 1. Static analysis intro
@@ -85,8 +87,6 @@ Concepts:
 1. Communicating intent exercise
 1. Documentation intro
 1. Javadoc intro
-1. Fractional config exercise
-1. Code review
 
 Concepts:
 * Did you find testability patterns like dependency injection made code easier to reason about and test?
@@ -121,9 +121,18 @@ Concepts:
 1. Deployment automation
 1. Staged deployment
 1. Dynamic routing
+1. Change management
+1. Alerting
+1. Oncall
+1. Configuration-based damage control
+1. Failover
+1. Rolling back
+1. Root cause
+1. Postmortem
 
 ## 7
 
+1. Pairing
 1. Android
 1. Android Studio
 1. Android unit testing
@@ -131,13 +140,16 @@ Concepts:
 1. Design by contract
 1. API integration
 1. Tracing
-1. Backwards compatibility
+1. Crash monitoring
+1. Continuous integration for Android
+1. Staged deploy for Android
 
 ## 8
 
-1. Continuous integration for Android
-1. Staged deploy for Android
-1. Crash reporting
+1. Performance monitoring
+1. Product usage monitoring
+1. Resource usage monitoring
+1. Fractional deployment
 
 
 
