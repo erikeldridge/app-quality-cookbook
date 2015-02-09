@@ -146,6 +146,7 @@ Concepts:
 1. Dynamic configuration
 1. Design by contract
 1. API integration
+1. Versioning intro
 1. Backwards compatibility
 1. Graceful degradation
 
