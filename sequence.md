@@ -24,7 +24,7 @@ Concepts:
 1. [Static analysis intro](static_analysis/README.md) with [Lint](static_analysis/lint.md)
 1. JDB intro
 1. [Testing theory 1](testing/README.md)
-1. [Version control intro](version_control/README.md) with [Git](tools/git.md)
+1. [Version control](version_control/README.md) with [Git](tools/git.md)
 1. [Java exercise 2](exercises/java.md)
 
 Concepts:
