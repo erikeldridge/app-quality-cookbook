@@ -68,8 +68,11 @@ Concepts:
 1. Testability intro
 1. Spaghetti code exercise
 1. Static analysis intro
+1. Style analysis
 1. Checkstyle intro
+1. Complexity analysis intro
 1. PMD intro
+1. Code coverage intro
 1. JaCoCo intro
 1. Single responsibility intro
 1. Single responsibility exercise
