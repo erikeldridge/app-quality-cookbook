@@ -16,16 +16,16 @@ Concepts:
 ## 2
 
 1. [preface](preface.md) bias toward scope over quality wrt solo development
-1. [Unix description](tools/unix.md)
-1. [Unix fs & ssh exercise](](exercises/unix.md))
-1. [vim description](tools/vim.md)
-1. [vim exercise](tools/vim.md)
-1. [Java description](tools/java.md)
+1. [Unix intro](tools/unix.md)
+1. [Unix fs and ssh exercise](](exercises/unix.md))
+1. [Vim intro](tools/vim.md)
+1. [Vim exercise](tools/vim.md)
+1. [Java intro](tools/java.md)
 1. [Java exercise 1](exercises/java.md)
-1. [Static analysis theory](static_analysis/README.md)
-1. [Lint description](static_analysis/lint.md)
+1. [Static analysis intro](static_analysis/README.md)
+1. [Lint intro](static_analysis/lint.md)
 1. [Testing theory 1](testing/README.md)
-1. [Version control theory 1](version_control/README.md)
+1. [Version control intro 1](version_control/README.md)
 1. [Java exercise 2](exercises/java.md)
 1. [Code review exercise 1](static_analysis/code_review.md)
 
@@ -38,4 +38,10 @@ Concepts:
 * How do you know if our code is working correctly?
 * How do you fix issues as they are discovered?
 * Was it help
+
+## 3
+
+1. IntelliJ introduction
+1. 
+
 
