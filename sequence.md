@@ -24,10 +24,10 @@ Concepts:
 1. [Java exercise 1](exercises/java.md)
 1. [Static analysis intro](static_analysis/README.md)
 1. [Lint intro](static_analysis/lint.md)
+1. JDB intro
 1. [Testing theory 1](testing/README.md)
 1. [Version control intro](version_control/README.md)
 1. [Java exercise 2](exercises/java.md)
-1. [Code review exercise 1](static_analysis/code_review.md)
 
 Concepts:
 
@@ -37,7 +37,6 @@ Concepts:
 * Does the compiler help identify problems?
 * How do you know if our code is working correctly?
 * How do you fix issues as they are discovered?
-* Was it help
 
 ## 3
 
@@ -45,6 +44,14 @@ Concepts:
 1. [Git intro](tools/git.md)
 1. [Review group exercise](exercises/grouper.md)
 1. Integration testing intro
-1. 
+1. Over-the-shoulder code review
+1. Github intro
+1. Bug report exercise
+1. Bug resolution exercise
+1. IntelliJ debugger
+Exercise: repro bug in debugger
+exercise: revert bug
+exercise: commit fix
+
 
 
