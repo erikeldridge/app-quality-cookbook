@@ -89,7 +89,7 @@ Concepts:
 1. REST intro with Jersey
 1. Fractional config web service exercise
 1. Functional test intro
-1. Build config intro
+1. Build configuration
 1. Immutable platform intro
 1. Heroku intro
 1. Monitoring intro
@@ -126,7 +126,6 @@ Concepts:
 1. Robolectric
 1. Test-driven development
 1. Native feature preference
-1. Build configuration
 1. Dynamic configuration
 1. Design by contract
 1. API integration
