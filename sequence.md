@@ -124,10 +124,6 @@ Concepts:
 1. [Practice](damage_control/practice.md)
 1. [Redline testing](testing/redline.md)
 
-Concepts:
-* Does continuous integration help you feel more confident about the code base?
-* 
-
 ## 7
 
 1. Android
@@ -148,6 +144,9 @@ Concepts:
 
 1. [Tracing](damage_control/tracing.md)
 1. [Crash monitoring](monitoring/crash.md)
+1. [Device testing](testing/device.md)
+1. [Deterministic tests](testing/deterministic.md)
+1. [Network testing](testing/network.md)
 1. Continuous integration for Android
 1. Staged deploy for Android
 1. [Performance monitoring](monitoring/performance.md)
