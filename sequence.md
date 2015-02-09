@@ -38,13 +38,14 @@ Concepts:
 ## 3
 
 1. Maven intro
-1. [IntelliJ intro](tools/intellij)
+1. [IntelliJ](tools/intellij)
 1. [Review group exercise](exercises/grouper.md)
-1. [Code review intro](static_analysis/code_review.md)
-1. Hosted respository intro with [Github](tools/github.md)
+1. [Code review](static_analysis/code_review.md)
+1. Hosted repositories with [Github](tools/github.md)
 1. Bug report exercise
-1. [Unit testing intro](testing/unit.md) with [JUnit](tools/junit.md)
-1. [Integration testing intro](testing/integration.md)
+1. [Unit testing](testing/unit.md)
+1. [JUnit](tools/junit.md)
+1. [Integration testing](testing/integration.md)
 1. Pull request exercise
 
 Concepts:
@@ -56,24 +57,25 @@ Concepts:
 
 ## 4
 
-1. Communication
-1. Shared principles
-1. [Pairing intro](collaboration/pairing.md)
-1. Testability intro
-1. Spaghetti code exercise
-1. Static analysis intro
-1. Style analysis with Checkstyle
-1. Complexity analysis intro with PMD
-1. Code coverage intro with JaCoCo
-1. Single responsibility intro
-1. Single responsibility exercise
-1. Dependency injection intro with Dagger 2
-1. Dependency injection exercise
-1. Refactoring to patterns intro
-1. Refactoring to patterns exercise
-1. Communicating intent intro
-1. Communicating intent exercise
-1. Documentation intro with Javadoc
+1. [Communication](collaboration/communication.md)
+1. [Shared principles](collaboration/principles.md)
+1. [Pairing](collaboration/pairing.md)
+1. [Testability](testability/README.md)
+1. [Spaghetti code](testability/spaghetti.md)
+1. [Static analysis](static_analysis/README.md)
+1. [Style analysis](static_analysis/style.md)
+1. [Checkstyle](tools/checkstyle.md)
+1. [Complexity analysis](static_analysis/complecity.md)
+1. [PMD](tools/pmd.md)
+1. [Code coverage](static_analysis/coverage.md)
+1. [JaCoCo](tools/jacoco.md)
+1. [Single responsibility](testability/srp.md)
+1. [Dependency injection](testability/di.md)
+1. Dagger 2
+1. [Refactoring to patterns](testability/pattern.md)
+1. [Communicating intent](testability/intent.md)
+1. [Documentation](collaboration/documentation.md)
+1. [Javadoc](tools/javadoc.md)
 
 Concepts:
 * Did you find testability patterns like dependency injection made code easier to reason about and test?
@@ -83,20 +85,26 @@ Concepts:
 ## 5
 
 1. [Automation intro](automation/README.md)
-1. Scripting intro with Bash
+1. Command line scripting
+1. Bash
 1. Pre-push hook exercise
-1. Web service intro with Jetty
-1. REST intro with Jersey
+1. Jetty
+1. Jersey
 1. Fractional config web service exercise
-1. Functional test intro
+1. Functional testing
 1. Build configuration
-1. Immutable platform intro
-1. Heroku intro
-1. Monitoring intro
-1. New relic intro
+1. Immutable platforms
+1. Heroku
+1. Monitoring
+1. Alerting
+1. New relic
 1. Monitoring exercise
-1. Log analysis intro
+1. Log analysis
 1. Log analysis exercise
+
+Concepts:
+* Did running tests automatically catch any issues?
+* Did functional tests catch anything missed by unit or integration tests?
 
 ## 6
 
