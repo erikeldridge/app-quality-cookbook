@@ -89,9 +89,7 @@ Concepts:
 1. REST intro with Jersey
 1. Fractional config web service exercise
 1. Functional test intro
-1. Functional test exercise
 1. Build config intro
-1. Dynamic config intro
 1. Immutable platform intro
 1. Heroku intro
 1. Monitoring intro
