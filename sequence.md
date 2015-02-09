@@ -5,13 +5,7 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 ## 1
 
 1. [preface](preface.md) tldr and goals
-1. Drawing exercises 1, 2, and 3
-
-Concepts:
-
-* How do you know if the shape is drawn correctly?
-* If we don't get feedback, how do we know if we've drawn a shape correctly?
-* Was it easier to draw the shape correctly with feedback?
+1. [Drawing exercises](exercises/drawing.md)
 
 ## 2
 
