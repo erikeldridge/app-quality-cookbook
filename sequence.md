@@ -10,16 +10,15 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 ## 2
 
 1. [preface](preface.md) bias toward scope over quality wrt solo development
-1. [Unix intro](tools/unix.md)
-1. [Unix fs and ssh exercise](exercises/unix.md)
-1. [Vim](tools/vim.md)
+1. [Unix](exercises/unix.md)
+1. [Vim](exercises/vim.md)
 1. [Java](exercises/java.md)
 1. [Static analysis](static_analysis/README.md)
 1. [Lint](static_analysis/lint.md)
 1. [Debugger](damage_control/debugger.md)
 1. [Testing](testing/README.md)
 1. [Version control](versioning/version_control.md)
-1. [Git](tools/git.md)
+1. [Git](exercises/git.md)
 1. [Java exercise 2](exercises/java.md)
 
 Concepts:
