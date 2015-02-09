@@ -54,7 +54,6 @@ Concepts:
 1. Bug resolution exercise
 1. Pull request exercise
 1. Pairing exercise
-1. Javadoc intro
 
 Concepts:
 * Was it easier to write code in an IDE vs vim?
