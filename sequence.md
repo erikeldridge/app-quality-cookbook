@@ -43,17 +43,12 @@ Concepts:
 1. Maven intro
 1. [IntelliJ intro](tools/intellij)
 1. [Review group exercise](exercises/grouper.md)
-1. Code review intro
-1. Github intro
+1. [Code review intro](static_analysis/code_review.md)
+1. Hosted respository intro with [Github intro](tools/github.md)
 1. Bug report exercise
-1. IntelliJ debugger
-1. Unit testing intro
-1. Integration testing intro
-1. JUnit intro
-1. JUnit exercise
-1. Bug resolution exercise
+1. [Unit testing intro](testing/unit.md) with [JUnit](tools/junit.md)
+1. [Integration testing intro](testing/integration.md)
 1. Pull request exercise
-1. Pairing exercise
 
 Concepts:
 * Was it easier to write code in an IDE vs vim?
@@ -66,26 +61,22 @@ Concepts:
 
 1. Communication
 1. Shared principles
+1. [Pairing intro](collaboration/pairing.md)
 1. Testability intro
 1. Spaghetti code exercise
 1. Static analysis intro
-1. Style analysis
-1. Checkstyle intro
-1. Complexity analysis intro
-1. PMD intro
-1. Code coverage intro
-1. JaCoCo intro
+1. Style analysis with Checkstyle
+1. Complexity analysis intro with PMD
+1. Code coverage intro with JaCoCo
 1. Single responsibility intro
 1. Single responsibility exercise
-1. Dependency injection intro
-1. Dagger intro
+1. Dependency injection intro with Dagger 2
 1. Dependency injection exercise
 1. Refactoring to patterns intro
 1. Refactoring to patterns exercise
 1. Communicating intent intro
 1. Communicating intent exercise
-1. Documentation intro
-1. Javadoc intro
+1. Documentation intro with Javadoc
 
 Concepts:
 * Did you find testability patterns like dependency injection made code easier to reason about and test?
@@ -94,13 +85,12 @@ Concepts:
 
 ## 5
 
-1. Automation intro
-1. Bash scripting intro
+1. [Automation intro](automation/README.md)
+1. Scripting intro with Bash
 1. Pre-push hook exercise
-1. Web service intro
-1. Jetty intro
-1. Jersey intro
-1. Fractional config service exercise
+1. Web service intro with Jetty
+1. REST intro with Jersey
+1. Fractional config web service exercise
 1. Functional test intro
 1. Functional test exercise
 1. Build config intro
