@@ -10,8 +10,7 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 ## 2
 
 1. [preface](preface.md) bias toward scope over quality wrt solo development
-1. [Unix intro](tools/unix.md)
-1. [Unix fs and ssh exercise](exercises/unix.md)
+1. [Unix](tools/unix.md)
 1. [Vim](tools/vim.md)
 1. [Java](tools/java.md)
 1. [Java exercise 1](exercises/java.md)
@@ -37,7 +36,8 @@ Concepts:
 1. [IntelliJ](tools/intellij)
 1. [Review group exercise](exercises/grouper.md)
 1. [Code review](static_analysis/code_review.md)
-1. Hosted repositories with [Github](tools/github.md)
+1. Hosted repositories
+1. [Github](tools/github.md)
 1. Bug report exercise
 1. [Unit testing](testing/unit.md)
 1. [JUnit](tools/junit.md)
