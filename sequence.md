@@ -119,19 +119,19 @@ Concepts:
 1. Continuous integration intro
 1. Jenkins intro
 1. Deployment automation
-1. Backwards compatibility
 1. Staged deployment
 1. Dynamic routing
 
 ## 7
 
 1. Android
-2. Android Studio
-3. Android unit testing
-4. Robolectric
-5. Design by contract
-6. API integration
-7. Tracing
+1. Android Studio
+1. Android unit testing
+1. Robolectric
+1. Design by contract
+1. API integration
+1. Tracing
+1. Backwards compatibility
 
 ## 8
 
