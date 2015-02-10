@@ -102,7 +102,7 @@ Concepts:
 ## 6
 
 1. [Continuous integration](automation/ci.md)
-1. [Jenkins](jenkins.md)
+1. [Jenkins](tools/jenkins.md)
 1. [Deployment automation](automation/deployment.md)
 1. [Staged deployment](deployment/staged.md)
 1. [Dynamic routing](testing/dynamic.md)
