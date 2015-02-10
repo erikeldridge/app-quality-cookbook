@@ -144,7 +144,7 @@ Concepts:
 1. Staged deploy for Android
 1. [Performance monitoring](monitoring/performance.md)
 1. [Product usage monitoring](monitoring/product_usage.md)
-1. [Resource usage monitoring](monitoring/resource_usage.md)
+1. [Resource usage monitoring](monitoring/resources_client.md)
 
 
 
