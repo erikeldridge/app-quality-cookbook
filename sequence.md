@@ -64,7 +64,7 @@ Concepts:
 1. [JaCoCo](tools/jacoco.md)
 1. [Single responsibility](testability/srp.md)
 1. [Dependency injection](testability/di.md)
-1. Dagger 2
+1. [Dagger 2](tools/dagger2.md)
 1. [Refactoring to patterns](testability/pattern.md)
 1. [Communicating intent](testability/intent.md)
 1. [Documentation](collaboration/documentation.md)
