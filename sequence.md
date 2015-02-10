@@ -11,22 +11,14 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 
 1. [Unix](exercises/unix.md)
 1. [Vim](exercises/vim.md)
-1. [Java](exercises/java.md)
+1. [Java exercise 1](exercises/java.md)
 1. [Static analysis](static_analysis/README.md)
 1. [Lint](static_analysis/lint.md)
 1. [Debugger](damage_control/debugger.md)
 1. [Testing](testing/README.md)
 1. [Version control](versioning/version_control.md)
 1. [Git](exercises/git.md)
-1. [Java exercise 2](exercises/java.md)
-
-Concepts:
-* How efficiently can we write code with a simple text editor?
-* How confident are we in code written in a text editor?
-* Does running code through a compiler help improve confidence?
-* Does the compiler help identify problems?
-* How do you know if our code is working correctly?
-* How do you fix issues as they are discovered?
+1. Java exercise 2
 
 ## 3
 
@@ -40,13 +32,6 @@ Concepts:
 1. [JUnit](tools/junit.md)
 1. [Integration testing](testing/integration.md)
 1. Pull request exercise
-
-Concepts:
-* Was it easier to write code in an IDE vs vim?
-* Do you feel more confident with code written in an IDE?
-* Did you have less compiler errors from code written in an IDE?
-* Did you feel more confident after tests were added?
-* Do you feel more confident about changes made while pairing?
 
 ## 4
 
@@ -70,11 +55,6 @@ Concepts:
 1. [Documentation](collaboration/documentation.md)
 1. [Javadoc](tools/javadoc.md)
 
-Concepts:
-* Did you find testability patterns like dependency injection made code easier to reason about and test?
-* Did documentation make code easier to understand?
-* Does static analysis help you feel more confident about the code base?
-
 ## 5
 
 1. [Automation intro](automation/README.md)
@@ -94,10 +74,6 @@ Concepts:
 1. Monitoring exercise
 1. Log analysis
 1. Log analysis exercise
-
-Concepts:
-* Did running tests automatically catch any issues?
-* Did functional tests catch anything missed by unit or integration tests?
 
 ## 6
 
