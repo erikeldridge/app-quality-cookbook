@@ -68,25 +68,14 @@ Vagrant.configure(2) do |config|
     sudo apt-get update
 
     # virtualbox gui
-    sudo apt-get install -y virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
+    sudo apt-get install -y xfce4 virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11
     sudo VBoxClient --clipboard --draganddrop --seamless --display --checkhostversion
-
-    # ubuntu desktop
-    sudo apt-get install -y xorg gnome-core gnome-system-tools gnome-app-install
 
     # allow vagrant user to log into gui
     sed -ie 's/allowed_users=.*/allowed_users=anybody/' /etc/X11/Xwrapper.config
 
     # java
     sudo apt-get install -y default-jre default-jdk
-
-    # checkstyle
-    wget http://downloads.sourceforge.net/project/checkstyle/checkstyle/6.3/checkstyle-6.3-all.jar
-    wget https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml
-    
-    # junit
-    wget -O junit-4.12.jar http://search.maven.org/remotecontent?filepath=junit/junit/4.12/junit-4.12.jar
-    wget -O hamcrest-core-1.3.jar http://search.maven.org/remotecontent?filepath=org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
 
     # git
     sudo apt-get install git
@@ -120,14 +109,8 @@ DesktopConfig
     sudo cp /opt/idea/bin/idea.png /usr/share/pixmaps/idea.png
 
     # maven
-    sudo apt-get install maven
+    sudo apt-get -y install maven
 
-    # mockito
-    wget https://bintray.com/artifact/download/szczepiq/maven/org/mockito/mockito-all/1.10.14/mockito-all-1.10.14.jar
-
-    # pmd
-    wget -O pmd-bin-5.2.3.zip http://downloads.sourceforge.net/project/pmd/pmd/5.2.3/pmd-bin-5.2.3.zip
-    unzip pmd-bin-5.2.3.zip
-    rm pmd-bin-5.2.3.zip
+    startxfce4&
   SHELL
 end

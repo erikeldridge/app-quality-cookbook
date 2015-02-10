@@ -4,6 +4,4 @@ I will, in fact, claim that the difference between a bad programmer and a good o
 
 ---
 
-This section introduces a set of quality engineering tools.
-
-You can install all of them via [Vagrant](https://www.vagrantup.com), as described in the [Vagrant section](vagrant.md).
+This section documents installation for the set of quality engineering tools used in this book.

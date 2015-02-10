@@ -1,28 +1,49 @@
 # Checkstyle
 
-## Goals
-
-* Install
-* Dive in
-
-## Motivation
-
-We can use style analysis tools to define an objective standard for code syntax.
-
-Having a standard style can make code easier to read and avoid subjective debates.
-
 Checkstyle is effective, widely used, and can be run in an IDE and CI.
 
 ## Prerequisites
 
-* Vagrant
+* Java
+* Maven
 
-## Steps
+## Install
 
-### Install
+Get Google's style rules:
 
-The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
+Use Maven fetch and run checkstyle. Configure pom.xml:
 
-### Diving in
+```
+...
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-checkstyle-plugin</artifactId>
+            <version>2.14</version>
+            <executions>
+                <execution>
+                    <id>checkstyle</id>
+                    <phase>validate</phase>
+                    <goals>
+                        <goal>check</goal>
+                    </goals>
+                    <configuration>
+                        <failOnViolation>true</failOnViolation>
+                    </configuration>
+                </execution>
+            </executions>
+        </plugin>
+    </plugins>
+</build>
+...
+```
 
-Please refer to the [style analysis](static_analysis/style.md) section to dive in.
+### Verify
+
+```
+$ mvn validate
+...
+Downloading: http://repo.maven.apache.org/maven2/org/apache/maven/plugins/maven-checkstyle-plugin/2.14/maven-checkstyle-plugin-2.14.pom
+...
+```

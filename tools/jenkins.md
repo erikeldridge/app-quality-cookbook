@@ -1,19 +1,14 @@
 # Jenkins
 
-## Goals
+Jenkins is a popular continuous integration server
 
-* Install
-* Configure
-
-## Steps
-
-### Install
+## Install
 
 * Install
 * Reboot
 * Observe http://localhost:8080
 
-### Security
+## Configure security settings
 
 * Manage Jenkins
 * Configure Global security
@@ -22,11 +17,11 @@
 * Allow users to sign up
 * Logged-in users can do anything
 
-### Plugins
+## Plugins
 
 * Install github plugin
 
-### Configure
+## Configure JDK and Maven settings
 
 * JDK
 ```
@@ -40,4 +35,4 @@ readlink -f `which mvn`
 ## Related
 
 * [Jenkins' Ubuntu installation docs](https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu)
-* [Continuous Integration with Jenkins on Amazon EC2 1/5](https://www.youtube.com/watch?v=1JSOGJQAhtE)
+* [Continuous Integration with Jenkins on Amazon EC2, parts 1 - 5](https://www.youtube.com/watch?v=1JSOGJQAhtE)

@@ -1,28 +1,29 @@
 # Github
 
-## Goal
-
-* Obtain a github account
-* Create a repository
-* Clone a repository
-
-## Motivation
-
 Github is widely used and provides an excellent interface for working with a repository
 
 ## Prerequisites
 
-* Familiarity with git
+* Git
 
-## Steps
+## Create account
 
-1. Create an account if you don’t have one already
-1. Create a new repository
-1. Clone your repository
+Create an account if you don’t have one already. It's free for open source projects.
 
-## Verify
+## Create a new repository
 
-1. Create a repository
-1. Clone the repository
-1. Make a simple change
-1. Push the change
+A repository is used to store code.
+
+Follow [Github's documentation for creating a repository](https://help.github.com/articles/create-a-repo/)
+
+## Configuring git locally
+
+[Github's set-up documentation](https://help.github.com/articles/set-up-git/) describes how to configure your local environment so you can talk to github.
+
+## Cloning a repository
+
+We clone a repository to make a copy we can work with locally.
+
+The clone is aware of the repository it was cloned from, so we can push our changes back to it.
+
+Follow [Github's documentation for working with remote repositories](https://help.github.com/articles/fetching-a-remote/), which describes cloning.

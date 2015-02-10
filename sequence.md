@@ -4,12 +4,11 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 
 ## 1
 
-1. [preface](preface.md) tldr and goals
+1. [preface](preface.md)
 1. [Drawing exercises](exercises/drawing.md)
 
 ## 2
 
-1. [preface](preface.md) bias toward scope over quality wrt solo development
 1. [Unix](exercises/unix.md)
 1. [Vim](exercises/vim.md)
 1. [Java](exercises/java.md)
@@ -32,7 +31,7 @@ Concepts:
 ## 3
 
 1. Maven intro
-1. [IntelliJ](tools/intellij)
+1. [IntelliJ](tools/intellij.md)
 1. [Review group exercise](exercises/grouper.md)
 1. [Code review](static_analysis/code_review.md)
 1. Hosted repositories with [Github](tools/github.md)

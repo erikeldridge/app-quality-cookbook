@@ -2,13 +2,18 @@
 
 Git is a widely used version control system, supported by many excellent products, like Github and Heroku.
 
-## Installation
+## Prerequisites
+
+* Java
+* Maven
+
+## Install
 
 ```
 sudo apt-get install git
 ```
 
-## Validation
+## Verify
 
 After installation completes, you should be able to invoke the _git_ command:
 

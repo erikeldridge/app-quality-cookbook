@@ -1,11 +1,5 @@
 # Unix
 
-## Goals
-
-* Install
-
-## Motivation
-
 Unix and the Unix-like Linux are widely used. 
 
 Some examples:
@@ -17,8 +11,6 @@ Some examples:
 
 * Vagrant
 
-## Steps
-
-### Install
+## Install
 
 The [virtual machine associated with this book](tools/vagrant.md) will manage installation. Please refer to the [machine's configuration](../Vagrantfile) for more details.
