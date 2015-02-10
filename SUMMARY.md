@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [Preface](preface.md)
+* [Suggested study sequence](sequence.md)
 * [Automation](automation/README.md)
    * [Continuous integration](automation/ci.md)
    * [Deployment](automation/deployment.md)
