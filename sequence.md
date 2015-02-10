@@ -139,7 +139,7 @@ Concepts:
 1. [Crash monitoring](monitoring/crash.md)
 1. [Device testing](testing/device.md)
 1. [Deterministic tests](testing/deterministic.md)
-1. [Network testing](testing/network.md)
+1. Network testing
 1. Continuous integration for Android
 1. Staged deploy for Android
 1. [Performance monitoring](monitoring/performance.md)
