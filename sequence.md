@@ -128,7 +128,7 @@ Concepts:
 1. [Dynamic configuration](configuration/dynamic.md)
 1. Design by contract
 1. API integration
-1. [Versioning strategy](versioning/strategy.md)
+1. [Versioning strategies](versioning/strategies.md)
 1. [Backwards compatibility](versioning/compatibility.md)
 1. [Graceful degradation](damage_control/degradation.md)
 1. Fractional availability exercise
