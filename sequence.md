@@ -58,7 +58,7 @@ Concepts:
 1. [Static analysis](static_analysis/README.md)
 1. [Style analysis](static_analysis/style.md)
 1. [Checkstyle](tools/checkstyle.md)
-1. [Complexity analysis](static_analysis/complecity.md)
+1. [Complexity analysis](static_analysis/complexity.md)
 1. [PMD](tools/pmd.md)
 1. [Code coverage](static_analysis/coverage.md)
 1. [JaCoCo](tools/jacoco.md)
