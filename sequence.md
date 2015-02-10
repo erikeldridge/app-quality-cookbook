@@ -88,7 +88,7 @@ Concepts:
 1. [Build configuration](configuration/build.md)
 1. Immutable platforms
 1. [Heroku](tools/heroku.md)
-1. [Monitoring](monitoring/alerting.md)
+1. [Monitoring](monitoring/README.md)
 1. [Alerting](monitoring/alerting.md)
 1. [New relic](tools/newrelic.md)
 1. Monitoring exercise
