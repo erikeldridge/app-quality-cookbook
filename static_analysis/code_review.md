@@ -1,30 +1,24 @@
 # Code review
 
-## Goals
-
-* Identify appropriate tooling
-* Create a review
-* Perform a review
-
-## Motivation
-
 We can improve the quality of the code base by reviewing changes before they are submitted.
 
 Code reviews also serve to distribute liability, facilitating change.
+
+## Prerequisites
+
+* Git
 
 ## Steps
 
 ### Over-the-shoulder
 
-### Email
+### Hosted tools
 
-### Github
+### Identify reviewers
 
-### Reviewers
+### Practice reviewing
 
-### Reviewing
-
-### Checklist
+### Review checklist:
 
 * prefer consistency
 * adhere to style guide and shared principles
@@ -41,9 +35,9 @@ Code reviews also serve to distribute liability, facilitating change.
 * no surprising changes
 * add recurring issues to this checklist and static analysis
 
-## Two-step
+### Two-step reviews
 
-## Understanding large changes
+### Understanding large changes
 
 * Run locally
 * Participate in design review

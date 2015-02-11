@@ -8,19 +8,22 @@
 
 ## Motivation
 
-Having an objective style definition can simplify reviews and improve standardization in the code base
+We can use style analysis tools to define an objective standard for code syntax.
+
+Having a standard style can make code easier to read and avoid subjective debates.
 
 Prerequisites:
 
-* IntelliJ, for the IDE portion
+* IntelliJ
+* Maven
 
 ## Steps
 
 ### Tooling
 
 An appropriate tool should be:
-* easily available
-* configurable
+* easily available, so everyone can use it
+* easy to add and disable rules to
 * usable from development and CI machines
 
 ### Using checkstyle from the command line
@@ -45,7 +48,7 @@ public class Foo {
 Run checkstyle:
 
 ```
-java -jar checkstyle-6.3-all.jar -c google_checks.xml Foo.java
+$ mvn validate
 ```
 
 Observe:
@@ -63,47 +66,6 @@ Audit done.
 
 ```
 
-### Using checkstyle with Maven
-
-Configure maven to run checkstyle during the build:
-```
-...
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-checkstyle-plugin</artifactId>
-            <version>2.14</version>
-            <configuration>
-                <configLocation>../google_checks.xml</configLocation>
-                <consoleOutput>true</consoleOutput>
-                <encoding>UTF-8</encoding>
-            </configuration>
-            <dependencies>
-                <dependency>
-                    <groupId>com.puppycrawl.tools</groupId>
-                    <artifactId>checkstyle</artifactId>
-                    <version>6.3</version><!-- support google checks -->
-                </dependency>
-            </dependencies>
-            <executions>
-                <execution>
-                    <id>checkstyle</id>
-                    <phase>validate</phase>
-                    <goals>
-                        <goal>check</goal>
-                    </goals>
-                    <configuration>
-                        <failOnViolation>true</failOnViolation>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
-...
-```
-
 ### Using checkstyle in IntelliJ
 
 1. Create a Maven project in IntelliJ
@@ -115,4 +77,4 @@ Configure maven to run checkstyle during the build:
 * [Checkstyle's Google style config](https://github.com/checkstyle/checkstyle/blob/master/src/main/resources/google_checks.xml)
 * [Google's Java style guide](https://google-styleguide.googlecode.com/svn-history/r130/trunk/javaguide.html)
 * [Maven checkstyle plugin documentation](http://maven.apache.org/plugins/maven-checkstyle-plugin/usage.html)
-
+* [Android checkstyle config](https://gist.github.com/shareme/4197561)

@@ -1,13 +1,5 @@
 # Complexity analysis
 
-## Goals
-
-* Identify appropriate tooling
-* Command line usage
-* IDE integration
-
-## Motivation
-
 We can use complexity analysis tools to objectively measure flaws in our code.
 
 This objective analysis can make code review more efficient by weeding out problems before they reach review, and catching issues uniformly.
@@ -15,6 +7,7 @@ This objective analysis can make code review more efficient by weeding out probl
 ## Prerequisites
 
 * Java
+* PMD
 
 ## Steps
 
@@ -27,7 +20,7 @@ An appropriate tool should:
 
 ### Command line
 
-Create a file Foo.java:
+Define the following function:
 ```
 // Code from: http://pmd.sourceforge.net/pmd-4.3.0/rules/codesize.html
 public class Foo {
@@ -72,13 +65,12 @@ public class Foo {
 Run pmd:
 
 ```
-./pmd-bin-5.2.3/bin/run.sh pmd -R java-basic,java-codesize -d Foo.java
+$ mvn pmd:check
 ```
 
 Observe PMD’s output:
 
 ```
-$ ./pmd-bin-5.2.3/bin/run.sh pmd -R java-basic,java-codesize -d Foo.java
 /home/vagrant/Foo.java:1:	The class 'Foo' has a Cyclomatic Complexity of 6 (Highest = 11).
 /home/vagrant/Foo.java:1:	The class 'Foo' has a Standard Cyclomatic Complexity of 6 (Highest = 11).
 /home/vagrant/Foo.java:3:	Avoid long parameter lists.
@@ -86,47 +78,4 @@ $ ./pmd-bin-5.2.3/bin/run.sh pmd -R java-basic,java-codesize -d Foo.java
 /home/vagrant/Foo.java:3:	The method 'example' has a Standard Cyclomatic Complexity of 11.
 ```
 
-Note: the "ruleset" format is java-<ruleset file name>. For example, pass "java-strings" to use [java/strings.html](http://pmd.sourceforge.net/pmd-5.2.3/pmd-java/rules/java/codesize.html).
 
-### Using PMD in Maven
-
-Edit pom.xml to run pmd when building:
-```
-...
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-pmd-plugin</artifactId>
-            <version>3.4</version>
-            <configuration>
-                <failurePriority>4</failurePriority>
-                <rulesets>
-                    <!-- ruleset configuration -->
-                    <ruleset>/rulesets/java/codesize.xml</ruleset>
-                </rulesets>
-            </configuration>
-            <executions>
-                <execution>
-                    <phase>verify</phase>
-                    <goals>
-                    <goal>check</goal>
-                    </goals>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
-...
-```
-
-View output in terminal
-
-### IDE
-
-Create project from Maven and verify
-
-## Related
-
-* [PMD rulesets](http://pmd.sourceforge.net/pmd-5.2.3/pmd-java/rules/index.html)
-* [Maven PMD plugin](http://maven.apache.org/plugins/maven-pmd-plugin/examples/usingRuleSets.html)

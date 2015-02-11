@@ -1,69 +1,21 @@
 # Code coverage
 
-## Goals
-
-* Identify an appropriate tool
-* Generate and interpret a code coverage report
-
-## Motivation
-
 Code coverage analysis can tell us how many lines of our code are touched by our tests.
 
 Having 100% coverage doesn't guarantee freedom from bugs, in part because our tests don't cover all usage patterns, but it can help us identify under-maintained portions of our code.
+
+## Prerequisites
+
+* JaCoCo
+* Maven
 
 ## Steps
 
 ### Tooling
 
-An appropriate tool should:
-* be runnable from the command line
-* be runnable in an IDE
-* generate machine-readable output for CI
+An appropriate tool should be runnable from the command line and produce machine-readable output for CI
 
-### Using JaCoCo in Maven
-
-Incorporate JaCoCo's plugin:
-```
-...
-<build>
-    <plugins>
-        <plugin>
-            <groupId>org.jacoco</groupId>
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.7.2.201409121644</version>
-            <executions>
-                <execution>
-                    <id>default-prepare-agent</id>
-                    <goals>
-                        <goal>prepare-agent</goal>
-                    </goals>
-                </execution>
-                <execution>
-                    <id>default-check</id>
-                    <goals>
-                        <goal>check</goal>
-                    </goals>
-                    <configuration>
-                        <rules>
-                            <rule>
-                                <element>BUNDLE</element>
-                                <limits>
-                                    <limit>
-                                        <counter>COMPLEXITY</counter>
-                                        <value>COVEREDRATIO</value>
-                                        <minimum>0.60</minimum>
-                                    </limit>
-                                </limits>
-                            </rule>
-                        </rules>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
-    </plugins>
-</build>
-...
-```
+### Using JaCoCo on the command line
 
 Run:
 ```

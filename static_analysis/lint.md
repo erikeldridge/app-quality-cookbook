@@ -2,21 +2,14 @@
 
 We can use "lint" tools to identify syntactic issues in our code
 
-## Diving in
+The Java compiler provides a built-in lint tool, which can provide more context for a compiler error.
 
-1. Create a file Main.java:
+## Steps
 
-```
-class Main {
-	public static void main(String[] args) {
-	}
-}
-```
-
-2. Compile
+1. Run
 
 ```
-javac Main.java -Xlint
+javac -Xlint Main.java
 ```
 
 ## Related
