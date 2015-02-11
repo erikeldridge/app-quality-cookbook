@@ -1,14 +1,6 @@
 # Staged deployment
 
-## Goals
-
-* Identify staged deployment strategies
-* Deploy to risk-tolerant audiences before deploying to risk-averse audiences, eg enable a feature for alpha
-* No new changes in beta; single, promoted build
-
-## Motivation
-
-Decrease risk
+We can decrease risk by deploying to pools of decreasingly risk tolerant audiences.
 
 ## Steps
 
