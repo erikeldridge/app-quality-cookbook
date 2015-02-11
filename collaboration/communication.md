@@ -1,13 +1,5 @@
 # Communication
 
-## Goals
-
-* Submit a code change with an informative description
-* Announce a release effectively
-* Triage an issue
-
-## Motivation
-
 Effective communication can help build confidence.
 
 Code reviews will be more efficient if the reviewer understands the intent of the code.

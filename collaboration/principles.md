@@ -1,11 +1,5 @@
 # Shared principles
 
-## Goals
-
-* List shared principles
-
-## Motivation
-
 Development can be stressful if the people involved have different priorities, and/or no objective standard. To alleviate this, we can agree on a set of guidelines.
 
 For example, Twitter has 10 high-level "engineering principles":
@@ -24,17 +18,8 @@ Best-practice: automate enforcement as much as possible to increase objectivity.
 
 ## Steps
 
-### Identify principles
-
-Work with your team to identify ~5 qualities you would like in your development environment
-
-### Use principles
-
-Practice refering to them when coordinating activities
-
-## Reflect
-
-Did this have an effect on your communication?
+1. Identify principles
+1. Use principles
 
 ## Related
 

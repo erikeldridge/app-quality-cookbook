@@ -1,32 +1,23 @@
 # Documentation
 
-## Goals
-
-* Balance documentation with maintainability
-* Implement class and method level header comments
-* Use JavaDoc to generate documentation
-* Tie a TODO comment with a tracking ticket
-
-## Motivation
-
 We spend time during development to obtain full understanding of the problem. Documentation preserves this investment.
 
 Note: beware of stale documentation; the recommendations below strive for a balance of coverage and maintainability.
 
+Best-practices:
+* Define class header comments
+* Define function header comments for public interfaces
+* Tie "TODO" comments to a bug ticket
+
+## Prerequisites
+
+* Github
+* Javadoc
+
 ## Steps
 
-### Class headers
-
-Document at the class level
-
-### Function headers
-
-Only document public interfaces
-
-### TODO
-
-Tie "TODO" comments to an owner and implementation plan by referencing a bug ticket
-
-### Automation
-
-Generate programmatic documentation in CI
+1. Create a class header
+1. Create a method header
+1. Create a trackable TODO comment
+1. Generate documentation
+1. Write a runbook
