@@ -1,13 +1,15 @@
 # Deploy automation
 
-## Goals
+Deployment procedures can be complex. Automate the process to ease understanding and maintenance, increase determinism, and reduce stress.
 
-* Explore rationale
-* Automate deployment
+## Prerequisites
 
-## Motivation
+* Heroku
+* Continuous integration
 
-Deployment procedures can be complex. Automate the process to ease understanding and maintenance, increase determinism, and reduce stress while deploying.
+## Steps
+
+1. Configure Jenkins to deploy to heroku
 
 ## Related
 

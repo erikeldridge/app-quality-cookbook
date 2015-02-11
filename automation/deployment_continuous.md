@@ -1,46 +1,22 @@
 # Continuous deployment
 
-## Goals
-
-* Define deployment strategy
-* Configure CI to deploy automatically
-
-## Motivation
-
-We can improve quality and productivity by decreasing the size of changes and increasing the frequency of changes. This is summed up in the phrase "release early, release often".
+Automate deployment to the extent you are confident of your quality using only automated tooling.
 
 ## Prerequisites
 
-* Continuous integration
-* Staging environment
-* Canary environment
-* Monitoring
 * Alerting
+* CI
+* Monitoring
+* Staged deployment environments
 
 ## Steps
 
-### Strategy
-
-To the extent you are confident of your quality using only automated tooling, automate deploy promotion.
-
-For example:
-* If all tests pass, merge into master
-* Deploy to staging
-* Run tests against staging
-* Deploy to canary
-* Monitor canary
-* Deploy to production
-* Monitor production
-
-### Configure
-
-1. Configure CI to push to staging
-1. Configure CI to push to canary
-1. Configure CI to push to production
-
-## Reflect
-
-* Do you feel more confident?
+1. Configure CI to deploy to staging
+1. Configure CI to test staging
+1. Configure CI to deploy to canary
+1. Configure CI to test canary
+1. Configure CI to deploy to production
+1. Configure CI to test production
 
 ## Related
 
