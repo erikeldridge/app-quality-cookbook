@@ -1,11 +1,5 @@
 # Single responsibility principle
 
-## Goals
-
-* Refactor code to express SRP
-
-## Motivation
-
 The single responsibility principle (SRP) is a powerful tool for keeping code clean and easy to understand.
 
 ## Prerequisites
@@ -16,11 +10,12 @@ The single responsibility principle (SRP) is a powerful tool for keeping code cl
 
 ### Refactor
 
-* extract the identifer type resolution
-* extract the identifer lookup into separate fn
-* extract the user lookup into a separate fn
-* write unit tests for each fn
-* run unit and integration tests
+Modify the spaghetti code we created earlier:
+1. extract the identifer type resolution
+1. extract the identifer lookup into separate fn
+1. extract the user lookup into a separate fn
+1. write unit tests for each fn
+1. run unit and integration tests
 
 ## Reflect
 

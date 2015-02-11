@@ -1,16 +1,10 @@
 # Spaghetti code
 
-## Goals
-
-* Write spaghetti code
-
-## Motivation
-
 Some code is unpleasant to work with because it's dependencies and influences are poorly defined. Because it is difficult to understand, it is difficult to modify without side effects. A common term for such code is spaghetti.
 
 ## Prerequisites
 
-* Integration testing
+* Java
 
 ## Steps
 

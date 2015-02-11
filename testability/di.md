@@ -1,12 +1,5 @@
 # Dependency injection
 
-## Goals
-
-* Identify appropriate tooling
-* Use DI in our code
-
-## Motivation
-
 Dependency injection can help us simplify our app and testing code
 
 ## Prerequisites
@@ -52,8 +45,3 @@ class Foo {
 	}
 }
 ```
-
-## Reflect
-
-* Best-practice: let DI manage singletons, or just pass them as constructor args
-* Did DI make it more easy or difficult test?

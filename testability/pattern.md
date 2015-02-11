@@ -1,13 +1,5 @@
 # Refactoring to patterns
 
-## Goals
-
-* Identify a code smell
-* Determine an appropriate pattern
-* Refactoring the code to a pattern
-
-## Motivation
-
 The culture of design patterns provides us with not only institutional knowledge, but also a shared language we can use to identify issues and approach fixes.
 
 Some static analysis tools will identify standard "code smells" associated with known patterns.
@@ -18,15 +10,11 @@ Note: dogmatic adherence to patterns can introduce complexity, so tread lightly
 
 * Spaghetti code
 
-## Identifying a smell
+## Steps
 
-## Refactor
-
-## Reflect
-
-* Was it difficult or easy to modify the code before and after the change?
-* Was the code smell and resulting change intuitive?
-* Was the resulting change an improvement?
+1. Search for code smells and their associated patterns
+1. Implement code with this smell
+1. Refactor
 
 ## Related
 
