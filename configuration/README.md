@@ -1,14 +1,7 @@
 # Configuration
 
-The Eight Fallacies of Distributed Computing
+The central enemy of reliability is complexity. -  Geer et al.
 
-* The network is reliable
-* Latency is zero
-* Bandwidth is infinite
-* The network is secure
-* Topology doesn’t change
-* There is one administrator
-* Transport cost is zero
-* The network is homogeneous
+---
 
-– Peter Deutsch
+We can use configuration to improve quality by facilitating staged deployment and disabling broken features.
