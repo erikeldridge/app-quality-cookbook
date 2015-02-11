@@ -1,31 +1,19 @@
 # Code search
 
-## Goals
-
-* Gain experience with a code search tool, eg github's search
-
-## Motivation
-
 When investigating an issue, eg finding an unexpected string in output, it is helpful to be able to search your code base, especially across repositories.
+
+## Prerequisites
+
+* Git
 
 ## Steps
 
-### git log
-
-### git log -p
-
-### git grep
-
-### Search by keyword
-
-### Search by repository
-
-### Search by language
-
-### Search by sha
-
-Hack: find the repo via Google: https://www.google.com/search?q=0bade558646a133347a46475ce53dca91c29a1b4
-
-## Related
-
-http://alblue.bandlem.com/2011/08/git-tip-of-week-searching-for-commits.html
+1. Use `git log` to view all commit messages
+1. Use `git log --grep` to search commit messages
+1. Use `git log -p` to view changes per commit
+1. Use `git grep` to search code for key words
+1. Use `git blame` to view commit IDs per line
+1. Search Github by keyword
+1. Search Github by repository
+1. Search Github by language
+1. Search Google by commit ID

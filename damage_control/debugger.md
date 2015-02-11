@@ -13,33 +13,13 @@ We can use the IntelliJ debugger to explore these concepts.
 
 ## Steps
 
-### Setting a breakpoint
-
-Click the left gutter next to the line on which you'd like to set the breakpoint
-
-### Launching the debugger
-
-Click Run > Debug from the top navbar
-
-### Stepping over a line
-
-Click the "Step Over" button in the stepping toolbar
-
-### Stepping into a function
-
-If the current step is a function call, click the "Step Into" button in the stepping toolbar to examine the function's execution
-
-### Stepping out of a function
-
-If you've stepped into a function, click the "Step Out" button to exit the function
-
-### Continuing to the next breakpoint
-
-Click the "Resume Program" button
-
-### Show the contents of a variable
-
-Hover over a variable to see its contents
+1. Set a breakpoint
+1. Launch the debugger
+1. Step over a line
+1. Step into a function
+1. Step out of a function
+1. Continue to the next breakpoint
+1. Show the contents of a variable
 
 ## Related
 
