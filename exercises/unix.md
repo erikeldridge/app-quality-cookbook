@@ -1,13 +1,5 @@
 # Unix
 
-## Goals
-
-* SSH into a remote machine
-* Navigate the file system
-* Manipulate files
-
-## Motivation
-
 Unix and Linux are commonly used for app development. We should know how to get around.
 
 ## Prerequisites

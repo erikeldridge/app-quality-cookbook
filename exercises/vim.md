@@ -1,13 +1,5 @@
 # Vim syntax
 
-## Goals
-
-* Open
-* Edit
-* Undo
-* Save
-* Close
-
 ## Steps
 
 ### Opening a file

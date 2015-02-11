@@ -1,11 +1,5 @@
 # Review group generator
 
-## Goals
-
-* Identify requirements
-
-## Motivation
-
 Generating rotating groups for code reviews can be tedious
 
 ## Steps

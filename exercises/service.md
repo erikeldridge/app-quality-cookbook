@@ -1,14 +1,5 @@
 # Service
 
-## Goals
-
-* Initialize project
-* Add Jetty support
-* Set up dev env
-* Test service
-
-## Motivation
-
 We need a simple service with which we can practice practice quality engineering
 
 ## Prerequisites

@@ -1,11 +1,5 @@
 # Java syntax
 
-## Goals
-
-* Dive in
-
-## Motivation
-
 Learn Java basics to make the most of the content in this book
 
 ## Prequisites

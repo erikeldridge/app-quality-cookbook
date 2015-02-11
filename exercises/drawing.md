@@ -1,11 +1,5 @@
 # Drawing exercise
 
-## Goals
-
-Explore quality engineering principles in a simplified environment
-
-## Motivation
-
 Quality engineering concepts can be obscured by technical details
 
 ## Steps
