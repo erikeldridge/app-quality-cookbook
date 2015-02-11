@@ -1,11 +1,4 @@
-# UI tests
-
-## Goals
-
-* Identify appropriate ui tests
-* Write UI tests
-
-## Motivation
+# User interface tests
 
 We write user interface (UI) tests to verify our UI is working correctly
 
@@ -15,8 +8,6 @@ We write user interface (UI) tests to verify our UI is working correctly
 
 ## Steps
 
-### Determine a feature to test
-
-### Write tests
-
-### Run tests
+1. Determine a feature to test
+1. Write tests
+1. Run tests

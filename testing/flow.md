@@ -1,22 +1,21 @@
 # Flow
 
-## Goals
-
-* Explore approaches to testing
-
-## Motivation
-
 Tests can help build confidence, but they can be a pain if they are used inappropriately
+
+## Prerequisites
+
+* CI
+* JUnit
 
 ## Steps
 
-### Ordered by cost
+### Order by cost
 
 * Unit test before commit
 * Integration tests before pushing
 * Device testing in CI
 
-### Automated for reliability
+### Automate for reliability
 
 * Unit & integration test before merging, enforced by code review tooling
 * Device test periodically
