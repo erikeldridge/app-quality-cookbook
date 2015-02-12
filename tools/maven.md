@@ -1,12 +1,5 @@
 # Maven
 
-## Goals
-
-* Install
-* Verify
-
-## Motivation
-
 Maven simplifies and standardizes build configuration. It is commonly used, and other tools like Gradle can pull from Maven repositories.
 
 ## Steps
