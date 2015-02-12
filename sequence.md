@@ -25,7 +25,7 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 1. [IntelliJ](tools/intellij.md)
 1. [Review group exercise](exercises/grouper.md)
 1. [Code review](static_analysis/code_review.md)
-1. Hosted repositories with [Github](tools/github.md)
+1. [Github](tools/github.md)
 1. Bug report exercise
 1. [Unit testing](testing/unit.md)
 1. [JUnit](tools/junit.md)
