@@ -4,7 +4,7 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 
 ## 1
 
-1. [preface](preface.md)
+1. [Preface](preface.md)
 1. [Drawing exercises](exercises/drawing.md)
 
 ## 2
@@ -18,15 +18,14 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 1. [Testing](testing/README.md)
 1. [Version control](versioning/version_control.md)
 1. [Git](exercises/git.md)
-1. Java exercise 2
 
 ## 3
 
-1. Maven intro
+1. [Maven](tools/maven.md)
 1. [IntelliJ](tools/intellij.md)
 1. [Review group exercise](exercises/grouper.md)
 1. [Code review](static_analysis/code_review.md)
-1. Hosted repositories with [Github](tools/github.md)
+1. [Github](tools/github.md)
 1. Bug report exercise
 1. [Unit testing](testing/unit.md)
 1. [JUnit](tools/junit.md)
