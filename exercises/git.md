@@ -1,14 +1,14 @@
 # Git syntax
 
 Here are some common commands:
-* _init_ for creating a new repository
-* _status_ for seeing which files have changed
-* _add_ for "staging" files to commit
-* _commit_ for committing changes to a repository
-* _log_ for seeing all commits
-* _show_ for showing the changes in a commit
-* _diff_ for seeing what's changed
-* _reset_ for "unstaging" changes
+* `git init` for creating a new repository
+* `git status` for seeing which files have changed
+* `git add` for "staging" files to commit
+* `git commit` for committing changes to a repository
+* `git log` for seeing all commits
+* `git show` for showing the changes in a commit
+* `git diff` for seeing what's changed
+* `git reset` for "unstaging" changes
 
 ## Create a new repository
 
@@ -67,7 +67,6 @@ Here are some common commands:
 1. Finalize the commit:
 
         $ git commit
-
 Git will launch your default text editor. Write a brief message, eg "Add file", and exit the text editor.
 
 ## See all commits in a repository
