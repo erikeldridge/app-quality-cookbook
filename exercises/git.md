@@ -177,4 +177,5 @@ In the github exercise, we'll start working with a "remote" repository.
 ## Related
 
 * [git - the simple guide](http://rogerdudler.github.io/git-guide/)
+* [Pro Git](http://git-scm.com/book/en/v2)'s [Git Basics](http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 * [Pro Git](http://gitbookio.gitbooks.io/progit/)
