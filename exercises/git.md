@@ -130,32 +130,32 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
 
 1. Run `git revert` to undo a given change:
 
-    $ git revert 59d700c1db523b5a7d92161664cd5cdd5d9d477f
-    [master 8190a0b] Revert "Update file.txt"
-     1 file changed, 1 deletion(-)
+        $ git revert 59d700c1db523b5a7d92161664cd5cdd5d9d477f
+        [master 8190a0b] Revert "Update file.txt"
+         1 file changed, 1 deletion(-)
 
 1. Run `git log` to see the reversion:
 
-    $ git log
-    commit 8190a0b66231ddb06587b55c7cb6ade4c66bc6b3
-    Author: Erik Eldridge <erik@example.com>
-    Date:   Sun Feb 15 15:23:39 2015 -0800
+        $ git log
+        commit 8190a0b66231ddb06587b55c7cb6ade4c66bc6b3
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Sun Feb 15 15:23:39 2015 -0800
+    
+            Revert "Update file.txt"
+            
+            This reverts commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f.
 
-        Revert "Update file.txt"
-        
-        This reverts commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f.
-
-    commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f
-    Author: Erik Eldridge <erikeldridge@gmail.com>
-    Date:   Sun Feb 15 15:08:32 2015 -0800
-
-        Update file.txt
-
-    commit b974749b85a95f48fe6615f407a237320a68ed5d
-    Author: Erik Eldridge <erik@example.com>
-    Date:   Sun Feb 15 15:06:12 2015 -0800
-
-        adding a file
+        commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f
+        Author: Erik Eldridge <erikeldridge@gmail.com>
+        Date:   Sun Feb 15 15:08:32 2015 -0800
+    
+            Update file.txt
+    
+        commit b974749b85a95f48fe6615f407a237320a68ed5d
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Sun Feb 15 15:06:12 2015 -0800
+    
+            adding a file
 ## Creating a branch
 
 To ensure a repository always contains functional code, we can create a "branch" to encapsulate our work in progress.
