@@ -1,6 +1,6 @@
 # Github
 
-Github is widely used and provides an excellent interface for working with a repository
+Github is widely used and provides an excellent interface for working with remote repositories.
 
 ## Prerequisites
 
@@ -27,3 +27,7 @@ We clone a repository to make a copy we can work with locally.
 The clone is aware of the repository it was cloned from, so we can push our changes back to it.
 
 Follow [Github's documentation for working with remote repositories](https://help.github.com/articles/fetching-a-remote/), which describes cloning.
+
+## Related
+
+We're using Github for this book, but [Bitbucket](https://bitbucket.org/) is a comparable product.
