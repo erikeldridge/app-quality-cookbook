@@ -17,7 +17,6 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 1. [Debugger](damage_control/debugger.md)
 1. [Testing](testing/README.md)
 1. [Version control](versioning/version_control.md)
-1. [Git](exercises/git.md)
 
 ## 3
 

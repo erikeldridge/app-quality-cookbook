@@ -35,7 +35,6 @@
    * [Staged](deployment/staged.md)
 * Exercises
    * [Fractional availability](exercises/fractional.md)
-   * [Git](exercises/git.md)
    * [Review group generator](exercises/grouper.md)
    * [Java syntax](exercises/java.md)
    * [Unix syntax](exercises/unix.md)
