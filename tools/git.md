@@ -2,11 +2,6 @@
 
 Git is a widely used version control system, supported by many excellent products, like Github and Heroku.
 
-## Prerequisites
-
-* Java
-* Maven
-
 ## Install
 
 ```
