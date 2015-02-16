@@ -9,6 +9,7 @@ Here are some common commands:
 * `git show` for showing the changes in a commit
 * `git diff` for seeing what's changed
 * `git reset` for "unstaging" changes
+* `git revert` for undoing a commit
 * `git branch` for encapsulating changes
 * `git merge` for merging one branch into another
 
@@ -125,51 +126,36 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
         Unstaged changes after reset:
         M file.txt
 
-## Undoing a commit
+## Undoing changes
 
-1. Add the change made above and commit
-1. Run `git log` to see all commits:
+1. Run `git revert` to undo a given change:
 
-        $ git log
-        commit 7c7981e34176e105848403dad215126b321c6c21
-        Author: Erik Eldridge <erik@twitter.com>
-        Date:   Sun Feb 15 11:56:17 2015 -0800
+    $ git revert 59d700c1db523b5a7d92161664cd5cdd5d9d477f
+    [master 8190a0b] Revert "Update file.txt"
+     1 file changed, 1 deletion(-)
 
-            complete 'hello world' phrase
+1. Run `git log` to see the reversion:
 
-        commit 230d2a431184c93da0d7a5f7fbeaa00e168e005e
-        Author: Erik Eldridge <erik@twitter.com>
-        Date:   Sun Feb 15 11:27:45 2015 -0800
+    $ git log
+    commit 8190a0b66231ddb06587b55c7cb6ade4c66bc6b3
+    Author: Erik Eldridge <erik@twitter.com>
+    Date:   Sun Feb 15 15:23:39 2015 -0800
 
-            add file
-
-1. Run `git reset` to reset history back to the given commit:
-
-        $ git reset 230d2a431184c93da0d7a5f7fbeaa00e168e005e`
-
-1. Run `git status` to see which files have changed:
-
-        $ git status
-        On branch master
-        Changes not staged for commit:
-          (use "git add <file>..." to update what will be committed)
-          (use "git checkout -- <file>..." to discard changes in working directory)
+        Revert "Update file.txt"
         
-          modified:   file.txt
-        
-        no changes added to commit (use "git add" and/or "git commit -a")
+        This reverts commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f.
 
-1. Run `git diff` to see the changes:
+    commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f
+    Author: Erik Eldridge <erikeldridge@gmail.com>
+    Date:   Sun Feb 15 15:08:32 2015 -0800
 
-        $ git diff
-        diff --git a/file.txt b/file.txt
-        index d72af31..87e05f0 100644
-        --- a/file.txt
-        +++ b/file.txt
-        @@ -1 +1,2 @@
-         asd
-        +world
+        Update file.txt
 
+    commit b974749b85a95f48fe6615f407a237320a68ed5d
+    Author: Erik Eldridge <erik@twitter.com>
+    Date:   Sun Feb 15 15:06:12 2015 -0800
+
+        adding a file
 ## Creating a branch
 
 To ensure a repository always contains functional code, we can create a "branch" to encapsulate our work in progress.
