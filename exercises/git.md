@@ -76,7 +76,7 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
 
     $ git log
     commit 230d2a431184c93da0d7a5f7fbeaa00e168e005e
-    Author: Erik Eldridge <erik@twitter.com>
+    Author: Erik Eldridge <erik@example.com>
     Date:   Sun Feb 15 11:27:45 2015 -0800
     
         Add file
@@ -86,7 +86,7 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
 
     $ git show 230d2a431184c93da0d7a5f7fbeaa00e168e005e
     commit 230d2a431184c93da0d7a5f7fbeaa00e168e005e
-    Author: Erik Eldridge <erik@twitter.com>
+    Author: Erik Eldridge <erik@example.com>
     Date:   Sun Feb 15 11:27:45 2015 -0800
     
         Add file
@@ -138,7 +138,7 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
 
     $ git log
     commit 8190a0b66231ddb06587b55c7cb6ade4c66bc6b3
-    Author: Erik Eldridge <erik@twitter.com>
+    Author: Erik Eldridge <erik@example.com>
     Date:   Sun Feb 15 15:23:39 2015 -0800
 
         Revert "Update file.txt"
@@ -152,7 +152,7 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
         Update file.txt
 
     commit b974749b85a95f48fe6615f407a237320a68ed5d
-    Author: Erik Eldridge <erik@twitter.com>
+    Author: Erik Eldridge <erik@example.com>
     Date:   Sun Feb 15 15:06:12 2015 -0800
 
         adding a file
@@ -195,7 +195,7 @@ To create a new branch, run `git branch` with a branch name:
 
         $ git log master..foo
         commit cb86977de46709ab389a13741bdf8cd0495782cc
-        Author: Erik Eldridge <erik@twitter.com>
+        Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 15:34:27 2015 -0800
     
             add text
@@ -290,7 +290,7 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         $ git log -p
         commit 5455e48644e5e6de1290b978d58f1a9930c9e18a
         Merge: 1f2e058 8f942cd
-        Author: Erik Eldridge <erik@twitter.com>
+        Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 16:57:54 2015 -0800
     
             Merge branch 'bar'
@@ -299,7 +299,7 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
                 file.txt
     
         commit 8f942cd50b229547986d2afa171a1fcb8d7a9f8d
-        Author: Erik Eldridge <erik@twitter.com>
+        Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 16:55:05 2015 -0800
     
             Add bar text
@@ -313,7 +313,7 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         +bar text
     
         commit 1f2e05856b78a1fd51c55f76d991b260f4cd0abe
-        Author: Erik Eldridge <erik@twitter.com>
+        Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 16:54:49 2015 -0800
     
             Add foo text
@@ -327,7 +327,7 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         +foo text
     
         commit feac207c460002b7d90706f03d9e782180112553
-        Author: Erik Eldridge <erik@twitter.com>
+        Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 15:06:12 2015 -0800
     
             Add starting text
