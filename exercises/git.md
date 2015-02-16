@@ -9,7 +9,7 @@ Here are some common commands:
 * `git show` for showing the changes in a commit
 * `git diff` for seeing what's changed
 * `git reset` for "unstaging" changes
-* `git revert` for undoing a commit
+* `git revert` for reverting a commit
 * `git branch` for encapsulating changes
 * `git merge` for merging one branch into another
 
@@ -126,7 +126,7 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
         Unstaged changes after reset:
         M file.txt
 
-## Undoing changes
+## Revert a commit
 
 1. Run `git revert` to undo a given change:
 
