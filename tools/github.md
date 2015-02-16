@@ -4,7 +4,7 @@ Github is widely used and provides an excellent interface for working with a rep
 
 ## Prerequisites
 
-* Git
+* [Git](git.md)
 
 ## Create account
 
