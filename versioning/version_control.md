@@ -153,32 +153,33 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
 
 1. Run `git revert` to undo a given change:
 
-    $ git revert 59d700c1db523b5a7d92161664cd5cdd5d9d477f
-    [master 8190a0b] Revert "Update file.txt"
-     1 file changed, 1 deletion(-)
+        $ git revert 59d700c1db523b5a7d92161664cd5cdd5d9d477f
+        [master 8190a0b] Revert "Update file.txt"
+         1 file changed, 1 deletion(-)
 
 1. Run `git log` to see the reversion:
 
-    $ git log
-    commit 8190a0b66231ddb06587b55c7cb6ade4c66bc6b3
-    Author: Erik Eldridge <erik@example.com>
-    Date:   Sun Feb 15 15:23:39 2015 -0800
+        $ git log
+        commit 8190a0b66231ddb06587b55c7cb6ade4c66bc6b3
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Sun Feb 15 15:23:39 2015 -0800
+    
+            Revert "Update file.txt"
+            
+            This reverts commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f.
+    
+        commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f
+        Author: Erik Eldridge <erikeldridge@gmail.com>
+        Date:   Sun Feb 15 15:08:32 2015 -0800
+    
+            Update file.txt
+    
+        commit b974749b85a95f48fe6615f407a237320a68ed5d
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Sun Feb 15 15:06:12 2015 -0800
+    
+            adding a file
 
-        Revert "Update file.txt"
-        
-        This reverts commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f.
-
-    commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f
-    Author: Erik Eldridge <erikeldridge@gmail.com>
-    Date:   Sun Feb 15 15:08:32 2015 -0800
-
-        Update file.txt
-
-    commit b974749b85a95f48fe6615f407a237320a68ed5d
-    Author: Erik Eldridge <erik@example.com>
-    Date:   Sun Feb 15 15:06:12 2015 -0800
-
-        adding a file
 ## Creating a branch
 
 To ensure a repository always contains functional code, we can create a "branch" to encapsulate our work in progress.
@@ -380,7 +381,7 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
 To pull changes, we need to create a change somewhere other than our local repo. I'll use Github for this example.
 
 1. In Github, navigate to your project's page, eg https://github.com/erikeldridge/app-quality-cookbook
-1. Click through the file tree to an individual file, eg README.md
+1. Click through the file tree to an individual file, eg [README.md](https://github.com/erikeldridge/app-quality-cookbook/blob/master/README.md)
 1. Click the button with the pencil icon to edit the file
 1. Make a change and click the "Commit changes" button
 1. In your local terminal, run `git pull` to pull these changes into your local repository:
