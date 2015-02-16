@@ -13,12 +13,12 @@ Best-practices:
 * Style commit messages according to [git best-practices](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 * Include bug ticket, when available
 
-We can use [git](tools/git.md) and [github](tools/github.md) to explore version control.
+We can use [git](../tools/git.md) and [github](../tools/github.md) to explore version control.
 
 ## Prerequisites
 
-* [Git](tools/git.md)
-* [Github](tools/github.md)
+* [Git](../tools/git.md)
+* [Github](../tools/github.md)
 
 ## Git syntax basics
 
