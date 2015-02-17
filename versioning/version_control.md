@@ -1,17 +1,13 @@
 # Version control
 
-Version control provides us with the ability to create history-aware snapshots of a code base.
-
-These snapshots are named and immutable, which simplifies reasoning.
-
-The snapshots, aka changes, commits, etc., can also hold context, eg the author, a description of the state being commited, the date the change was made, etc, which facilitates investigation.
+Version control enables us to make incremental changes to our code base. We can then restore previously working versions, compare changes, and recover details about why a change was made.
 
 Best-practices:
 * Only commit working code; the master branch should be shippable at all times
 * Prefer small commits over monolithic changes
 * Do not commit dead code
 * Style commit messages according to [git best-practices](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-* Include bug ticket, when available
+* Include [issue tracking](../damage_control/bug_reporting.md) details, when available
 
 We can use [git](../tools/git.md) and [github](../tools/github.md) to explore version control.
 
@@ -84,16 +80,31 @@ We can use [git](../tools/git.md) and [github](../tools/github.md) to explore ve
 
         $ git status
         On branch master
-        Changes to be committed:
-          (use "git reset HEAD <file>..." to unstage)
         
-          new file:   file.txt
+        Initial commit
+        
+        Changes to be committed:
+          (use "git rm --cached <file>..." to unstage)
+        
+        	new file:   file.txt
         ...
 
-1. Finalize the commit:
+1. Finalize the commit.
+    
+        $ git commit
+
+    Git will launch your default text editor. Write a brief message, eg "Add file", and exit the text editor.
+    
+    If you haven't already configured git with your email and name, you'll be prompted to do so:
 
         $ git commit
-Git will launch your default text editor. Write a brief message, eg "Add file", and exit the text editor.
+        
+        *** Please tell me who you are.
+        
+        Run
+        
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
 
 ## See all commits in a repository
 
@@ -151,6 +162,7 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
 
 ## Revert a commit
 
+1. Add and commit the change reset above
 1. Run `git revert` to undo a given change:
 
         $ git revert 59d700c1db523b5a7d92161664cd5cdd5d9d477f
@@ -164,7 +176,7 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
         Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 15:23:39 2015 -0800
     
-            Revert "Update file.txt"
+            Revert "Update file"
             
             This reverts commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f.
     
@@ -172,13 +184,13 @@ Git will launch your default text editor. Write a brief message, eg "Add file", 
         Author: Erik Eldridge <erikeldridge@gmail.com>
         Date:   Sun Feb 15 15:08:32 2015 -0800
     
-            Update file.txt
+            Update file
     
         commit b974749b85a95f48fe6615f407a237320a68ed5d
         Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 15:06:12 2015 -0800
     
-            adding a file
+            Add file
 
 ## Creating a branch
 
@@ -203,7 +215,12 @@ To create a new branch, run `git branch` with a branch name:
         $ git checkout foo
         Switched to branch 'foo'
 
-1. Make a change and commit
+1. Make a change and commit, eg:
+
+        $ echo "a new change" >> file.txt
+        $ git add
+        $ git commit -m "Add a new change"
+
 1. Use `git diff` to compare master and your current branch:
 
         $ git diff master
@@ -212,8 +229,8 @@ To create a new branch, run `git branch` with a branch name:
         --- a/file.txt
         +++ b/file.txt
         @@ -1 +1,2 @@
-         asd
-        +qwe
+         hi
+        +a new change
 
 1. Use `git log` to see commits on your current branch that aren't on master:
 
@@ -222,7 +239,7 @@ To create a new branch, run `git branch` with a branch name:
         Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 15:34:27 2015 -0800
     
-            add text
+            Add a new change
 
 ## Merge branches
 
@@ -255,29 +272,29 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
 
 1. Create two new branches:
 
-        $ git branch foo
         $ git branch bar
+        $ git branch baz
 
 1. Checkout each branch and make a different change to the same line of the same file:
 
-        $ git checkout foo
-        $ echo "foo text" > file.txt
-        $ git add file.txt
-        $ git commit -m "Add foo text"
         $ git checkout bar
         $ echo "bar text" > file.txt
         $ git add file.txt
         $ git commit -m "Add bar text"
+        $ git checkout baz
+        $ echo "baz text" > file.txt
+        $ git add file.txt
+        $ git commit -m "Add baz text"
 
 1. Checkout master and merge both branches into it:
 
         $ git checkout master
-        $ git merge foo
+        $ git merge bar
         Updating feac207..1f2e058
         Fast-forward
          file.txt | 2 +-
          1 file changed, 1 insertion(+), 1 deletion(-)
-        $ git merge bar
+        $ git merge baz
         Auto-merging file.txt
         CONFLICT (content): Merge conflict in file.txt
         Automatic merge failed; fix conflicts and then commit the result.
@@ -298,36 +315,50 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         no changes added to commit (use "git add" and/or "git commit -a")
         $ cat file.txt 
         <<<<<<< HEAD
-        foo text
-        =======
         bar text
-        >>>>>>> bar
+        =======
+        baz text
+        >>>>>>> baz
 
 1. Edit the file to remove all but the text you'd like to keep, eg:
 
         $ cat file.txt 
-        bar text
+        baz text
 
 1. Run `git add` and `git commit` to accept the resolved conflict
 1. View the changes in your log:
 
         $ git log -p
-        commit 5455e48644e5e6de1290b978d58f1a9930c9e18a
-        Merge: 1f2e058 8f942cd
+        commit 617ad893e32eecd2f4e1de97f9c142fc74b816bf
+        Merge: 5a5fa49 33eb8ba
         Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 16:57:54 2015 -0800
-    
-            Merge branch 'bar'
+        Date:   Tue Feb 17 05:41:14 2015 +0000
+        
+            Merge branch 'baz'
             
             Conflicts:
                 file.txt
-    
-        commit 8f942cd50b229547986d2afa171a1fcb8d7a9f8d
+        
+        commit 33eb8babdf2ade068c875df8c3c087a4ef0b1203
         Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 16:55:05 2015 -0800
-    
+        Date:   Tue Feb 17 05:36:02 2015 +0000
+        
+            Add baz text
+        
+        diff --git a/file.txt b/file.txt
+        index d2bc3f2..a67f6b2 100644
+        --- a/file.txt
+        +++ b/file.txt
+        @@ -1 +1 @@
+        -starting text
+        +baz text
+        
+        commit 5a5fa498fcdef61a0c4943883fbb96ddd3810d6c
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Tue Feb 17 05:35:44 2015 +0000
+        
             Add bar text
-    
+        
         diff --git a/file.txt b/file.txt
         index d2bc3f2..132d0f8 100644
         --- a/file.txt
@@ -335,39 +366,27 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         @@ -1 +1 @@
         -starting text
         +bar text
-    
-        commit 1f2e05856b78a1fd51c55f76d991b260f4cd0abe
+        
+        commit b4088f901f72ed138a9ad5376634504d9b5687fa
         Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 16:54:49 2015 -0800
-    
-            Add foo text
-    
+        Date:   Tue Feb 17 05:35:10 2015 +0000
+        
+            Add starting text
+        
         diff --git a/file.txt b/file.txt
-        index d2bc3f2..5e02c89 100644
+        index 0a978b3..d2bc3f2 100644
         --- a/file.txt
         +++ b/file.txt
-        @@ -1 +1 @@
-        -starting text
-        +foo text
-    
-        commit feac207c460002b7d90706f03d9e782180112553
-        Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 15:06:12 2015 -0800
-    
-            Add starting text
-    
-        diff --git a/file.txt b/file.txt
-        new file mode 100644
-        index 0000000..d2bc3f2
-        --- /dev/null
-        +++ b/file.txt
-        @@ -0,0 +1 @@
+        @@ -1,2 +1 @@
+        -hi
+        -a new change
         +starting text
+        ...
 
 ## Pushing changes
 
 1. Create and commit a change
-1. Use `git push` to push these changes to the remote repository:
+1. Use `git push` to push these changes to the remote repository you created in the [Github set up](../tools/github.md), eg:
 
         $ git push origin master
         Counting objects: 3, done.
