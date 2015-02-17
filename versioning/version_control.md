@@ -166,6 +166,7 @@ We can use [git](../tools/git.md) and [github](../tools/github.md) to explore ve
 
 ## Revert a commit
 
+1. Add and commit the change reset above
 1. Run `git revert` to undo a given change:
 
         $ git revert 59d700c1db523b5a7d92161664cd5cdd5d9d477f
