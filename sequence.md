@@ -22,7 +22,6 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 
 1. [Maven](tools/maven.md)
 1. [IntelliJ](tools/intellij.md)
-1. [Review group exercise](exercises/grouper.md)
 1. [Issue tracking](damage_control/issue_tracking.md)
 1. [Code review](static_analysis/code_review.md)
 1. [Github](tools/github.md)
