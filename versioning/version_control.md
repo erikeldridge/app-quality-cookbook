@@ -223,7 +223,7 @@ To create a new branch, run `git branch` with a branch name:
 
         $ echo "a new change" >> file.txt
         $ git add
-        $ git commit
+        $ git commit -m "Add a new change"
 
 1. Use `git diff` to compare master and your current branch:
 
@@ -276,29 +276,29 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
 
 1. Create two new branches:
 
-        $ git branch foo
         $ git branch bar
+        $ git branch baz
 
 1. Checkout each branch and make a different change to the same line of the same file:
 
-        $ git checkout foo
-        $ echo "foo text" > file.txt
-        $ git add file.txt
-        $ git commit -m "Add foo text"
         $ git checkout bar
         $ echo "bar text" > file.txt
         $ git add file.txt
         $ git commit -m "Add bar text"
+        $ git checkout baz
+        $ echo "baz text" > file.txt
+        $ git add file.txt
+        $ git commit -m "Add baz text"
 
 1. Checkout master and merge both branches into it:
 
         $ git checkout master
-        $ git merge foo
+        $ git merge bar
         Updating feac207..1f2e058
         Fast-forward
          file.txt | 2 +-
          1 file changed, 1 insertion(+), 1 deletion(-)
-        $ git merge bar
+        $ git merge baz
         Auto-merging file.txt
         CONFLICT (content): Merge conflict in file.txt
         Automatic merge failed; fix conflicts and then commit the result.
@@ -319,10 +319,10 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         no changes added to commit (use "git add" and/or "git commit -a")
         $ cat file.txt 
         <<<<<<< HEAD
-        foo text
-        =======
         bar text
-        >>>>>>> bar
+        =======
+        baz text
+        >>>>>>> baz
 
 1. Edit the file to remove all but the text you'd like to keep, eg:
 
