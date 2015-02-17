@@ -29,7 +29,6 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 1. [Unit testing](testing/unit.md)
 1. [JUnit](tools/junit.md)
 1. [Integration testing](testing/integration.md)
-1. Pull request exercise
 
 ## 4
 
