@@ -58,4 +58,4 @@ For example:
 ## Related
 
 * [Misko Hevery's code reviewers guide](http://misko.hevery.com/code-reviewers-guide/)
-
+* [Github's documentation on forking a respository and submitting a pull request](https://guides.github.com/activities/forking/)
