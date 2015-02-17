@@ -84,16 +84,31 @@ We can use [git](../tools/git.md) and [github](../tools/github.md) to explore ve
 
         $ git status
         On branch master
-        Changes to be committed:
-          (use "git reset HEAD <file>..." to unstage)
         
-          new file:   file.txt
+        Initial commit
+        
+        Changes to be committed:
+          (use "git rm --cached <file>..." to unstage)
+        
+        	new file:   file.txt
         ...
 
-1. Finalize the commit:
+1. Finalize the commit.
+    
+        $ git commit
+
+    Git will launch your default text editor. Write a brief message, eg "Add file", and exit the text editor.
+    
+    If you haven't already configured git with your email and name, you'll be prompted to do so:
 
         $ git commit
-Git will launch your default text editor. Write a brief message, eg "Add file", and exit the text editor.
+        
+        *** Please tell me who you are.
+        
+        Run
+        
+          git config --global user.email "you@example.com"
+          git config --global user.name "Your Name"
 
 ## See all commits in a repository
 
