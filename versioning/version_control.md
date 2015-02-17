@@ -180,7 +180,7 @@ We can use [git](../tools/git.md) and [github](../tools/github.md) to explore ve
         Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 15:23:39 2015 -0800
     
-            Revert "Update file.txt"
+            Revert "Update file"
             
             This reverts commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f.
     
@@ -188,13 +188,13 @@ We can use [git](../tools/git.md) and [github](../tools/github.md) to explore ve
         Author: Erik Eldridge <erikeldridge@gmail.com>
         Date:   Sun Feb 15 15:08:32 2015 -0800
     
-            Update file.txt
+            Update file
     
         commit b974749b85a95f48fe6615f407a237320a68ed5d
         Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 15:06:12 2015 -0800
     
-            adding a file
+            Add file
 
 ## Creating a branch
 
