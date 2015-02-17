@@ -1,6 +1,6 @@
-# Bug reporting
+# Issue tracking
 
-Bug reporting tools provide a structured way to collect feedback.
+Issue tracking tools provide a structured way to collect feedback.
 
 The nature of the product will determine the appopriate tools to use.
 

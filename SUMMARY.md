@@ -16,7 +16,7 @@
    * [Launch](configuration/launch.md)
    * [Dynamic](configuration/dynamic.md)
 * [Damage control](damage_control/README.md)
-   * [Bug reporting](damage_control/bug_reporting.md)
+   * [Issue tracking](damage_control/issue_tracking.md)
    * [Code search](damage_control/code_search.md)
    * [Configuration-based](damage_control/configure.md)
    * [Debugging with JDB](damage_control/debugger_jdb.md)

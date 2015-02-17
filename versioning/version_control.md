@@ -7,7 +7,7 @@ Best-practices:
 * Prefer small commits over monolithic changes
 * Do not commit dead code
 * Style commit messages according to [git best-practices](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-* Include [issue tracking](../damage_control/bug_reporting.md) details, when available
+* Include [issue tracking](../damage_control/issue_tracking.md) details, when available
 
 We can use [git](../tools/git.md) and [github](../tools/github.md) to explore version control.
 
