@@ -219,7 +219,12 @@ To create a new branch, run `git branch` with a branch name:
         $ git checkout foo
         Switched to branch 'foo'
 
-1. Make a change and commit
+1. Make a change and commit, eg:
+
+        $ echo "a new change" >> file.txt
+        $ git add
+        $ git commit
+
 1. Use `git diff` to compare master and your current branch:
 
         $ git diff master
@@ -228,8 +233,8 @@ To create a new branch, run `git branch` with a branch name:
         --- a/file.txt
         +++ b/file.txt
         @@ -1 +1,2 @@
-         asd
-        +qwe
+         hi
+        +a new change
 
 1. Use `git log` to see commits on your current branch that aren't on master:
 
@@ -238,7 +243,7 @@ To create a new branch, run `git branch` with a branch name:
         Author: Erik Eldridge <erik@example.com>
         Date:   Sun Feb 15 15:34:27 2015 -0800
     
-            add text
+            Add a new change
 
 ## Merge branches
 
