@@ -26,7 +26,6 @@ In the spirit of iteration, I recommend introducing core concepts and then build
 1. [Bug reporting](damage_control/bug_reporting.md)
 1. [Code review](static_analysis/code_review.md)
 1. [Github](tools/github.md)
-1. Bug report exercise
 1. [Unit testing](testing/unit.md)
 1. [JUnit](tools/junit.md)
 1. [Integration testing](testing/integration.md)
