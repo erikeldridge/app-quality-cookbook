@@ -390,7 +390,7 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
 ## Pushing changes
 
 1. Create and commit a change
-1. Use `git push` to push these changes to the remote repository you created in the [Github set up](../tools/github.md):
+1. Use `git push` to push these changes to the remote repository you created in the [Github set up](../tools/github.md), eg:
 
         $ git push origin master
         Counting objects: 3, done.
