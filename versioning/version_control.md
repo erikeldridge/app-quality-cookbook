@@ -327,28 +327,42 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
 1. Edit the file to remove all but the text you'd like to keep, eg:
 
         $ cat file.txt 
-        bar text
+        baz text
 
 1. Run `git add` and `git commit` to accept the resolved conflict
 1. View the changes in your log:
 
         $ git log -p
-        commit 5455e48644e5e6de1290b978d58f1a9930c9e18a
-        Merge: 1f2e058 8f942cd
+        commit 617ad893e32eecd2f4e1de97f9c142fc74b816bf
+        Merge: 5a5fa49 33eb8ba
         Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 16:57:54 2015 -0800
-    
-            Merge branch 'bar'
+        Date:   Tue Feb 17 05:41:14 2015 +0000
+        
+            Merge branch 'baz'
             
             Conflicts:
                 file.txt
-    
-        commit 8f942cd50b229547986d2afa171a1fcb8d7a9f8d
+        
+        commit 33eb8babdf2ade068c875df8c3c087a4ef0b1203
         Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 16:55:05 2015 -0800
-    
+        Date:   Tue Feb 17 05:36:02 2015 +0000
+        
+            Add baz text
+        
+        diff --git a/file.txt b/file.txt
+        index d2bc3f2..a67f6b2 100644
+        --- a/file.txt
+        +++ b/file.txt
+        @@ -1 +1 @@
+        -starting text
+        +baz text
+        
+        commit 5a5fa498fcdef61a0c4943883fbb96ddd3810d6c
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Tue Feb 17 05:35:44 2015 +0000
+        
             Add bar text
-    
+        
         diff --git a/file.txt b/file.txt
         index d2bc3f2..132d0f8 100644
         --- a/file.txt
@@ -356,34 +370,22 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         @@ -1 +1 @@
         -starting text
         +bar text
-    
-        commit 1f2e05856b78a1fd51c55f76d991b260f4cd0abe
+        
+        commit b4088f901f72ed138a9ad5376634504d9b5687fa
         Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 16:54:49 2015 -0800
-    
-            Add foo text
-    
+        Date:   Tue Feb 17 05:35:10 2015 +0000
+        
+            Add starting text
+        
         diff --git a/file.txt b/file.txt
-        index d2bc3f2..5e02c89 100644
+        index 0a978b3..d2bc3f2 100644
         --- a/file.txt
         +++ b/file.txt
-        @@ -1 +1 @@
-        -starting text
-        +foo text
-    
-        commit feac207c460002b7d90706f03d9e782180112553
-        Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 15:06:12 2015 -0800
-    
-            Add starting text
-    
-        diff --git a/file.txt b/file.txt
-        new file mode 100644
-        index 0000000..d2bc3f2
-        --- /dev/null
-        +++ b/file.txt
-        @@ -0,0 +1 @@
+        @@ -1,2 +1 @@
+        -hi
+        -a new change
         +starting text
+        ...
 
 ## Pushing changes
 
