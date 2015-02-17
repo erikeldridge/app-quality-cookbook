@@ -24,4 +24,5 @@ Since we're focused on software development in this book, we'll use Github's iss
 
 ## Related
 
-* [Github's issue tracker documentation](https://guides.github.com/features/issues/)
+* [Github's issue tracker](https://guides.github.com/features/issues/)
+* For comparison, [Jira](https://www.atlassian.com/software/jira) is another widely used issue tracker. Bitbucket provides an [issue tracker](https://confluence.atlassian.com/display/BITBUCKET/Use+the+issue+tracker) that's very similar to Github's
