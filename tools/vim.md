@@ -13,3 +13,7 @@ $ vim --version
 VIM - Vi IMproved 7.4 (2013 Aug 10, compiled Jan  2 2014 19:40:04)
 ...
 ```
+
+## Related
+
+* [Set vim as your default text editor](http://vim.wikia.com/wiki/Set_Vim_as_your_default_editor_for_Unix)
