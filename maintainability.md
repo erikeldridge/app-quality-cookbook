@@ -6,8 +6,9 @@ Code that is easier to read is easier to understand. Code that is easier to unde
 
 The phrase "maintainability" refers to the ease with which we can maintain our code. Testability and readability are two important aspects of maintainability.
 
-This exercise covers four common aspects of maintainable code:
+This exercise covers five common aspects of maintainable code:
 * avoiding side effects
+* injecting dependencies
 * communicating intent
 * adhering to known patterns
 * doing one thing well
