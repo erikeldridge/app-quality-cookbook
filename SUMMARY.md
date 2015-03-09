@@ -1,108 +1,30 @@
 # Summary
 
-* [Introduction](README.md)
 * [Preface](preface.md)
-* [Suggested study sequence](sequence.md)
-* [Automation](automation/README.md)
-   * [Continuous integration](automation/ci.md)
-   * [Deployment](automation/deployment.md)
-* [Collaboration](collaboration/README.md)
-   * [Communication](collaboration/communication.md)
-   * [Documentatoin](collaboration/documentation.md)
-   * [Engineering principles](collaboration/principles.md)
-   * [Pairing](collaboration/pairing.md)
-* [Configuration](configuration/README.md)
-   * [Build](configuration/build.md)
-   * [Launch](configuration/launch.md)
-   * [Dynamic](configuration/dynamic.md)
-* [Damage control](damage_control/README.md)
-   * [Issue tracking](damage_control/issue_tracking.md)
-   * [Code search](damage_control/code_search.md)
-   * [Configuration-based](damage_control/configure.md)
-   * [Debugging with JDB](damage_control/debugger_jdb.md)
-   * [Graceful degradation](damage_control/degradation.md)
-   * [Failover](damage_control/failover.md)
-   * [Investigation](damage_control/investigation.md)
-   * [Network-related](damage_control/network.md)
-   * [Postmortem](damage_control/postmortem.md)
-   * [Practice](damage_control/practice.md)
-   * [Rollback](damage_control/rollback.md)
-   * [Root cause](damage_control/root_cause.md)
-   * [Tracing](damage_control/tracing.md)
-* [Deployment](deployment/README.md)
-   * [Automation](deployment/automation.md)
-   * [Continuous](deployment/continuous.md)
-   * [Fractional](deployment/fractional.md)
-   * [Staged](deployment/staged.md)
-* Exercises
-   * [Fractional availability](exercises/fractional.md)
-   * [Review group generator](exercises/grouper.md)
-   * [Java syntax](exercises/java.md)
-   * [Unix syntax](exercises/unix.md)
-   * [Web service](exercises/service.md)
-* [Monitoring](monitoring/README.md)
-   * [Alerting](monitoring/alerting.md)
-   * [Change management](monitoring/change_management.md)
-   * [Crash reporting](monitoring/crash.md)
-   * [On call](monitoring/oncall.md)
-   * [Performance](monitoring/performance.md)
-   * [Product usage](monitoring/product_usage.md)
-   * [Resource usage in a client](monitoring/resources_client.md)
-   * [Resource usage in a service](monitoring/resources_service.md)
-* [Static analysis](static_analysis/README.md)
-   * [Code review](static_analysis/code_review.md)
-   * [Complexity](static_analysis/complexity.md)
-   * [Coverage](static_analysis/coverage.md)
-   * [IDE](static_analysis/ide.md)
-   * [Lint](static_analysis/lint.md)
-   * [Owners](static_analysis/owners.md)
-   * [Style](static_analysis/style.md)
-* [Testability](testability/README.md)
-   * [Communicating intent](testability/intent.md) 
-   * [Dependency injection](testability/di.md)
-   * [Design by contract](testability/contract.md)
-   * [Native APIs](testability/native.md)
-   * [Refactoring to patterns](testability/pattern.md)
-   * [Single responsability principle](testability/srp.md)
-   * [Spaghetti code](testability/spaghetti.md)
-* [Testing](testing/README.md)
-   * [Configuration](testing/configuration.md)
-   * [Deterministic](testing/deterministic.md)
-   * [Devices](testing/device.md)
-   * [Dynamic routing](testing/dynamic.md)
-   * [Flow](testing/flow.md)
-   * [Integration](testing/integration.md)
-   * [Redline](testing/redline.md)
-   * [Test-driven development](testing/tdd.md)
-   * [Unit](testing/unit.md)
-   * [UI](testing/ui.md)
-* [Tools](tools/README.md)
-   * [Android Studio](tools/android_studio.md)
-   * [Checkstyle](tools/checkstyle.md)
-   * [Dagger 2](tools/dagger2.md)
-   * [Git](tools/git.md)
-   * [Github](tools/github.md)
-   * [Heroku](tools/heroku.md)
-   * [IntelliJ](tools/intellij.md)
-   * [JaCoCo](tools/jacoco.md)
-   * [Java](tools/java_installation.md)
-   * [Javadoc](tools/javadoc.md)
-   * [Jenkins](tools/jenkins.md)
-   * [JUnit](tools/junit.md)
-   * [Maven](tools/maven.md)
-   * [Mockito](tools/mockito.md)
-   * [New Relic](tools/newrelic.md)
-   * [PMD](tools/pmd.md)
-   * [Unix](tools/unix.md)
-   * [Vagrant](tools/vagrant.md)
-   * [Vim](tools/vim.md)
-* [Monitoring](monitoring/README.md)
-   * [Alerting](monitoring/alerting.md)
-   * [Crash reporting](monitoring/crash.md)
-   * [On call](monitoring/oncall.md)
-   * [Product usage](monitoring/product_usage.md)
-   * [Resource usage in a client](monitoring/resource_client.md)
-* [Versioning](versioning/README.md)
-   * [Backwards compatibility](versioning/compatibility.md)
-   * [Strategies](versioning/strategies.md)
-   * [Version control](versioning/version_control.md)
+* [Introduction](introduction.md)
+   * Conceptual overview
+   * Unix
+   * Vim
+   * Java
+   * IntelliJ
+* [Source code management](source.md)
+   * Git
+   * Github
+   * Issue tracking
+   * Code review
+* [Testing](testing.md)
+   * Bash
+   * Maven
+   * Unit
+   * Integration
+   * Functional
+   * Fixtures
+   * Githooks
+* [Maintainability](maintainability.md)
+   * Avoiding side effects
+   * Dependency injection
+   * Mockito
+   * Communicating intent
+   * Adhering to known patterns
+   * Doing one thing well
+   
