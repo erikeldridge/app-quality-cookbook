@@ -110,8 +110,6 @@ Generate a review group for exercise 3.
 
 Push your branch to review once complete, CCing your review group. This will be a point of comparison for later.
 
-### Reflect
-
 Was it easy to modify your code to add support for os version?
 
 As a reviewer, can you understand what the code is doing?
