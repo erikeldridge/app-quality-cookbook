@@ -4,11 +4,11 @@ This section is intended to give you experience with three common tools for main
 
 Version control helps us make incremental changes to our code. Issue tracking enables our users to provide feedback. Code review improves the quality of code going into our code base.
 
+We used a few tools to explore these topics: [git](http://git-scm.com/) and [github](https://github.com/).
+
 ## Version control
 
 Version control enables us to make incremental changes to our code base. We can then restore previously working versions, compare changes, and recover details about why a change was made.
-
-We can use [git](http://git-scm.com/) and [github](https://github.com/) to explore version control.
 
 ### Install git
 
@@ -655,7 +655,7 @@ Push the branch to your forked repo.
 
 Create a pull request and mention your reviewers.
 
-For example, [search Square's pull requests for usages of "cc"](https://github.com/search?utf8=%E2%9C%93&q=cc+language%3Ajava+type%3Apr+user%3Asquare&type=Issues&ref=searchresults) to request feedback from specific people.
+For example, [search Square's pull requests for usages of "cc"](https://github.com/search?utf8=%E2%9C%93&q=cc+language%3Ajava+type%3Apr+user%3Asquare&type=Issues&ref=searchresults) to see how people submitting pull requests ask for feedback from specific people.
 
 ### Perform a review
 
@@ -667,7 +667,7 @@ If you own the repo, and the change looks good, merge the change and close the i
 
 ### Identify reviewers
 
-We can use a tool like our group generator to randomly assign teammates to review groups. Random assignment ensures teammates maintain experience with the entire code base.
+Code review involves multiple people, which introduces organizational complexity. We can use the code review group generator to simplify this process. Random assignment ensures teammates maintain experience with the entire code base.
 
 Alternatively, we can pre-identify owners of a code base and automatically add them to a review. Github uses "contributors" for this.
 
@@ -700,3 +700,8 @@ For example:
 * [Misko Hevery's code reviewers guide](http://misko.hevery.com/code-reviewers-guide/)
 * [Github's documentation on forking a respository and submitting a pull request](https://guides.github.com/activities/forking/)
 
+## Conclusion
+
+We now have experience with version control, issue tracking and code review.
+
+The basic ideas are: collaboration and incremental development. We want to develop in a way that can tolerate failure, eg repositories can be re-cloned when a laptop or vm dies, issues can be reported by anyone, bugs can be associated with specific changes, buggy changes can be reverted, works-in-progress can be encapsulated in a branch and transferred from one person to another, etc.
