@@ -34,6 +34,7 @@ Git should already be installed if you set up your development environment using
 * `git merge` merges one branch into another
 * `git pull` pulls commits from a remote repository
 * `git push` pushes commits to a remote repository
+* `git clone` makes a local copy of a remote repository
 
 ### Create a new repository
 
@@ -111,25 +112,24 @@ Git should already be installed if you set up your development environment using
 ### See all commits in a repository
 
     $ git log
-    commit 230d2a431184c93da0d7a5f7fbeaa00e168e005e
+    commit c9b26e67839d1e53b017b4a02c55bb8e7f4eefec
     Author: Erik Eldridge <erik@example.com>
-    Date:   Sun Feb 15 11:27:45 2015 -0800
+    Date:   Fri Mar 13 04:22:00 2015 +0000
     
         Add file
-    ...
 
 ### Show the changes in a commit
 
-    $ git show 230d2a431184c93da0d7a5f7fbeaa00e168e005e
-    commit 230d2a431184c93da0d7a5f7fbeaa00e168e005e
+    $ git show c9b26e67839d1e53b017b4a02c55bb8e7f4eefec
+    commit c9b26e67839d1e53b017b4a02c55bb8e7f4eefec
     Author: Erik Eldridge <erik@example.com>
-    Date:   Sun Feb 15 11:27:45 2015 -0800
+    Date:   Fri Mar 13 04:22:00 2015 +0000
     
         Add file
     
     diff --git a/file.txt b/file.txt
     new file mode 100644
-    index 0000000..d72af31
+    index 0000000..45b983b
     --- /dev/null
     +++ b/file.txt
     @@ -0,0 +1 @@
@@ -145,7 +145,7 @@ Git should already be installed if you set up your development environment using
 
         $ git diff
         diff --git a/file.txt b/file.txt
-        index d72af31..87e05f0 100644
+        index 45b983b..3b097cd 100644
         --- a/file.txt
         +++ b/file.txt
         @@ -1 +1,2 @@
@@ -164,34 +164,53 @@ Git should already be installed if you set up your development environment using
 
 ### Revert a commit
 
-1. Add and commit the change reset above
-1. Run `git revert` to undo a given change:
+1. Add and commit (using the -m shortcut) the change:
 
-        $ git revert 59d700c1db523b5a7d92161664cd5cdd5d9d477f
-        [master 8190a0b] Revert "Update file.txt"
+        $ git add file.txt
+        $ git commit -m "Update file.txt"
+        [master 59d700c] Update file.txt
+        1 file changed, 1 insertion(+)
+        $ git log
+        commit 06abe628a703ed148bfcf21c45efdd2283609d40
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Fri Mar 13 04:27:42 2015 +0000
+        
+            Update file.txt
+        
+        commit c9b26e67839d1e53b017b4a02c55bb8e7f4eefec
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Fri Mar 13 04:22:00 2015 +0000
+        
+            Add file
+        ...
+
+1. Run `git revert` to undo the given change:
+
+        $ git revert 06abe628a703ed148bfcf21c45efdd2283609d40
+        [master f7d0faa] Revert "Update file.txt"
          1 file changed, 1 deletion(-)
 
 1. Run `git log` to see the reversion:
 
         $ git log
-        commit 8190a0b66231ddb06587b55c7cb6ade4c66bc6b3
+        commit f7d0faa478b7b2ee19feba9c0d76bebfab37b061
         Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 15:23:39 2015 -0800
-    
-            Revert "Update file"
+        Date:   Fri Mar 13 04:32:07 2015 +0000
+        
+            Revert "Update file.txt"
             
-            This reverts commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f.
-    
-        commit 59d700c1db523b5a7d92161664cd5cdd5d9d477f
-        Author: Erik Eldridge <erikeldridge@gmail.com>
-        Date:   Sun Feb 15 15:08:32 2015 -0800
-    
-            Update file
-    
-        commit b974749b85a95f48fe6615f407a237320a68ed5d
+            This reverts commit 06abe628a703ed148bfcf21c45efdd2283609d40.
+        
+        commit 06abe628a703ed148bfcf21c45efdd2283609d40
         Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 15:06:12 2015 -0800
-    
+        Date:   Fri Mar 13 04:27:42 2015 +0000
+        
+            Update file.txt
+        
+        commit c9b26e67839d1e53b017b4a02c55bb8e7f4eefec
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Fri Mar 13 04:22:00 2015 +0000
+        
             Add file
 
 ### Create a branch
@@ -200,17 +219,16 @@ To ensure a repository always contains functional code, we can create a "branch"
 
 By convention, the main branch of a repository is usually called "master".
 
-To create a new branch, run `git branch` with a branch name:
+1. Run `git branch` to see your branches:
+
+        $ git branch
+        * master
+        
+1. Run `git branch` with a branch name to create a new branch:
 
     $ git branch foo
 
 ### Select a branch to work in
-
-1. Run `git branch` without a branch name to see all branches:
-
-        $ git branch
-          foo
-        * master
 
 1. Run `git checkout` with a branch name to work in that branch:
 
@@ -220,14 +238,14 @@ To create a new branch, run `git branch` with a branch name:
 1. Make a change and commit, eg:
 
         $ echo "a new change" >> file.txt
-        $ git add
+        $ git add file.txt
         $ git commit -m "Add a new change"
 
 1. Use `git diff` to compare master and your current branch:
 
         $ git diff master
         diff --git a/file.txt b/file.txt
-        index d72af31..c5cb59a 100644
+        index 45b983b..0a978b3 100644
         --- a/file.txt
         +++ b/file.txt
         @@ -1 +1,2 @@
@@ -237,13 +255,15 @@ To create a new branch, run `git branch` with a branch name:
 1. Use `git log` to see commits on your current branch that aren't on master:
 
         $ git log master..foo
-        commit cb86977de46709ab389a13741bdf8cd0495782cc
+        commit 9c249cd4035b675df73e92861afb0c1609d2a74b
         Author: Erik Eldridge <erik@example.com>
-        Date:   Sun Feb 15 15:34:27 2015 -0800
-    
+        Date:   Fri Mar 13 04:40:05 2015 +0000
+        
             Add a new change
 
 ### Merge branches
+
+Merge changes from one branch into another using `git merge`.
 
 1. Checkout the branch you'd like to merge changes into, eg master:
 
@@ -252,7 +272,7 @@ To create a new branch, run `git branch` with a branch name:
 1. Use `git merge` to merge changes from another branch:
 
         $ git merge foo
-        Updating 8190a0b..cb86977
+        Updating f7d0faa..9c249cd
         Fast-forward
          file.txt | 1 +
          1 file changed, 1 insertion(+)
@@ -265,9 +285,8 @@ To create a new branch, run `git branch` with a branch name:
 
 If Git can't merge branches cleanly, it will indicate conflicting lines and ask us to resolve.
 
-1. Checkout master, create a change, and commit, eg
+1.  Create a change on the master branch and commit, eg
 
-        $ git checkout master
         $ echo "starting text" > file.txt
         $ git add file.txt
         $ git commit -m "Add starting text"
@@ -280,19 +299,27 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
 1. Checkout each branch and make a different change to the same line of the same file:
 
         $ git checkout bar
+        Switched to branch 'bar'
         $ echo "bar text" > file.txt
         $ git add file.txt
         $ git commit -m "Add bar text"
+        [bar 3557270] Add bar text
+         1 file changed, 1 insertion(+), 1 deletion(-)
         $ git checkout baz
+        Switched to branch 'baz'
         $ echo "baz text" > file.txt
         $ git add file.txt
         $ git commit -m "Add baz text"
+        [baz e76619d] Add baz text
+        1 file changed, 1 insertion(+), 1 deletion(-)
 
 1. Checkout master and merge both branches into it:
 
         $ git checkout master
+        Switched to branch 'master'
         $ git merge bar
         Updating feac207..1f2e058
+        Updating 0c4320f..3557270
         Fast-forward
          file.txt | 2 +-
          1 file changed, 1 insertion(+), 1 deletion(-)
@@ -301,19 +328,18 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         CONFLICT (content): Merge conflict in file.txt
         Automatic merge failed; fix conflicts and then commit the result.
 
-1. View the conflicted state:
+1. View the conflicted state (using Unix's [cat](http://en.wikipedia.org/wiki/Cat_%28Unix%29) command):
 
         $ git status
         On branch master
-    
         You have unmerged paths.
           (fix conflicts and run "git commit")
-    
+        
         Unmerged paths:
           (use "git add <file>..." to mark resolution)
-    
-          both modified:   file.txt
-    
+        
+        	both modified:      file.txt
+        
         no changes added to commit (use "git add" and/or "git commit -a")
         $ cat file.txt 
         <<<<<<< HEAD
@@ -324,26 +350,27 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
 
 1. Edit the file to remove all but the text you'd like to keep, eg:
 
+        $ vim file.txt
         $ cat file.txt 
         baz text
 
 1. Run `git add` and `git commit` to accept the resolved conflict
-1. View the changes in your log:
+1. View the changes in your log (using the -p flag to show the diffs):
 
         $ git log -p
-        commit 617ad893e32eecd2f4e1de97f9c142fc74b816bf
-        Merge: 5a5fa49 33eb8ba
+        commit 7c5d054732577aa89581e505e4468928a1a88e3b
+        Merge: 3557270 e76619d
         Author: Erik Eldridge <erik@example.com>
-        Date:   Tue Feb 17 05:41:14 2015 +0000
+        Date:   Fri Mar 13 04:52:41 2015 +0000
         
             Merge branch 'baz'
             
             Conflicts:
-                file.txt
+            	file.txt
         
-        commit 33eb8babdf2ade068c875df8c3c087a4ef0b1203
+        commit e76619db788991b25c68a1290b37848bbc692d17
         Author: Erik Eldridge <erik@example.com>
-        Date:   Tue Feb 17 05:36:02 2015 +0000
+        Date:   Fri Mar 13 04:46:17 2015 +0000
         
             Add baz text
         
@@ -355,9 +382,9 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         -starting text
         +baz text
         
-        commit 5a5fa498fcdef61a0c4943883fbb96ddd3810d6c
+        commit 355727053e3f85b758c7d3d82f9167e154067476
         Author: Erik Eldridge <erik@example.com>
-        Date:   Tue Feb 17 05:35:44 2015 +0000
+        Date:   Fri Mar 13 04:45:26 2015 +0000
         
             Add bar text
         
@@ -369,9 +396,9 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         -starting text
         +bar text
         
-        commit b4088f901f72ed138a9ad5376634504d9b5687fa
+        commit 0c4320fa52e32c23bde122200737bf8b71769de5
         Author: Erik Eldridge <erik@example.com>
-        Date:   Tue Feb 17 05:35:10 2015 +0000
+        Date:   Fri Mar 13 04:43:02 2015 +0000
         
             Add starting text
         
@@ -383,35 +410,139 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         -hi
         -a new change
         +starting text
-        ...
+        
+        commit 9c249cd4035b675df73e92861afb0c1609d2a74b
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Fri Mar 13 04:40:05 2015 +0000
+        
+            Add a new change
+        
+        diff --git a/file.txt b/file.txt
+        index 45b983b..0a978b3 100644
+        --- a/file.txt
+        +++ b/file.txt
+        @@ -1 +1,2 @@
+         hi
+        +a new change
+        
+        commit f7d0faa478b7b2ee19feba9c0d76bebfab37b061
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Fri Mar 13 04:32:07 2015 +0000
+        
+            Revert "Update file.txt"
+            
+            This reverts commit 06abe628a703ed148bfcf21c45efdd2283609d40.
+        
+        diff --git a/file.txt b/file.txt
+        index 3b097cd..45b983b 100644
+        --- a/file.txt
+        +++ b/file.txt
+        @@ -1,2 +1 @@
+         hi
+        -world
+        
+        commit 06abe628a703ed148bfcf21c45efdd2283609d40
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Fri Mar 13 04:27:42 2015 +0000
+        
+            Update file.txt
+        
+        diff --git a/file.txt b/file.txt
+        index 45b983b..3b097cd 100644
+        --- a/file.txt
+        +++ b/file.txt
+        @@ -1 +1,2 @@
+         hi
+        +world
+        
+        commit c9b26e67839d1e53b017b4a02c55bb8e7f4eefec
+        Author: Erik Eldridge <erik@example.com>
+        Date:   Fri Mar 13 04:22:00 2015 +0000
+        
+            Add file
+        
+        diff --git a/file.txt b/file.txt
+        new file mode 100644
+        index 0000000..45b983b
+        --- /dev/null
+        +++ b/file.txt
+        @@ -0,0 +1 @@
+        +hi
+
 
 ### Remote repositories
 
-We now have experience working with a git repository on our local machine, but what happens if our local machine dies, or we want to coordinate with other developers? We can use a "remote" repository, ie a repository hosted on another machine, to avoid catastrophe and facilitate collaboration.
+We now have experience working with a git repository on our local machine, but what happens if our laptop or virtual machine dies, or we want to coordinate with other developers? We can use a "remote" repository, ie a repository hosted on another machine, to avoid catastrophe and facilitate collaboration.
 
 Github is widely used and provides an excellent interface for working with remote repositories. 
 
 Create an account if you don’t have one already. It's free for open source projects.
 
-Follow [Github's documentation for creating a repository](https://help.github.com/articles/create-a-repo/)
-
 [Github's set-up documentation](https://help.github.com/articles/set-up-git/) describes how to configure your local environment so you can talk to github.
+
+We'll use SSH to talk with Github, so follow [Github's documentation for setting up SSH](https://help.github.com/articles/generating-ssh-keys/).
+
+Setting this up can be a little tedious, so refer to [Github's SSH support](https://help.github.com/categories/ssh/) documentation if you run into trouble.
+
+Setting up your Ubuntu vm will look like this:
+
+    $ ssh-keygen -t rsa -C "erik@example.com"
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/home/vagrant/.ssh/id_rsa): 
+    Enter passphrase (empty for no passphrase): 
+    Enter same passphrase again: 
+    Your identification has been saved in /home/vagrant/.ssh/id_rsa.
+    Your public key has been saved in /home/vagrant/.ssh/id_rsa.pub.
+    The key fingerprint is:
+    5a:d6:2f:b1:99:5e:c6:41:0f:e2:c1:69:81:61:8e:ca erik@example.com
+    The key's randomart image is:
+    +--[ RSA 2048]----+
+    |        oo.      |
+    |       +.. o     |
+    |      . . * o    |
+    |   . .   + + o   |
+    |    E   S + . .  |
+    |       +   B .   |
+    |      .   = =    |
+    |         . +     |
+    |          .      |
+    +-----------------+
+    $ eval "$(ssh-agent -s)"
+    Agent pid 2244
+    $ ssh-add ~/.ssh/id_rsa
+    Identity added: /home/vagrant/.ssh/id_rsa (/home/vagrant/.ssh/id_rsa)
+    $ cat ~/.ssh/id_rsa.pub
+    ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAKEDM4noIPCkpjk39KrfSz0y4zFJVsiP7gv0Wazi1+uAP/np0WR82ylWK8TTBY6M6LrcYESkl4T4ssLOdDpUrH6jlvLhbBVYjjwPA+omVniAb2kgXGLFwIVIDTqHjNqNtoBzXEGgN5aU4/1sXvcsuEU5kxRq/1fM9XOxJvniLgcbQ5egD/aa6VYd9zqEekNeNqalg6ehXXiw6tSe3D/lFs2NxQn56tt0DQGZwrmXc36ziFEEM7rpcZX5iPFvDhr/6mp4fU93IXikSiWrVXkIzjVHQi23JkYX17nxIEWVzpRXZT/W9A8fQrZOBILKqyK+mtF+a4BrF0sPdUC8hxvxjHT erik@example.com
+
+Per the SSH instructions linked above, copy the id_rsa.pub contents you just printed into your Github account settings.
+
+Follow [Github's documentation for creating a repository](https://help.github.com/articles/create-a-repo/). Look for "…or push an existing repository from the command line" on the page Github loads after you create a repository, and then tell your local repository where your remote respository is:
+
+    $ git remote add origin git@github.com:erikeldridge/cst-395-example.git
 
 ### Pushing changes
 
-1. Create and commit a change
-1. Use `git push` to push these changes to the remote repository you created in the [Github set up](../tools/github.md), eg:
+1. Use `git push` to push your changes to the remote repository you just created, eg:
 
-        $ git push origin master
-        Counting objects: 3, done.
-        Writing objects: 100% (3/3), 215 bytes | 0 bytes/s, done.
-        Total 3 (delta 0), reused 0 (delta 0)
-        To git@github.com:erikeldridge/app-quality-cookbook.git
+        $ git push -u origin master
+        Warning: Permanently added the RSA host key for IP address '192.30.252.131' to the list of known hosts.
+        Counting objects: 20, done.
+        Compressing objects: 100% (8/8), done.
+        Writing objects: 100% (20/20), 1.48 KiB | 0 bytes/s, done.
+        Total 20 (delta 3), reused 0 (delta 0)
+        To git@github.com:erikeldridge/cst-395-example.git
          * [new branch]      master -> master
 
-Push your review group generator code to your repository.
+1. Reload your repository's page on Github
+1. Observe you can now see the file in your repository
+1. Click the link to your "8 commits"
+1. Observe Github provides a web interface to your git history
+1. Browse around Github and take a look at other repositories, eg [Android](https://github.com/android), [Linux](https://github.com/torvalds/linux), [Hadoop](https://github.com/apache/hadoop), etc.
 
-Use your review group generator to generate a group.
+After your done browsing, use the review group generator we created [earlier](introduction.md) to generate a group for exercise 1:
+
+    $ java Generator 1 erik@example.com
+    [martha@example.com, alex@example.com, erik@example.com]
 
 Send an email to your review group linking to your repository. You should receive similar emails from the other members of your group. If you don’t, reach out and request one.
 
@@ -423,7 +554,7 @@ The clone is aware of the repository it was cloned from, so we can push our chan
 
 Follow [Github's documentation for working with remote repositories](https://help.github.com/articles/fetching-a-remote/), which describes cloning.
 
-Clone the repositories of your group:
+Use `git clone` to clone the repositories of your group:
 
     $ cd ~
     $ git clone https://github.com/<github username>/<repository name>.git
@@ -431,33 +562,35 @@ Clone the repositories of your group:
 Build and run them. They should generate the same review group your program did.
 
     $ cd <repository name>
-    $ javac Main.java
-    $ java Main f 1
-    [e, c, f]
+    $ javac Generator.java
+    $ java Generator 1 erik@example.com
+    [martha@example.com, alex@example.com, erik@example.com]
 
 ### Pull changes
 
 To pull changes, we need to create a change somewhere other than our local repo. I'll use Github for this example.
 
-1. In Github, navigate to your project's page, eg https://github.com/erikeldridge/app-quality-cookbook
-1. Click through the file tree to an individual file, eg [README.md](https://github.com/erikeldridge/app-quality-cookbook/blob/master/README.md)
+1. In Github, navigate to your project's page
+1. Navigate to your file.txt
 1. Click the button with the pencil icon to edit the file
 1. Make a change and click the "Commit changes" button
 1. In your local terminal, run `git pull` to pull these changes into your local repository:
 
         $ git pull origin master
         remote: Counting objects: 3, done.
-        remote: Total 3 (delta 0), reused 0 (delta 0)
+        remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
         Unpacking objects: 100% (3/3), done.
-        From github.com:erikeldridge/app-quality-cookbook
+        From github.com:erikeldridge/cst-395-example
          * branch            master     -> FETCH_HEAD
-           b974749..59d700c  master     -> origin/master
-        Updating b974749..59d700c
+           7c5d054..0c3e437  master     -> origin/master
+        Updating 7c5d054..0c3e437
         Fast-forward
-         README.md | 1 +
+         file.txt | 1 +
          1 file changed, 1 insertion(+)
 
 ### Best-practices
+
+I know we only have a few example commits so far, but keep the following best-practices in mind as we go forward:
 
 * Only commit working code; the master branch should be shippable at all times
 * Prefer small commits over monolithic changes
