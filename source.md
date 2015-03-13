@@ -606,19 +606,17 @@ I know we only have a few example commits so far, but keep the following best-pr
 
 ## Issue tracking
 
-Issue tracking tools provide a structured way to collect feedback.
+Issue tracking tools provide a structured way to collect feedback. In general, an "issue" is a bug you'd like to see fixed or a feature you'd like to see added.
 
-The nature of the product will determine the appropriate tools to use.
+The nature of the product will determine the appropriate tools to use. Since we're focused on software development in this book, we'll use Github's issue tracking to explore the concept.
 
-Since we're focused on software development in this book, we'll use Github's issue tracking to explore the concept.
+For example, here's an [issue](https://github.com/Netflix/feign/issues/32) requesting better documentation.
 
 ### Creating issues
 
-Identify an issue or enhancement (it can just be a comment) in your group's projects. Did the project build? Was it correct? Was it easy to figure out? Could you understand the code? If the code you’re reviewing doesn’t run, or produces an incorrect result, this is a great opportunity to get it running.
+For each of your group's projects create an issue, as described in [Github's issue tracker documentation](https://guides.github.com/features/issues/). The "feature" you request can be simple, like "Add text to this file".
 
-Create an issue, as described in [Github's issue tracker documentation](https://guides.github.com/features/issues/)
-
-Structure your issue report to include:
+To get experience creating informative issue reports, include the following details:
   * A quick summary
   * What you were trying to do when you noticed the issue
   * Steps to reproduce the issue
@@ -629,13 +627,8 @@ Structure your issue report to include:
 ### Learn more
 
 * [Github's issue tracker](https://guides.github.com/features/issues/)
-* For comparison, [Jira](https://www.atlassian.com/software/jira) is another widely used issue tracker. Bitbucket provides an [issue tracker](https://confluence.atlassian.com/display/BITBUCKET/Use+the+issue+tracker) that's very similar to Github's
-
-Identify an issue or enhancement (it can just be a comment) in each project. Did the project build? Was it correct? Was it easy to figure out? Could you understand the code? 
-
-If the code you’re reviewing doesn’t run, or produces an incorrect result, this is a great opportunity to get it running.
-
-Open an issue on Github for the project (documentation)
+* For comparison, [Jira](https://www.atlassian.com/software/jira) is another widely used issue tracker.
+* Bitbucket provides an [issue tracker](https://confluence.atlassian.com/display/BITBUCKET/Use+the+issue+tracker) that's very similar to Github's
 
 ## Code review
 
@@ -662,9 +655,11 @@ Push the branch to your forked repo.
 
 Create a pull request and mention your reviewers.
 
+For example, [search Square's pull requests for usages of "cc"](https://github.com/search?utf8=%E2%9C%93&q=cc+language%3Ajava+type%3Apr+user%3Asquare&type=Issues&ref=searchresults) to request feedback from specific people.
+
 ### Perform a review
 
-If you are a reviewer, click through the “files changed” tab on the pull request to see the diff.
+If you are a reviewer, click through the “files changed” tab on the pull request to see the diff ([example](https://github.com/square/okhttp/pull/1488/files)). 
 
 If you don’t own the repo you’re reviewing code for, just comment on the pull request saying if it looks good or not.
 
