@@ -20,15 +20,15 @@ Java's compiler provides a relatively simple example:
 
     $ javac -Xlint:all Main.java
 
-For example, define a class that prints "1" if you pass 1 or "2" if you pass 2:
+For example, define a class that prints "One" if you pass 1 or "Two" if you pass 2:
 
     class Main {
         public static void main(String[] args) {
-            switch (Integer.valueOf(args[0])) {
+            switch (Integer.parseInt(args[0])) {
                 case 1:
-                    System.out.println("1");
+                    System.out.println("One");
                 case 2:
-                    System.out.println("2");
+                    System.out.println("Two");
             }
         }
     }
@@ -40,10 +40,10 @@ Compile it:
 Run it:
 
     $ java Main 2
-    2
+    Two
     $ java Main 1
-    1
-    2
+    One
+    Two
 
 Hmm. That's a bug.
 
@@ -57,7 +57,7 @@ Lint could have helped:
         ^
     1 warning
 
-I think linters are worth being aware of because many languages have them, eg [Android's lint](http://developer.android.com/tools/help/lint.html), [PyLint](http://www.pylint.org/), [JSLint](http://www.jslint.com/)/[JSHint](http://jshint.com/), etc.
+Many languages have linters, eg [Android's lint](http://developer.android.com/tools/help/lint.html), [PyLint](http://www.pylint.org/), [JSLint](http://www.jslint.com/)/[JSHint](http://jshint.com/), etc. I won't dwell on lint here, though, because the style and bug checkers we'll cover are much more powerful than Java's lint.
 
 ## Style check
 
