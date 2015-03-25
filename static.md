@@ -171,7 +171,7 @@ Re-run and observe the tests now fail:
     [ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:2.15:check (validate) on project my-app: Failed during checkstyle execution: There are 8 errors reported by Checkstyle 6.4.1 with ./google_checks.xml ruleset. -> [Help 1]
     ...
 
-Fix each of the issues so the build succeeds and commit your changes:
+Fix any issues so the build succeeds and commit your changes:
 
     $ git add pom.xml
     $ git add <any code that's changed>
