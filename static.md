@@ -163,7 +163,11 @@ Re-run and observe the tests now fail:
     [ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:2.15:check (validate) on project red-camping-run: Failed during checkstyle execution: There are 8 errors reported by Checkstyle 6.4.1 with ./google_checks.xml ruleset. -> [Help 1]
     ...
 
-Fix each of the issues so the build succeeds and commit your changes, eg "add checkstyle support."
+Fix each of the issues so the build succeeds and commit your changes:
+
+    $ git add pom.xml
+    $ git add <any code that's changed>
+    $ git commit -m "Add checkstyle"
 
 [Search Github for XML files containing "checkstyle"](https://github.com/search?l=xml&q=checkstyle&ref=searchresults&type=Code&utf8=%E2%9C%93) to see configuration files used by other projects.
 
@@ -237,7 +241,7 @@ As with Checkstyle, we've configured PMD to run during the verification phase of
 
     $ mvn verify
 
-Undo your example failure:
+If you played with failing string code above you can easily undo the change by checking out your code from git:
 
     $ git checkout -- src/main/java/com/example/app/App.java
 
@@ -258,39 +262,39 @@ Tests have a cost, so it may be unreasonable to require 100% coverage, but we ca
 
 We'll use a tool called [JaCoCo](http://www.eclemma.org/jacoco). Install it via Maven:
 
-  <plugin>
-      <groupId>org.jacoco</groupId>
-      <artifactId>jacoco-maven-plugin</artifactId>
-      <version>0.7.4.201502262128</version>
-      <executions>
-          <execution>
-              <id>default-prepare-agent</id>
-              <goals>
-                  <goal>prepare-agent</goal>
-              </goals>
-          </execution>
-          <execution>
-              <id>default-check</id>
-              <goals>
-                  <goal>check</goal>
-              </goals>
-              <configuration>
-                  <rules>
-                      <rule>
-                          <element>BUNDLE</element>
-                          <limits>
-                              <limit>
-                                 <counter>COMPLEXITY</counter>
-                                  <value>COVEREDRATIO</value>
-                                  <minimum>0.60</minimum>
-                              </limit>
-                          </limits>
-                      </rule>
-                  </rules>
-              </configuration>
-          </execution>
-      </executions>
-  </plugin>
+    <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <version>0.7.4.201502262128</version>
+        <executions>
+            <execution>
+                <id>default-prepare-agent</id>
+                <goals>
+                    <goal>prepare-agent</goal>
+                </goals>
+            </execution>
+            <execution>
+                <id>default-check</id>
+                <goals>
+                    <goal>check</goal>
+                </goals>
+                <configuration>
+                    <rules>
+                        <rule>
+                            <element>BUNDLE</element>
+                            <limits>
+                                <limit>
+                                    <counter>COMPLEXITY</counter>
+                                    <value>COVEREDRATIO</value>
+                                    <minimum>0.60</minimum>
+                                </limit>
+                            </limits>
+                        </rule>
+                    </rules>
+                </configuration>
+            </execution>
+        </executions>
+    </plugin>
 
 Run it:
 
@@ -325,13 +329,13 @@ The build should fail if _x_ percent our code is untested, where _x_ is a config
 
 [Continuous integration](http://www.thoughtworks.com/continuous-integration) (CI) is the practice of testing and merging code continuously, as opposed to waiting until development completes. We can use CI to run our static analysis on a change in review to see if it will "break the build" and on each commit to verify the health of the project. This can help us catch issues early.
 
-We'll use a tool called Travis for a few reasons: it's relatively modern, so it's enjoyable to use; it integrates seamlessly with Github; it's freely available for open repositories like ours.
+We'll use a tool called [Travis](https://travis-ci.org/) for a few reasons: it's relatively modern, so it's enjoyable to use; it integrates seamlessly with Github; it's freely available for open repositories like ours.
 
 Before diving in, I should call out a comparable tool called [Jenkins](https://jenkins-ci.org/). Jenkins, and its predecessor Hudson, are widely used, solid, open-source CI servers, which you'll see in lots of documentation and workplaces. We're not using it here because it's relatively difficult to set up and use, but we should be aware of it.
 
-Ok. Here we go. Log into [travis-ci.org](https://travis-ci.org/) (Note: .org, not .com, which we'd use for closed source projects) with your Github account.
+Ok. Here we go. Log into [travis-ci.org](https://travis-ci.org/) (Note: .org, not .com, which we'd use for closed source projects) with your Github account and allow it to manage your Github repositories.
 
-Travis will list the repositories in your Github account. Find the repository you're using for this exercise and enable CI for it. Click "Travis CI" in the upper left to navigate home, and then use the "Search all repositories" box to find your repository. Click the repository name to open the repository's dashboard. The url will be https://travis-ci.org/<your username>/<your repository name>.
+Travis fetch and display your Github repositories. Find the repository you're using for this exercise and enable CI for it by toggling the switch on the right of the dashboard. Click "Travis CI" in the upper left to navigate home, and then use the "Search all repositories" box to find your repository. Click the repository name to open the repository's dashboard. The url will be  https://travis-ci.org/&lt;your username&gt;/&lt;your repository name&gt;.
 
 In your local repository, define a .travis.yml config file:
 
@@ -346,62 +350,81 @@ Commit your config file:
     $ git add .travis.yml
     $ git commit -m "Define new travis config file"
 
-Push your change to trigger CI:
+Push your change to Github to trigger CI:
 
-  $ git push origin master
+    $ git push origin master
 
 Navigate back to the project dashboard you opened above.
 
 You should see your commit listed under the "Current" tab. It will be yellow until the build passes. The entry will turn green if the build passes or red if the build fails.
 
-After the build completes, review the logged output. If the build failed, look for the Maven command Travis ran and try to run it locally:
+After the build completes, review the logged output. Look for the Maven commands Travis ran and try to run them locally:
 
-  $ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  ...
-  $ mvn test -B
+    $ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+    ...
+    $ mvn test -B
+
+Observe that Travis defaults to Maven for Java projects.
+
+Modify your config file to verify our build:
+
+    language: java
+    jdk:
+      - openjdk7
+    script: mvn verify
+
+Commit this change and push. Observe Travis now runs `mvn verify` after installation instead of `mvn test -b`.
 
 Define a pre-push githook to run these commands before pushing to github:
 
-  mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-  installed=$?
-
-  mvn verify
-  verified=$?
-
-  if [ ! $installed ] || [ ! $verified ]
-  then
-    exit 1
-  fi
+    mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+    installed=$?
+    
+    mvn verify
+    verified=$?
+    
+    if [ ! $installed ] || [ ! $verified ]
+    then
+        exit 1
+    fi
 
 This will help you catch errors before they break the build.
 
-Defining a githook to avoid wasting CI time is an example of progressive testing. Our tests should become progressively more "expensive" as we get closer to shipping a product. In development, we want immediate feedback, like IDE hints, lint errors, and quick unit tests to ensure our change works. To avoid breaking the build, but still provide on-demand feedback, we can have CI run full unit and integration test suites before a change merges. CI can periodically run still more expensive functional tests to ensure we don't have a broken build on an ongoing basis (because we always want the freedom to apply a critical bug fix on master and deploy). To simulate production before we ship, we can run live integration tests with real data, and define pre-release versions, eg "nightly", alpha", "beta", etc. Delivery itself is the final test, which can "cost" us customers if a product doesn't work.
+A quick aside: defining a githook to avoid wasting CI time is an example of progressive testing - our tests should become progressively more "expensive" as we get closer to shipping a product.
+
+In development, we want immediate feedback, like IDE hints, lint errors, and quick unit tests to ensure our change works. To avoid breaking the build, but still provide on-demand feedback, we can have CI run full unit and integration test suites before a change merges.
+
+CI can periodically run still more expensive functional tests to ensure our project is healthy on an ongoing basis (because we always want the freedom to apply a critical bug fix on master and deploy).
+
+To simulate production before we ship, we can run live integration tests with real data, and define pre-release versions, eg "nightly", alpha", "beta", etc. 
+
+Delivery itself is the final test, which can "cost" us customers if a product doesn't work.
 
 Ok. Let's create a code review and observe CI's validation on the review.
 
 Create and checkout a new branch:
 
-  $ git checkout -b edit_readme
+    $ git checkout -b edit_readme
 
 Create and commit a change:
 
-  $ echo "asd" >> README.md
-  $ git add README.md
-  $ git commit -m "Add text to readme"
+    $ echo "asd" >> README.md
+    $ git add README.md
+    $ git commit -m "Add text to readme"
 
 Push the branch to Github:
 
-  $ git push origin edit_readme
+    $ git push origin edit_readme
 
 Navigate to your repo in Github. Click the "Pull requests" link on the right. Click the "New pull request" button to create a pull request. Set master as the base and the branch you just pushed, eg "edit_readme", as the branch to compare.
 
-Observe Github has added a section the pull request with the Travis details. While the build is in progress, you'll see "Waiting to hear about <git sha>." This status will change to "All is well" when the build succeeds.
+After creating the pull request, observe Github has added a section it with the Travis details. While the build is in progress, you'll see "Waiting to hear about &lt;git sha&gt;." This status will change to "All is well" when the build succeeds.
 
-Navigate to the Travis dashboard. Observe there's a build for "<your branch> Add text to readme." Click the "Pull requests" tab and observe there's an entry for your pull request.
+Navigate to the Travis dashboard. Observe there's a build for "&lt;your branch&gt; Add text to readme." Click the "Pull requests" tab and observe there's an entry for your pull request.
 
-Once your build passes, merge the change on Github. Observe Travis starts a new build on the master branch to verify "Merge pull request #1 from <your github user name>/<your branch name>.
+Once your build passes, merge the change on Github. Observe Travis starts a new build on the master branch to verify "Merge pull request #1 from &lt;your github user name&gt;/&lt;your branch name&gt;".
 
-Congrats! You've just used CI to verify your change!
+Congrats! You've just used CI to run static analysis and tests before and after merging.
 
 To learn more about Travis:
 * see [Travis' getting started documentation](http://docs.travis-ci.com/user/getting-started/) for config examples
@@ -412,8 +435,5 @@ To learn more about Travis:
 
 We've covered linters, style checkers, bug finders, test covereage tools, and a means to run them all on each commit via CI. We've also introduced alternative tools so you can continue exploring this space, compare, and find the right approaches for your projects.
 
-Programmatic quality control is much more consistent, but also more brittle, than manual quality control, so we use a balance of both. In general, start with some basic defaults, like the Google style guide enforced programmatically. 
+Programmatic quality control is much more consistent, but also more brittle, than manual quality control, so we use a balance of both. In general, start with some basic defaults, like the Google style guide, and enforce them programmatically. As you see recurring issues, think about how you could automate the steps you take to prevent them.
 
-Were you able to install and everything on your local machine?
-
-Were you able to set up Travis?
