@@ -165,29 +165,27 @@ Re-run and observe the tests now fail:
 
 Fix each of the issues so the build succeeds and commit your changes, eg "add checkstyle support."
 
-Checkstyle can helps us maintain a standard style in our code base. We can check this style programmatically, which simplifies code review.
-
 [Search Github for XML files containing "checkstyle"](https://github.com/search?l=xml&q=checkstyle&ref=searchresults&type=Code&utf8=%E2%9C%93) to see configuration files used by other projects.
 
-Comparable tools: [Sonarqube](http://www.sonarqube.org/), [Uncrustify](https://github.com/bengardner/uncrustify), [pep8](https://github.com/jcrocholl/pep8)
+Comparable tools: [Sonarqube](http://www.sonarqube.org/), [Uncrustify](https://github.com/bengardner/uncrustify), [pep8](https://github.com/jcrocholl/pep8).
 
 ## Finding bugs and analyzing complexity
 
 [Cyclomatic complexity](http://en.wikipedia.org/wiki/Cyclomatic_complexity) refers to the number of paths through a given piece of software. For example, the following function has a complexity value of 1:
 
-  int add(int a, int b) {
-    return a + b;
-  }
+    int add(int a, int b) {
+        return a + b;
+    }
 
 A function with conditional logic is relatively complexbecause we have to consider multiple code paths:
 
-  int getLength(String str) {
-    if (str == null) {
-      return 0;
-    } else {
-      return str.length();
+    int getLength(String str) {
+        if (str == null) {
+            return 0;
+        } else {
+            return str.length();
+        }
     }
-  }
 
 We can use static analysis tools to evaluate complexity and detect other operational issues. For this exercise, we'll use [PMD](http://pmd.sourceforge.net/pmd-5.2.3/).
 
@@ -195,8 +193,8 @@ To paraphrase PMD's site, PMD scans Java source code for dead, suboptimal, or du
 
 Install via Maven:
 
-  ...
-  <build>
+    ...
+    <build>
           ...
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -222,8 +220,8 @@ Install via Maven:
               </configuration>
           </plugin>
       </plugins>
-  </build>
-  ...
+    </build>
+    ...
 
 The _execution_ block tells Maven to run this check as part of the verification phase.
 
@@ -233,8 +231,20 @@ The _rulesets_ configuration defines which rules to apply. See all the rulesets 
 
 For example, add the following code to your class to fail the [_strings_ rule](http://pmd.sourceforge.net/pmd-5.2.3/pmd-java/rules/java/strings.html) for StringInstantiation:
 
-  String s = new String("this is a new string");
+    String s = new String("this is a new string");
 
+As with Checkstyle, we've configured PMD to run during the verification phase of the Maven build:
+
+    $ mvn verify
+
+Undo your example failure:
+
+    $ git checkout -- src/main/java/com/example/app/App.java
+
+And then commit your pom.xml:
+
+    $ git add pom.xml
+    $ git commit -m "Add PMD"
 
 [FindBugs](http://findbugs.sourceforge.net/index.html) is a very common, comparable tool that analyzes compiled byte code looking for bugs. We only covered PMD here to limit the complexity of this exercise, but you can set up FindBugs in much the same way: install via Maven plugin, configure, etc.
 
@@ -270,7 +280,7 @@ We'll use a tool called [JaCoCo](http://www.eclemma.org/jacoco). Install it via 
                           <element>BUNDLE</element>
                           <limits>
                               <limit>
-                                  <counter>COMPLEXITY</counter>
+                                 <counter>COMPLEXITY</counter>
                                   <value>COVEREDRATIO</value>
                                   <minimum>0.60</minimum>
                               </limit>
@@ -284,32 +294,32 @@ We'll use a tool called [JaCoCo](http://www.eclemma.org/jacoco). Install it via 
 
 Run it:
 
-  $ mvn verify
-  ...
-  [INFO] 
-  [INFO] 
-  [INFO] --- jacoco-maven-plugin:0.7.4.201502262128:check (default-check) @ red-camping-run ---
-  [INFO] Analyzed bundle 'red-camping-run' with 1 classes
-  [WARNING] Rule violated for bundle red-camping-run: complexity covered ratio is 0.00, but expected minimum is 0.60
-  [INFO] ------------------------------------------------------------------------
-  [INFO] BUILD FAILURE
-  [INFO] ------------------------------------------------------------------------
-  [INFO] Total time: 2.937s
-  [INFO] Finished at: Tue Mar 24 09:03:08 UTC 2015
-  [INFO] Final Memory: 15M/36M
-  [INFO] ------------------------------------------------------------------------
-  [ERROR] Failed to execute goal org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:check (default-check) on project red-camping-run: Coverage checks have not been met. See log for details. -> [Help 1]
-  ...
+    $ mvn verify
+    ...
+    [INFO] 
+    [INFO] 
+    [INFO] --- jacoco-maven-plugin:0.7.4.201502262128:check (default-check) @ red-camping-run ---
+    [INFO] Analyzed bundle 'red-camping-run' with 1 classes
+    [WARNING] Rule violated for bundle red-camping-run: complexity covered ratio is 0.00, but expected minimum is 0.60
+    [INFO] ------------------------------------------------------------------------
+    [INFO] BUILD FAILURE
+    [INFO] ------------------------------------------------------------------------
+    [INFO] Total time: 2.937s
+    [INFO] Finished at: Tue Mar 24 09:03:08 UTC 2015
+    [INFO] Final Memory: 15M/36M
+    [INFO] ------------------------------------------------------------------------
+    [ERROR] Failed to execute goal org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:check (default-check) on project red-camping-run: Coverage checks have not been met. See log for details. -> [Help 1]
+    ...
 
 The build should fail if _x_ percent our code is untested, where _x_ is a configuration option in the plugin. The configuration above fails unless at least 60% of code is tested:
 
-  <limits>
-      <limit>
-          <counter>COMPLEXITY</counter>
-          <value>COVEREDRATIO</value>
-          <minimum>0.60</minimum>
-      </limit>
-  </limits>
+    <limits>
+        <limit>
+            <counter>COMPLEXITY</counter>
+            <value>COVEREDRATIO</value>
+            <minimum>0.60</minimum>
+        </limit>
+    </limits>
 
 ## Continuous integration
 
@@ -325,16 +335,16 @@ Travis will list the repositories in your Github account. Find the repository yo
 
 In your local repository, define a .travis.yml config file:
 
-  language: java
-  jdk:
-    - openjdk7
+    language: java
+    jdk:
+        - openjdk7
 
 You can use [Travis' linter](http://lint.travis-ci.org/) to verify your config is correct.
 
 Commit your config file:
 
-  $ git add .travis.yml
-  $ git commit -m "Define new travis config file"
+    $ git add .travis.yml
+    $ git commit -m "Define new travis config file"
 
 Push your change to trigger CI:
 
