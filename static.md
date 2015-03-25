@@ -131,15 +131,15 @@ Run it:
 By default, the style rules will only warn:
 
     ...
-    [INFO] --- maven-checkstyle-plugin:2.15:check (validate) @ red-camping-run ---
+    [INFO] --- maven-checkstyle-plugin:2.15:check (validate) @ my-app ---
     [INFO] Starting audit...
-    /home/vagrant/red-camping-run/src/main/java/com/example/redcampingrun/App.java:4: warning: First sentence should be present.
-    /home/vagrant/red-camping-run/src/main/java/com/example/redcampingrun/App.java:9:1: warning: '{' should be on the previous line.
-    /home/vagrant/red-camping-run/src/main/java/com/example/redcampingrun/App.java:10: warning: 'method def modifier' have incorrect indentation level 4, expected level should be 2.
-    /home/vagrant/red-camping-run/src/main/java/com/example/redcampingrun/App.java:11: warning: 'method def lcurly' have incorrect indentation level 4, expected level should be 2.
-    /home/vagrant/red-camping-run/src/main/java/com/example/redcampingrun/App.java:11:5: warning: '{' should be on the previous line.
-    /home/vagrant/red-camping-run/src/main/java/com/example/redcampingrun/App.java:12: warning: 'method def' child have incorrect indentation level 8, expected level should be 4.
-    /home/vagrant/red-camping-run/src/main/java/com/example/redcampingrun/App.java:13: warning: 'method def rcurly' have incorrect indentation level 4, expected level should be 2.
+    /home/vagrant/my-app/src/main/java/com/example/app/App.java:4: warning: First sentence should be present.
+    /home/vagrant/my-app/src/main/java/com/example/app/App.java:9:1: warning: '{' should be on the previous line.
+    /home/vagrant/my-app/src/main/java/com/example/app/App.java:10: warning: 'method def modifier' have incorrect indentation level 4, expected level should be 2.
+    /home/vagrant/my-app/src/main/java/com/example/app/App.java:11: warning: 'method def lcurly' have incorrect indentation level 4, expected level should be 2.
+    /home/vagrant/my-app/src/main/java/com/example/app/App.java:11:5: warning: '{' should be on the previous line.
+    /home/vagrant/my-app/src/main/java/com/example/app/App.java:12: warning: 'method def' child have incorrect indentation level 8, expected level should be 4.
+    /home/vagrant/my-app/src/main/java/com/example/app/App.java:13: warning: 'method def rcurly' have incorrect indentation level 4, expected level should be 2.
     Audit done.
     ...
     
@@ -168,7 +168,7 @@ Re-run and observe the tests now fail:
     [INFO] Finished at: Mon Mar 23 00:32:57 UTC 2015
     [INFO] Final Memory: 9M/23M
     [INFO] ------------------------------------------------------------------------
-    [ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:2.15:check (validate) on project red-camping-run: Failed during checkstyle execution: There are 8 errors reported by Checkstyle 6.4.1 with ./google_checks.xml ruleset. -> [Help 1]
+    [ERROR] Failed to execute goal org.apache.maven.plugins:maven-checkstyle-plugin:2.15:check (validate) on project my-app: Failed during checkstyle execution: There are 8 errors reported by Checkstyle 6.4.1 with ./google_checks.xml ruleset. -> [Help 1]
     ...
 
 Fix each of the issues so the build succeeds and commit your changes:
@@ -310,9 +310,9 @@ Run it:
     ...
     [INFO] 
     [INFO] 
-    [INFO] --- jacoco-maven-plugin:0.7.4.201502262128:check (default-check) @ red-camping-run ---
-    [INFO] Analyzed bundle 'red-camping-run' with 1 classes
-    [WARNING] Rule violated for bundle red-camping-run: complexity covered ratio is 0.00, but expected minimum is 0.60
+    [INFO] --- jacoco-maven-plugin:0.7.4.201502262128:check (default-check) @ my-app ---
+    [INFO] Analyzed bundle 'my-app' with 1 classes
+    [WARNING] Rule violated for bundle my-app: complexity covered ratio is 0.00, but expected minimum is 0.60
     [INFO] ------------------------------------------------------------------------
     [INFO] BUILD FAILURE
     [INFO] ------------------------------------------------------------------------
@@ -320,7 +320,7 @@ Run it:
     [INFO] Finished at: Tue Mar 24 09:03:08 UTC 2015
     [INFO] Final Memory: 15M/36M
     [INFO] ------------------------------------------------------------------------
-    [ERROR] Failed to execute goal org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:check (default-check) on project red-camping-run: Coverage checks have not been met. See log for details. -> [Help 1]
+    [ERROR] Failed to execute goal org.jacoco:jacoco-maven-plugin:0.7.4.201502262128:check (default-check) on project my-app: Coverage checks have not been met. See log for details. -> [Help 1]
     ...
 
 The build should fail if _x_ percent our code is untested, where _x_ is a configuration option in the plugin. The configuration above fails unless at least 60% of code is tested:
@@ -444,4 +444,3 @@ To learn more about Travis:
 We've covered linters, style checkers, bug finders, test covereage tools, and a means to run them all on each commit via CI. We've also introduced alternative tools so you can continue exploring this space, compare, and find the right approaches for your projects.
 
 Programmatic quality control is much more consistent, but also more brittle, than manual quality control, so we use a balance of both. In general, start with some basic defaults, like the Google style guide, and enforce them programmatically. As you see recurring issues, think about how you could automate the steps you take to prevent them.
-
