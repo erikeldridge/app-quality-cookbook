@@ -96,7 +96,7 @@ Download the [Checkstyle rules for Google's Java style guide](http://checkstyle.
 
     $ wget https://raw.githubusercontent.com/checkstyle/checkstyle/master/src/main/resources/google_checks.xml
 
-[Configure Checkstyle to use Google's style rules](https://maven.apache.org/plugins/maven-checkstyle-plugin/examples/custom-checker-config.html) instead of checkstyle.xml:
+[Configure Checkstyle to use Google's style rules](https://maven.apache.org/plugins/maven-checkstyle-plugin/examples/custom-checker-config.html):
 
     ...
     <configLocation>./google_checks.xml</configLocation>
