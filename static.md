@@ -1,10 +1,18 @@
 # Static analysis and continuous integration
 
-The phrase "static analysis" refers to analyzing the aspects of software like source code, byte code, etc., that do not change. Code is _static_ in that it doesn't change, as opposed to things like memory and network usage, which are _dynamic_.
+The phrase "static analysis" refers to inspecting the aspects of software that do not change, like source code, byte code, etc., for correctness. Code is _static_ in that it doesn't change, as opposed to things like memory and network usage, which are _dynamic_ and change while software is running.
 
-In simplistic terms, we perform static analysis when we read and review code. Our compiler performs static analysis when it parses our code. We'll explore four tools in this section that will help us improve the quality of our code by providing sophisticated and consistent static analysis.
+In simplistic terms, we perform static analysis when we read and review code. Our compiler performs static analysis when it parses our code. 
 
-## Linting
+We'll explore four categories of static analysis tools in this section:
+* Lint
+* Style check
+* Bug check
+* Test coverage
+
+We'll conclude by introducing continuous integration, which we can use to automatically perform tasks, like running tests and static analysis, in response to changes in a code base.
+
+## Lint
 
 The verb [lint](http://en.wikipedia.org/wiki/Lint_%28software%29), as applied to software, refers to scanning code for errors.
 
@@ -51,7 +59,7 @@ Lint could have helped:
 
 I think linters are worth being aware of because many languages have them, eg [Android's lint](http://developer.android.com/tools/help/lint.html), [PyLint](http://www.pylint.org/), [JSLint](http://www.jslint.com/)/[JSHint](http://jshint.com/), etc.
 
-## Checking style
+## Style check
 
 Style checking tools give us a way to verify the code we've written conforms to a "style guide". This is awesome. Why? Because we can codify best-practices, such as [Google's Java style guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html), and an objectively enforce them. This can save time and debate in code review.
 
@@ -173,7 +181,7 @@ Fix each of the issues so the build succeeds and commit your changes:
 
 Comparable tools: [Sonarqube](http://www.sonarqube.org/), [Uncrustify](https://github.com/bengardner/uncrustify), [pep8](https://github.com/jcrocholl/pep8).
 
-## Finding bugs and analyzing complexity
+## Bug check
 
 [Cyclomatic complexity](http://en.wikipedia.org/wiki/Cyclomatic_complexity) refers to the number of paths through a given piece of software. For example, the following function has a complexity value of 1:
 
@@ -181,7 +189,7 @@ Comparable tools: [Sonarqube](http://www.sonarqube.org/), [Uncrustify](https://g
         return a + b;
     }
 
-A function with conditional logic is relatively complexbecause we have to consider multiple code paths:
+In comparison, a function with conditional logic is relatively complex because we have to consider multiple code paths:
 
     int getLength(String str) {
         if (str == null) {
