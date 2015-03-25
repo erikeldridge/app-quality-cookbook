@@ -27,4 +27,8 @@
    * Communicating intent
    * Adhering to known patterns
    * Doing one thing well
-   
+* [Static analysis and continuous integration](static.md)
+   * Lint
+   * Bug checks
+   * Test coverage
+   * Continuous integration
