@@ -19,6 +19,8 @@ We'll build a configuration generator to explore these ideas. We'll start by imp
 
 Some code is unpleasant to work with because its dependencies and influences are poorly defined. Such code is difficult to modify without side effects because it is difficult to understand. A common term for such code is spaghetti.
 
+To explore this concept, we're going to define a function that generates [feature switch](http://martinfowler.com/bliki/FeatureToggle.html) configuration, a set of boolean values we can use to enable/disable features.
+
 Generate a new maven quickstart project.
 
 Define a main method that accepts the following inputs:
@@ -244,7 +246,11 @@ Use Maven to install. Edit your project’s pom.xml:
       </dependency>
     </dependencies>
 
-Add the following tests:
+Edit your tests to use mock objects:
+
+    import static org.mockito.Mockito.*;
+
+    ...
 
     @Test
     public void s() throws FileNotFoundException, YamlException {
