@@ -30,7 +30,7 @@ The method should read configuration from a file. I use [YAML](http://yaml.org/)
 
 Example configuration:
 
-    feature_a
+    feature_a:
       os: android
     feature_b:
       percentage: 10
