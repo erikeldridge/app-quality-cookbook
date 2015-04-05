@@ -306,7 +306,7 @@ Package your feature selector as a jar file by changing into that project's dire
     $ ls target
     ... feature-selector-1.0-SNAPSHOT.jar ...
 
-Change back into _feature-switch-config_ and declare your dependency using a relative path in _pom.xml_:
+Change back into _feature-switch-service_ and declare your dependency using a relative path in _pom.xml_:
 
     <dependencies>
         ...
@@ -476,9 +476,37 @@ Modify your test to parse the response using [Jackson's ObjectMapper](http://wik
 
 Recompile, test functionally via curl, run your integration test, and commit when everything's working.
 
-## Observe errors in the server log
-
 ## Test using your VM
+
+We can treat our VM as a remote server by configuring _port forwarding_ and then calling our service from our local maching.
+
+Edit your Vagrantfile to uncomment the _forward_port_ line:
+
+    # Create a forwarded port mapping which allows access to a specific port
+    # within the machine from a port on the host machine. In the example below,
+    # accessing "localhost:8080" will access port 80 on the guest machine.
+    config.vm.network "forwarded_port", guest: 8080, host: 80
+
+Reload your VM to apply the configuration change:
+
+    $ vagrant reload
+
+Observe port forwarding details logged by the VM as it starts up:
+
+    $ vagrant reload
+    ...
+    ==> default: Forwarding ports...
+        default: 8080 => 8080 (adapter 1)
+        default: 22 => 2222 (adapter 1)
+    ...
+
+After the VM restarts, _ssh_ in and restart your server:
+
+    $ vagrant ssh
+    $ cd feature-switch-service
+    $ mvn jetty:run
+
+Load [http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3](http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3) in a browser on your local machine. Observe your server running in the VM handles the request.
 
 ## Deploy the app to Heroku
 
