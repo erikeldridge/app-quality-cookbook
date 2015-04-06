@@ -259,21 +259,25 @@ Commit:
 
 ## Add your feature switch code to this project
 
-We have a couple options for getting the code we created in the maintainability section into our project:
+We have a couple options for getting the code we created earlier into our project:
 
-1. Copy/paste it over
 1. Import it via Maven
+1. Copy/paste it over
 
-The first option is easier, but breaks encapsulation. The second option requires some set up, but will result in a more maintainable project. I'll cover them both.
+The first preserves encapsulation, which would help with maintainability as our project grows. We can package our code as an artifact and use tools like [Nexus](http://www.sonatype.org/nexus/) or [Bintray](https://bintray.com/) to distribute it.
 
-If you copy/paste it over, you should end up with a set of files like:
+However, since we're building a configuration service, we're the only customers of this code, and the focus of this section is service creation, not artifact distribution, copying the code over seems acceptable.
 
-    $ ls src/main/java/com/example/
-    Input.java FeatureSelector.java FeatureSwitchConfig.java  Main.java
-    $ ls src/test/java/com/example/
-    FeatureSelectorTest.java FeatureSwitchConfigTest.java
-    $ ls src/test/resources/
-    features.yml
+If you copy/paste it over, you should end up with a diff like this:
+
+    $ git diff --name-status
+    M       pom.xml
+    A       src/main/java/com/example/featureswitchservice/FeatureSwitchConfig.java
+    A       src/main/resources/features.yml
+    A       src/test/java/com/example/featureswitchservice/FeatureSwitchConfigTest.java
+    A       src/test/resources/features.yml
+
+We've modified _pom.xml_ to include our feature selector dependencies and added a few new files.
 
 Test to make sure everything works:
 
@@ -281,72 +285,9 @@ Test to make sure everything works:
 
 Commit your changes.
 
-If you import the project you'll need to package your code, declare a dependency, and import that dependency.
-
-Package your feature selector as a jar file by changing into that project's directory and running `mvn package`:
-
-    $ cd ../feature-selector
-    $ mvn package
-    [INFO] Scanning for projects...
-    ...
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Building feature-selector 1.0-SNAPSHOT
-    [INFO] ------------------------------------------------------------------------
-    ...
-    [INFO] 
-    [INFO] --- maven-jar-plugin:2.2:jar (default-jar) @ feature-selector ---
-    [INFO] Building jar: /home/vagrant/feature-selector/target/feature-selector-1.0-SNAPSHOT.jar
-    [INFO] ------------------------------------------------------------------------
-    [INFO] BUILD SUCCESS
-    [INFO] ------------------------------------------------------------------------
-    [INFO] Total time: 2.449s
-    [INFO] Finished at: Fri Apr 03 06:11:15 UTC 2015
-    [INFO] Final Memory: 12M/29M
-    [INFO] ------------------------------------------------------------------------
-    $ ls target
-    ... feature-selector-1.0-SNAPSHOT.jar ...
-
-Change back into _feature-switch-service_ and declare your dependency using a relative path in _pom.xml_:
-
-    <dependencies>
-        ...
-        <dependency>
-            <version>1.0-SNAPSHOT</version>
-            <groupId>com.example</groupId>
-            <artifactId>feature-selector</artifactId>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/../feature-selector/target/feature-selector-1.0-SNAPSHOT.jar</systemPath>
-        </dependency>
-        ...
-    </dependencies>
-
-Compile your project to pull in your dependency:
-
-    $ mvn compile
-
-Observe the warning regarding inaccessibility of this locally referenced jar:
-
-...
-[WARNING] 'dependencies.dependency.systemPath' for com.example:feature-selector:jar should not point at files within the project directory, ${project.basedir}/../feature-selector/target/feature-selector-1.0-SNAPSHOT.jar will be unresolvable by dependent projects @ line 40, column 25
-...
-
-This is fine since we're the only ones working on this project, but when working with teams, we can use tools like [Nexus](http://www.sonatype.org/nexus/) or [Bintray](https://bintray.com/) to distribute our artifacts.
-
-Edit _FeatureSwitchConfig_ to import _FeatureSelector_:
-
-    ...
-    import com.example.FeatureSelector;
-    ...
-
-Observe IntelliJ can resolve this reference and _com.example.FeatureSelector_ appears in the list of "External Libraries" in IntelliJ's project structure.
-
-Commit your _pom.xml_ changes ("Add feature-selector dependency").
-
 ## Integrate feature selector
 
-We now have a web server and a class for generating feature switch config. Let's tie them together.
-
-Define a _features.yml_ file in _src/main/resources_, like we did in the _feature-selector_ project.
+We now have a web server and code for generating feature switch config. Let's tie them together.
 
 Edit _FeatureSwitchConfig_ to accept args from the request URL and return feature switch configuration:
 
@@ -378,33 +319,14 @@ Call your endpoint:
     $ curl "http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3"
     {feature_c=true, feature_b=false, feature_a=true}
 
-If you need to modify your feature selector code during your integration, you can open both projects in separate [IntelliJ windows](https://www.jetbrains.com/idea/help/opening-multiple-projects.html#d1286669e148). Run `mvn package` after any feature selector changes to repackage the _jar_ file imported into the feature switch service project.
+The next step is to format our response as JSON to external callers can easily parse it.
 
-Update your integration tests once your functional testing with curl works.
+However, the steps to integrate JSON are complicated and it would be nice to save our state. We only want to commit working code, though, so create a temp branch to encapsulate the changes.
 
-    ...
-    @Test
-    public void testGet() throws IOException {
-        final String responseMsg = target()
-            .path("feature_switch_config")
-            .queryParam("id", "123")
-            .queryParam("os", "android")
-            .queryParam("version", "2.3")
-            .request()
-            .get(String.class);
-        HashMap<String, Boolean> expected = new HashMap<>();
-        expected.put("feature_a", true);
-        expected.put("feature_b", false);
-        expected.put("feature_c", true);
-        assertEquals(expected.toString(), responseMsg);
-    }
-    ...
+    $ git branch integration_json
+    $ git checkout integration_json
 
-Commit your changes, especially since the upcoming JSON integration is complicated.
-
-Next, we want to return the config as JSON so external callers can easily parse it. We can use a tool called Jackson to convert our Java objects to JSON.
-
-To do that, we'll need to configure our project, Jersey, and our app logic to use Jackson for JSON parsing.
+We can use a tool called Jackson to convert our Java objects to JSON. To do that, we'll need to make changes to our project, Jersey, and app logic.
 
 Add a dependency on Jersey's Jackson artifact in your _pom.xml_:
 
@@ -416,7 +338,7 @@ Add a dependency on Jersey's Jackson artifact in your _pom.xml_:
     </dependency>
     ...
 
-Define a new _ResourceConfig_ class to register Jackson (under the hood, Jersey is using dependency injection to inject Jackson):
+Define a new _ResourceConfig_ class to register Jackson:
 
     package com.example.featureswitchservice;
 
@@ -474,13 +396,30 @@ Modify your test to parse the response using [Jackson's ObjectMapper](http://wik
         assertEquals(expected, actual);
     }
 
-Recompile, test functionally via curl, run your integration test, and commit when everything's working.
+Run your integration tests to verify they're still working.
+
+Recompile, run your server, and call with _curl_:
+
+    $ curl -v "http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3"
+    ...
+    {"feature_c":true,"feature_b":false,"feature_a":true}
+
+Observe the _Content-Type_ response header is now "application/json":
+    ...
+    < Content-Type: application/json
+    ...
+    
+Commit your changes and merge your branch back into your development branch:
+
+    $ git commit -m "Integrat feature selector"
+    $ git checkout dev
+    $ git merge integrate_json
 
 ## Test using your VM
 
 We can treat our VM as a remote server by configuring _port forwarding_ and then calling our service from our local maching.
 
-Edit your Vagrantfile to uncomment the _forward_port_ line:
+Edit your _Vagrantfile_ to uncomment the _forwarded_port_ setting:
 
     # Create a forwarded port mapping which allows access to a specific port
     # within the machine from a port on the host machine. In the example below,
@@ -510,15 +449,33 @@ Load [http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3]
 
 ## Deploy the app to Heroku
 
+Create a free Heroku account.
+
+Install the [Heroku toolbelt](https://toolbelt.heroku.com). This book's [Vagrantfile](http://erikeldridge.gitbooks.io/app-quality-cookbook/content/Vagrantfile) should install the toolbelt in your VM.
+
+Verify the toolbelt is installed by running:
+
+    $ heroku
+
+Follow [Jersey's instructions to deploy your service to Heroku](https://jersey.java.net/documentation/latest/user-guide.html#deploy-it-on-heroku).
+
+Call your service as before:
+
+    $ curl -v "https://young-depths-7217.herokuapp.com/feature_switch_config?id=123&os=android&version=2.3"
+    ...
+    {"feature_c":true,"feature_b":false,"feature_a":true}
+
+Congratulations! You now have experience deploying a service to [production](http://en.wikipedia.org/wiki/Development_environment_%28software_development_process%29).
+
 ## Observe deploy log
 
 ## Observe we need to deploy to change config
 
 ## Modify the app to abstract config as a dependency
 
-Inject the config using Dagger 2
+## Inject the config using Guice
 
-Load config dynamically (from Github API)
+## Load config dynamically (from Github API)
 
 Observe we also get a commit log
 
