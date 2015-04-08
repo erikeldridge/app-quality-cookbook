@@ -122,5 +122,3 @@ Congrats! You've just used CI to run static analysis and tests before and after 
 To learn more about Travis:
 * see [Travis' java docs](http://docs.travis-ci.com/user/languages/java/) for more configuration options
 * [search Github for .travis.yml files](https://github.com/search?utf8=%E2%9C%93&q=%22language%3A+java%22+language%3Ayml&type=Code&ref=searchresults) to see how other projects use Travis.
-
-Programmatic quality control is much more consistent, but also more brittle, than manual quality control. We can use a balance of both. In general, start with some basic defaults, like the Google style guide, and enforce them programmatically. As you see recurring issues, think about how you could automate the steps you take to prevent them.
