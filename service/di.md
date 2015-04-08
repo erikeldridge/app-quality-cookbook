@@ -1,4 +1,4 @@
-# Modify the app to abstract config as a dependency
+# Inject your dependencies
 
 Our feature switch configuration currently loads from a file bundled with our server. Because our deployed code is immutable, we need to re-deploy our server change configuration.
 
