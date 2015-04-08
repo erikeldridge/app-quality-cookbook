@@ -20,13 +20,12 @@
    * Functional
    * Fixtures
    * Githooks
-* [Maintainability](maintainability.md)
-   * Avoiding side effects
-   * Dependency injection
-   * Mockito
-   * Communicating intent
-   * Adhering to known patterns
-   * Doing one thing well
+* [Maintainability](maintainability/README.md)
+   * [Avoiding side effects](maintainability/functional.md)
+   * [Dependency injection](maintainability/di.md)
+   * [Communicating intent](maintainability/intent.md)
+   * [Adhering to known patterns](maintainability/patterns.md)
+   * [Doing one thing well](maintainability/srp.md)
 * [Static analysis and continuous integration](static.md)
    * Lint
    * Bug checks
