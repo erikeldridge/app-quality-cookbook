@@ -1,12 +1,13 @@
 # Summary
 
 * [Preface](preface.md)
-* [Introduction](introduction.md)
-   * Conceptual overview
-   * Unix
-   * Vim
-   * Java
-   * IntelliJ
+* [Set up](setup/.md)
+   * [Conceptual overview](setup/concepts.md)
+   * [Unix](setup/unix.md)
+   * [Vim](setup/vim.md)
+   * [Java](setup/java.md)
+   * [IntelliJ](setup/intellij.md)
+   * [Conclusion](setup/conclusion.md)
 * [Managing source code](source/README.md)
    * [Version control](source/version.md)
    * [Issue tracking](source/issues.md)
