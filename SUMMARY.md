@@ -9,7 +9,7 @@
    * [IntelliJ](setup/intellij.md)
    * [Conclusion](setup/conclusion.md)
 * [Managing source code](source/README.md)
-   * [Version control](source/version.md)
+   * [Version control](source/versions.md)
    * [Issue tracking](source/issues.md)
    * [Code review](source/review.md)
    * [Conclusion](source/conclusion.md)
