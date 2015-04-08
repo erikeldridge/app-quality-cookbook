@@ -7,7 +7,7 @@ Define a class member for the fixture you’d like to provide to your tests:
 ```java
 public class AppTest {
     private List<String> names;
-    …
+    ...
 ```
 
 To populate the list of names before every test, we can “annotate” a function with @Before:
