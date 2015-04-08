@@ -32,3 +32,9 @@
    * Bug checks
    * Test coverage
    * Continuous integration
+* [Service development](service/README.md)
+   * [Service creation](service/create.md)
+   * [Add feature switch logic](service/add.md)
+   * [Test against VM](service/vm.md)
+   * [Deploy](service/deploy.md)
+   * [Integrate Guice for DI](service/di.md)
