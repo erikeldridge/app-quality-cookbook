@@ -1,8 +1,8 @@
 # Deploy the app to Heroku
 
-Create a free Heroku account.
+Create a free [Heroku](https://www.heroku.com/) account.
 
-Install the [Heroku toolbelt](https://toolbelt.heroku.com). This book's [Vagrantfile](http://erikeldridge.gitbooks.io/app-quality-cookbook/content/Vagrantfile) should install the toolbelt in your VM.
+Install the [Heroku toolbelt](https://toolbelt.heroku.com). (If you're using this book's [Vagrantfile](http://erikeldridge.gitbooks.io/app-quality-cookbook/content/Vagrantfile), it should install the toolbelt in your VM.)
 
 Verify the toolbelt is installed by running:
 
@@ -10,7 +10,7 @@ Verify the toolbelt is installed by running:
 
 Follow [Jersey's instructions to deploy your service to Heroku](https://jersey.java.net/documentation/latest/user-guide.html#deploy-it-on-heroku).
 
-Call your service as before:
+Call your service as before, but using the generated host name:
 
     $ curl -v "https://young-depths-7217.herokuapp.com/feature_switch_config?id=123&os=android&version=2.3"
     ...
@@ -20,7 +20,7 @@ Congratulations! You now have experience deploying a service to [production](htt
 
 ## Observe deploy log
 
-Heroku is great in part because it provides an [immutable service environment](http://martinfowler.com/bliki/ImmutableServer.html).
+Heroku is great in part because it provides an [immutable service environment](http://martinfowler.com/bliki/ImmutableServer.html). We cannot change our code after it's deployed.
 
 Heroku [increments a version number](https://devcenter.heroku.com/articles/releases) each time we deploy a release.
 
