@@ -1,6 +1,6 @@
 # Test using your VM
 
-We can treat our VM as a remote server by configuring _port forwarding_ and then calling our service from our local maching.
+We can treat our VM as a remote server by configuring _port forwarding_ and then calling our service from our local machine.
 
 Edit your _Vagrantfile_ to uncomment the _forwarded_port_ setting:
 
@@ -28,6 +28,9 @@ After the VM restarts, _ssh_ in and restart your server:
     $ cd feature-switch-service
     $ mvn jetty:run
 
-Load [http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3](http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3) in a browser on your local machine. Observe your server running in the VM handles the request.
+Load your service url in a browser on your local machine:
+[http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3](http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3)
+
+Observe your server running in the VM handles the request.
 
 We used an Ubuntu VM for this book to simplify our initial setup and because we needed a desktop. Going forward, we can use a tool like [Docker](https://www.docker.com/) to just provide a "container" for a service. We can use [Vagrant](http://docs.vagrantup.com/v2/provisioning/docker.html) to host the container locally, and a platform like [AWS](https://aws.amazon.com/blogs/aws/cloud-container-management/) or [Kubernetes](http://kubernetes.io/), to host the container remotely.
