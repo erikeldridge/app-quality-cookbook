@@ -8,10 +8,12 @@ Jersey implements a pattern called [REST](https://www.ics.uci.edu/~fielding/pubs
 
 Run the Maven archetype command from the _Creating a Web Application that can be deployed on Heroku_ section of [Jersey's getting started documentation](https://jersey.java.net/documentation/latest/getting-started.html):
 
-    $ mvn archetype:generate -DarchetypeArtifactId=jersey-heroku-webapp \
-    -DarchetypeGroupId=org.glassfish.jersey.archetypes -DinteractiveMode=false \
-    -DgroupId=com.example -DartifactId=simple-heroku-webapp -Dpackage=com.example \
-    -DarchetypeVersion=2.17
+```nohighlight
+$ mvn archetype:generate -DarchetypeArtifactId=jersey-heroku-webapp \
+-DarchetypeGroupId=org.glassfish.jersey.archetypes -DinteractiveMode=false \
+-DgroupId=com.example -DartifactId=simple-heroku-webapp -Dpackage=com.example \
+-DarchetypeVersion=2.17
+```
 
 [Heroku](https://www.heroku.com/), btw, is a fantastic hosting platform. We'll explore it later in this section.
 
@@ -21,50 +23,60 @@ Create a new IntelliJ project by importing _simple-heroku-webapp/pom.xml_ and ac
 
 Open the `Main` class (IntelliJ tip: type _&lt;ctrl&gt; + N_ to search by class name) and observe we're setting the port to "8080" by default and the base path to "/":
 
-    ...
-    String webPort = System.getenv("PORT");
-    if (webPort == null || webPort.isEmpty()) {
-        webPort = "8080";
-    }
+```java
+...
+String webPort = System.getenv("PORT");
+if (webPort == null || webPort.isEmpty()) {
+    webPort = "8080";
+}
 
-    final Server server = new Server(Integer.valueOf(webPort));
-    final WebAppContext root = new WebAppContext();
+final Server server = new Server(Integer.valueOf(webPort));
+final WebAppContext root = new WebAppContext();
 
-    root.setContextPath("/");
-    ...
+root.setContextPath("/");
+...
+```
 
 This configures the service to respond to HTTP requests for URLs beginning with _http://localhost:8080/_
 
 Open the `MyResource` class and observe we're defining code to return "Hello, Heroku!" in response to an HTTP GET request for _myresource_:
 
+```java
+...
+@Path("myresource")
+public class MyResource {
     ...
-    @Path("myresource")
-    public class MyResource {
-        ...
-        @GET
-        @Produces(MediaType.TEXT_PLAIN)
-        public String getIt() {
-            return "Hello, Heroku!";
-        ...
+    @GET
+    @Produces(MediaType.TEXT_PLAIN)
+    public String getIt() {
+        return "Hello, Heroku!";
+    ...
+```
 
 We should be able to call _http://localhost:8080/myresource_ when the server is running and get "Hello, Heroku!" back.
 
 In your terminal, change into the _simple-heroku-webapp_ directory:
 
-    $ cd simple-heroku-webapp
+```nohighlight
+$ cd simple-heroku-webapp
+```
 
 Once we start the server, it will "take over" the terminal and we want to work while the server is running, so open a new terminal tab.
 
 Compile and run your server:
 
-    $ mvn compile jetty:run
+```nohighlight
+$ mvn compile jetty:run
+```
 
 The `jetty:run` command starts a web server called [Jetty](http://www.eclipse.org/jetty/). Jersey works with a number of web servers. This project's _pom.xml_ file specifies Jetty, which is advantageous because Jetty is also used by projects like [Google AppEngine](http://www.infoq.com/news/2009/08/google-chose-jetty) and [Drop Wizard](http://www.dropwizard.io), so our experience will be portable.
 
 Change to your other tab and make a request to the server using the [curl](http://curl.haxx.se/) tool:
 
-    $ curl http://localhost:8080/myresource
-    Hello, Heroku!
+```nohighlight
+$ curl http://localhost:8080/myresource
+Hello, Heroku!
+```
 
 Congratulations! You've just defined a RESTful API endpoint.
 
@@ -72,131 +84,150 @@ Take a look at the test defined by `MyResourceTest` and observe how it asserts t
 
 Run your tests to verify the generated tests work:
 
-    $ mvn test
+```nohighlight
+$ mvn test
+```
 
 All right. We've got a working version, so let's commit it. Initialize a new repository:
 
-    $ git init
+```nohighlight
+$ git init
+```
 
 See what's in it:
 
-    $ git status
-    On branch master
+```nohighlight
+$ git status
+On branch master
 
-    Initial commit
+Initial commit
 
-    Untracked files:
-      (use "git add <file>..." to include in what will be committed)
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
 
-        .idea/
-        Procfile
-        pom.xml
-        simple-heroku-webapp.iml
-        src/
-        system.properties
-        target/
+    .idea/
+    Procfile
+    pom.xml
+    simple-heroku-webapp.iml
+    src/
+    system.properties
+    target/
+```
 
 Create a _.gitignore_ file to ignore IntelliJ's _.idea_ directory and _iml_ file, and the _target_ directory, which contains our compiled code:
 
-    .idea
-    *.iml
-    target
+```nohighlight
+.idea
+*.iml
+target
+```
 
 Now add and commit everything:
 
-    $ git add .
-    $ git commit -m "Generate Jersey app"
+```nohighlight
+$ git add .
+$ git commit -m "Generate Jersey app"
+```
 
 ## Use self-descriptive names
 
 Rename your service to something more self-descriptive:
 
-    $ cd ..
-    $ mv simple-heroku-webapp feature-switch-service
-    $ cd feature-switch-service
+```nohighlight
+$ cd ..
+$ mv simple-heroku-webapp feature-switch-service
+$ cd feature-switch-service
+```
 
 Edit _pom.xml_ to match your directory name:
 
-    <groupId>com.example</groupId>
-    <artifactId>feature-switch-service</artifactId>
-    <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <name>feature-switch-service</name>
+```xml
+...
+<groupId>com.example</groupId>
+<artifactId>feature-switch-service</artifactId>
+<packaging>jar</packaging>
+<version>1.0-SNAPSHOT</version>
+<name>feature-switch-service</name>
+...
+```
 
 Modify the resource path to be more self-descriptive:
 
-    ...
-    @Path("feature_switch_config")
-    ...
+```java
+...
+@Path("feature_switch_config")
+...
+```
 
 Use IntelliJ's refactoring tools to rename the request handler and test classes to `ConfigResource` and `ConfigResourceTest`, respectively. Rename the request handler function from `getIt` to `get`.
 
 Your diff will look like this:
 
-    $ git diff
-    diff --git a/Procfile b/Procfile
-    index 3da6f26..8314a3f 100644
-    --- a/Procfile
-    +++ b/Procfile
-    @@ -1 +1 @@
-    -web: java -cp target/classes:target/dependency/* com.example.heroku.Main
-    \ No newline at end of file
-    +web: java -cp target/classes:target/dependency/* com.example.featureswitchservice.Main
-    \ No newline at end of file
-    diff --git a/pom.xml b/pom.xml
-    index dca6042..1af7682 100644
-    --- a/pom.xml
-    +++ b/pom.xml
-    @@ -4,10 +4,10 @@
-         <modelVersion>4.0.0</modelVersion>
-     
-         <groupId>com.example</groupId>
-    -    <artifactId>simple-heroku-webapp</artifactId>
-    +    <artifactId>feature-switch-service</artifactId>
-         <packaging>war</packaging>
-         <version>1.0-SNAPSHOT</version>
-    -    <name>simple-heroku-webapp</name>
-    +    <name>feature-switch-service</name>
-     
-         <dependencyManagement>
-             <dependencies>
-    @@ -61,7 +61,7 @@
-         </dependencies>
-     
-         <build>
-    -        <finalName>simple-heroku-webapp</finalName>
-    +        <finalName>feature-switch-service</finalName>
-             <plugins>
-                 <plugin>
-                     <groupId>org.apache.maven.plugins</groupId>
-    diff --git a/src/main/java/com/example/featureswitchservice/ConfigResource.java b/src/main/java/com/example/featureswitchservice/ConfigResource.java
-    index 7d05472..8392f6c 100644
-    --- a/src/main/java/com/example/featureswitchservice/ConfigResource.java
-    +++ b/src/main/java/com/example/featureswitchservice/ConfigResource.java
-    @@ -19,7 +19,7 @@ public class ConfigResource {
-          */
-         @GET
-         @Produces(MediaType.TEXT_PLAIN)
-    -    public String getIt() {
-    +    public String get() {
-             return "Hello, Heroku!";
-         }
+```diff
+$ git diff
+diff --git a/Procfile b/Procfile
+index 3da6f26..8314a3f 100644
+--- a/Procfile
++++ b/Procfile
+@@ -1 +1 @@
+-web: java -cp target/classes:target/dependency/* com.example.heroku.Main
+\ No newline at end of file
++web: java -cp target/classes:target/dependency/* com.example.featureswitchservice.Main
+\ No newline at end of file
+diff --git a/pom.xml b/pom.xml
+index dca6042..1af7682 100644
+--- a/pom.xml
++++ b/pom.xml
+@@ -4,10 +4,10 @@
+     <modelVersion>4.0.0</modelVersion>
+ 
+     <groupId>com.example</groupId>
+-    <artifactId>simple-heroku-webapp</artifactId>
++    <artifactId>feature-switch-service</artifactId>
+     <packaging>war</packaging>
+     <version>1.0-SNAPSHOT</version>
+-    <name>simple-heroku-webapp</name>
++    <name>feature-switch-service</name>
+ 
+     <dependencyManagement>
+         <dependencies>
+@@ -61,7 +61,7 @@
+     </dependencies>
+ 
+     <build>
+-        <finalName>simple-heroku-webapp</finalName>
++        <finalName>feature-switch-service</finalName>
+         <plugins>
+             <plugin>
+                 <groupId>org.apache.maven.plugins</groupId>
+diff --git a/src/main/java/com/example/featureswitchservice/ConfigResource.java b/src/main/java/com/example/featureswitchservice/ConfigResource.java
+index 7d05472..8392f6c 100644
+--- a/src/main/java/com/example/featureswitchservice/ConfigResource.java
++++ b/src/main/java/com/example/featureswitchservice/ConfigResource.java
+@@ -19,7 +19,7 @@ public class ConfigResource {
+      */
+     @GET
+     @Produces(MediaType.TEXT_PLAIN)
+-    public String getIt() {
++    public String get() {
+         return "Hello, Heroku!";
      }
-    diff --git a/src/test/java/com/example/featureswitchservice/ConfigResourceTest.java b/src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
-    index 51afde3..849230e 100644
-    --- a/src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
-    +++ b/src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
-    @@ -19,8 +19,8 @@ public class ConfigResourceTest extends JerseyTest {
-          * Test to see that the message "Got it!" is sent in the response.
-          */
-         @Test
-    -    public void testGetIt() {
-    -        final String responseMsg = target().path("myresource").request().get(String.class);
-    +    public void testGet() {
-    +        final String responseMsg = target().path("feature_switch_config").request().get(String.class);
-     
-             assertEquals("Hello, Heroku!", responseMsg);
-         }
+ }
+diff --git a/src/test/java/com/example/featureswitchservice/ConfigResourceTest.java b/src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
+index 51afde3..849230e 100644
+--- a/src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
++++ b/src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
+@@ -19,8 +19,8 @@ public class ConfigResourceTest extends JerseyTest {
+      * Test to see that the message "Got it!" is sent in the response.
+      */
+     @Test
+-    public void testGetIt() {
+-        final String responseMsg = target().path("myresource").request().get(String.class);
++    public void testGet() {
++        final String responseMsg = target().path("feature_switch_config").request().get(String.class);
+ 
+         assertEquals("Hello, Heroku!", responseMsg);
+     }
 
 In the terminal, type the _&lt;ctrl&gt; + C_ to stop the server. Recompile and run your server, and functionally test via curl:
 
@@ -222,24 +253,31 @@ See what's changed:
       modified:   pom.xml
       modified:   src/main/java/com/example/featureswitchservice/ConfigResource.java
       modified:   src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
+```
 
 Add your changes (using the `--all` flag to include the deleted files):
 
-    $ git add --all .
+```nohighlight
+$ git add --all .
+```
 
 Re-run `git status` to verify git has interpreted file deletion and creation as a rename:
 
-    $ git status
-    On branch master
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+```nohighlight
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
 
-      modified:   Procfile
-      modified:   pom.xml
-      renamed:    src/main/java/com/example/heroku/MyResource.java -> src/main/java/com/example/featureswitchservice/ConfigResource.java
-      renamed:    src/main/java/com/example/heroku/Main.java -> src/main/java/com/example/featureswitchservice/Main.java
-      renamed:    src/test/java/com/example/heroku/MyResourceTest.java -> src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
+  modified:   Procfile
+  modified:   pom.xml
+  renamed:    src/main/java/com/example/heroku/MyResource.java -> src/main/java/com/example/featureswitchservice/ConfigResource.java
+  renamed:    src/main/java/com/example/heroku/Main.java -> src/main/java/com/example/featureswitchservice/Main.java
+  renamed:    src/test/java/com/example/heroku/MyResourceTest.java -> src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
+```
 
 Commit:
 
-    $ git commit -m "Reformat project to be more self-descriptive"
+```nohighlight
+$ git commit -m "Reformat project to be more self-descriptive"
+```
