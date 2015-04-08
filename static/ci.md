@@ -14,9 +14,11 @@ Travis will fetch and display your Github repositories. Find the repository you'
 
 In your local repository, define a _.travis.yml_ config file:
 
-    language: java
-    jdk:
-        - openjdk7
+```yaml
+language: java
+jdk:
+    - openjdk7
+```
 
 You can use [Travis' linter](http://lint.travis-ci.org/) to verify your config is correct.
 
@@ -24,12 +26,16 @@ See [Travis' getting started documentation](http://docs.travis-ci.com/user/getti
 
 Commit your config:
 
-    $ git add .travis.yml
-    $ git commit -m "Define new travis config file"
+```nohighlight
+$ git add .travis.yml
+$ git commit -m "Define new travis config file"
+```
 
 Push your change to Github to trigger CI:
 
-    $ git push origin master
+```nohighlight
+$ git push origin master
+```
 
 Navigate back to the project dashboard you opened above.
 
@@ -37,33 +43,39 @@ You should see your commit listed under the "Current" tab. It will be yellow unt
 
 After the build completes, review the logged output. Look for the Maven commands Travis ran and try to run them locally:
 
-    $ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-    ...
-    $ mvn test -B
+```nohighlight
+$ mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+...
+$ mvn test -B
+```
 
 Observe that Travis defaults to Maven for Java projects.
 
 Modify your config file to run `mvn verify`:
 
-    language: java
-    jdk:
-      - openjdk7
-    script: mvn verify
+```nohighlight
+language: java
+jdk:
+  - openjdk7
+script: mvn verify
+```
 
 Commit this change and push. Observe Travis now runs `mvn verify` after installation instead of `mvn test -B`.
 
 To help catch errors before they break the build, define a pre-push githook (`vim .git/hooks/pre-push`) to run these commands before pushing to github:
 
-    mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
-    installed=$?
-    
-    mvn verify
-    verified=$?
-    
-    if [ ! $installed ] || [ ! $verified ]
-    then
-        exit 1
-    fi
+```bash
+mvn install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+installed=$?
+
+mvn verify
+verified=$?
+
+if [ ! $installed ] || [ ! $verified ]
+then
+    exit 1
+fi
+```
 
 Quick aside: defining a githook to avoid wasting CI time is an example of progressive testing - our tests should become progressively more "expensive" as we get closer to shipping a product.
 
@@ -79,17 +91,23 @@ Ok. Let's create a code review and observe CI's validation on the review.
 
 Create and checkout a new branch:
 
-    $ git checkout -b edit_readme
+```nohighlight
+$ git checkout -b edit_readme
+```
 
 Create and commit a change:
 
-    $ echo "asd" >> README.md
-    $ git add README.md
-    $ git commit -m "Add text to readme"
+```nohighlight
+$ echo "asd" >> README.md
+$ git add README.md
+$ git commit -m "Add text to readme"
+```
 
 Push the branch to Github:
 
-    $ git push origin edit_readme
+```nohighlight
+$ git push origin edit_readme
+```
 
 Navigate to your repo in Github. Click the "Pull requests" link on the right. Click the "New pull request" button to create a pull request. Set master as the base and the branch you just pushed, eg "edit_readme", as the branch to compare.
 

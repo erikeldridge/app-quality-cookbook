@@ -45,18 +45,24 @@ This utility should accept the following inputs:
 
 The utility should return a review group as a sequence of three usernames:
 
-    $ java Generator e 1
-    e,c,f
+```nohighlight
+$ java Generator e 1
+e,c,f
+```
 
 For a given exercise identifier, each member of your group should generate the same sequence. For example, user "f" from the example above would see:
 
-    $ java Generator f 1
-    e,c,f
+```nohighlight
+$ java Generator f 1
+e,c,f
+```
 
 Changing the exercise identifier should change the composition of the group generated:
 
-    $ java Generator f 2
-    a,f,b
+```nohighlight
+$ java Generator f 2
+a,f,b
+```
 
 How did your experience writing Java in Vim compare with the IDE? Did you have less errors in one versus the other?
 

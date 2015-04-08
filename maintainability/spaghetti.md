@@ -15,14 +15,15 @@ The method should read configuration from a file. I use [YAML](http://yaml.org/)
 
 Example configuration:
 
-    feature_a:
-      os: android
-    feature_b:
-      percentage: 10
-    feature_c:
-      os: android
-      percentage: 50
-
+```yaml
+feature_a:
+  os: android
+feature_b:
+  percentage: 10
+feature_c:
+  os: android
+  percentage: 50
+```
 
 Java refers to a file like this as a [resource](http://docs.oracle.com/javase/tutorial/deployment/webstart/retrievingResources.html), and Maven defines a [standard "resources" directory](http://maven.apache.org/guides/getting-started/index.html#How_do_I_add_resources_to_my_JAR), eg /home/vagrant/my-app/src/main/resources/features.yml
 
@@ -30,44 +31,50 @@ The "os" field defines the operating system name for which a feature is enabled.
 
 For example, if the os is "android" and the percentage is "50", 50% of android users should see this feature:
 
-    $ java Main 1357246 android
-    feature_a:true
-    feature_b:false
-    feature_c:true
+```nohighlight
+$ java Main 1357246 android
+feature_a:true
+feature_b:false
+feature_c:true
+```
 
 Implement your function with minimal code.
 
 For example:
 
-    public class Main {
-        public static void main( String[] args ) throws IOException {
-            Integer i = Integer.valueOf(args[0]);
-            String o = args[1];
-            Double v = Double.valueOf(args[2]);
-            String g = Main.class.getClassLoader().getResource("rules.yml").getFile();
-            YamlReader r = new YamlReader(new FileReader(g));
-            Map<String, Map<String, String>> fs = r.read(Map.class);
-            Map<String, Boolean> s = new HashMap<>();
-            for (String n : fs.keySet()) {
-                Map<String, String> f = fs.get(n);
-                s.put(n, (!f.containsKey("os") || f.get("os").equals(o))
-                        && (!f.containsKey("percentage") || i % 100 < Integer.valueOf(f.get("percentage"))));
-            }
-            for (Map.Entry<String, Boolean> f : s.entrySet()) {
-                System.out.println(f.getKey() + ":" + f.getValue());
-            }
+```java
+public class Main {
+    public static void main( String[] args ) throws IOException {
+        Integer i = Integer.valueOf(args[0]);
+        String o = args[1];
+        Double v = Double.valueOf(args[2]);
+        String g = Main.class.getClassLoader().getResource("rules.yml").getFile();
+        YamlReader r = new YamlReader(new FileReader(g));
+        Map<String, Map<String, String>> fs = r.read(Map.class);
+        Map<String, Boolean> s = new HashMap<>();
+        for (String n : fs.keySet()) {
+            Map<String, String> f = fs.get(n);
+            s.put(n, (!f.containsKey("os") || f.get("os").equals(o))
+                    && (!f.containsKey("percentage") || i % 100 < Integer.valueOf(f.get("percentage"))));
+        }
+        for (Map.Entry<String, Boolean> f : s.entrySet()) {
+            System.out.println(f.getKey() + ":" + f.getValue());
         }
     }
+}
+```
 
 For the code above, I'm using a library called [YamlBeans](https://github.com/EsotericSoftware/yamlbeans) to parse yaml. I import it into my project via Maven:
     
-    ...
-    <dependency>
-        <groupId>com.esotericsoftware.yamlbeans</groupId>
-        <artifactId>yamlbeans</artifactId>
-        <version>1.09</version>
-    </dependency>
-    ...
+```xml
+...
+<dependency>
+    <groupId>com.esotericsoftware.yamlbeans</groupId>
+    <artifactId>yamlbeans</artifactId>
+    <version>1.09</version>
+</dependency>
+...
+```
     
 Commit your code once you get it working.
 
@@ -75,20 +82,26 @@ Now we'd like to get experience working with this code. To make this as realisti
 
 Update the code to enable features based on os version. For example, given a config like this:
     
-    ...
-    feature_c:
-      os: android
-      version: 2.3
-      percentage: 50
+```yaml
+...
+feature_c:
+  os: android
+  version: 2.3
+  percentage: 50
+```
 
 And you pass a lower version to the program:
 
-    $ java Main 1357246 android 2
+```nohighlight
+$ java Main 1357246 android 2
+```
 
 You should see:
 
-    ...
-    feature_c:false
+```nohighlight
+...
+feature_c:false
+```
 
 Commit your change.
 

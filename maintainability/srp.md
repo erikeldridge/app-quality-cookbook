@@ -12,14 +12,18 @@ If you're having trouble naming a function, the function is probably trying to d
 
 Some single-purpose functions can be so basic we won't need to test them. For example:
 
-    int addOne(int i) {
-        return i + 1;
-    }
+```java
+int addOne(int i) {
+    return i + 1;
+}
+```
 
 However, other functions can be single-purpose, but still relatively complex:
 
-    public boolean isPercentageEnabled(String featurePercentage, Integer inputId) {
-        return featurePercentage == null || inputId % 100 < Integer.valueOf(featurePercentage);
-    }
+```java
+public boolean isPercentageEnabled(String featurePercentage, Integer inputId) {
+    return featurePercentage == null || inputId % 100 < Integer.valueOf(featurePercentage);
+}
+```
 
 Review your code with single-purpose functions and classes in mind. Is there anything still trying to do too much?

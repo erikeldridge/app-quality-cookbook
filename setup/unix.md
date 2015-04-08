@@ -23,55 +23,77 @@ Open a terminal and navigate to the directory where you saved the Vagrantfile.
 
 Run the following to create the virtual machine:
 
-    $ vagrant up
+```nohighlight
+$ vagrant up
+```
 
 You should see lots of text printed to the terminal as vagrant configures the virtual machine. Wait for configuration to complete.
 
 The virtual machine should launch a terminal. Log in using “vagrant” as the username and password. From this terminal, start the desktop:
 
-    $ startx
+```nohighlight
+$ startx
+```
 
 We’ll use this desktop later when we work with IntelliJ, but let’s dive into the Unix file system first.
 
 Secure shell (SSH) is a common way of safely connecting with a remote service. We can use it to log into our virtual machine:
 
-    $ vagrant ssh
+```nohighlight
+$ vagrant ssh
+```
 
 ## Navigation
 
 Print the current working directory
 
-    $ pwd
+```nohighlight
+$ pwd
+```
 
 List contents of directory
 
-    $ ls
+```nohighlight
+$ ls
+```
 
 Change directory
 
-    $ cd foo
+```nohighlight
+$ cd foo
+```
 
 Go to your home directory
 
-    $ cd ~
+```nohighlight
+$ cd ~
+```
 
 ## File management
 
 Make a directory
 
-    $ mkdir foo
+```nohighlight
+$ mkdir foo
+```
 
 Move a file
 
-    $ mv foo.txt bar.txt
+```nohighlight
+$ mv foo.txt bar.txt
+```
 
 Remove a file
 
-    $ rm foo.txt
+```nohighlight
+$ rm foo.txt
+```
 
 Copy a file
 
-    $ cp foo.txt bar.txt
+```nohighlight
+$ cp foo.txt bar.txt
+```
 
 ## Learn more
 
