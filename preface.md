@@ -20,8 +20,6 @@ I'd prefer to keep the book terse, providing enough theory and examples to groun
 
 I call this a "cookbook" because it focuses on a set of verifiable outcomes, like the recipes in a cookbook.
 
-Each section of this book defines the what, why, and how for a given topic, expressed as "goals", "motivation", and "steps".
-
 ## Biases
 
 This book biases toward accommodating developers who may be inexperienced with a given topic, developing applications, cutting scope over quality, holding systems responsible, collaborating, iterating, and having fun.
