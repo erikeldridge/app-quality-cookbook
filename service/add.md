@@ -13,9 +13,9 @@ If you copy/paste it over, you should end up with a diff like this:
 
     $ git diff --name-status
     M       pom.xml
-    A       src/main/java/com/example/featureswitchservice/FeatureSwitchConfig.java
+    A       src/main/java/com/example/featureswitchservice/ConfigResource.java
     A       src/main/resources/features.yml
-    A       src/test/java/com/example/featureswitchservice/FeatureSwitchConfigTest.java
+    A       src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
     A       src/test/resources/features.yml
 
 We've modified _pom.xml_ to include our feature selector dependencies and added a few new files.
@@ -30,11 +30,11 @@ Commit your changes.
 
 We now have a web server and code for generating feature switch config. Let's tie them together.
 
-Edit _FeatureSwitchConfig_ to accept args from the request URL and return feature switch configuration:
+Edit `ConfigResource` to accept [parameters from the request URL](https://jersey.java.net/documentation/latest/jaxrs-resources.html#d0e2145) and return feature switch configuration:
 
     ...
     @Path("feature_switch_config")
-    public class FeatureSwitchConfig {
+    public class ConfigResource {
         @QueryParam("id") String id;
         @QueryParam("os") String os;
         @QueryParam("version") String version;
@@ -62,12 +62,12 @@ Call your endpoint:
 
 The next step is to format our response as JSON to external callers can easily parse it.
 
-However, the steps to integrate JSON are complicated and it would be nice to save our state. We only want to commit working code, though, so create a temp branch to encapsulate the changes.
+However, the steps to integrate JSON are complicated and it would be nice to save our state. We only want to commit working code, though, so create a temporary branch to encapsulate the changes. We can easily delete this branch and start over if things go haywire without disturbing our otherwise functional code.
 
     $ git branch integration_json
     $ git checkout integration_json
 
-We can use a tool called Jackson to convert our Java objects to JSON. To do that, we'll need to make changes to our project, Jersey, and app logic.
+We can use a tool called [Jackson](https://github.com/FasterXML/jackson) to convert our Java objects to JSON. To do that, we'll need to make changes to our project, Jersey, and app logic.
 
 Add a dependency on Jersey's Jackson artifact in your _pom.xml_:
 
@@ -79,7 +79,7 @@ Add a dependency on Jersey's Jackson artifact in your _pom.xml_:
     </dependency>
     ...
 
-Define a new _ResourceConfig_ class to register Jackson:
+Define a new `ResourceConfig` class to register Jackson:
 
     package com.example.featureswitchservice;
 
@@ -117,7 +117,7 @@ Modify your request handler to return a map of values as _application/json_:
     }
     ...
 
-Modify your test to parse the response using [Jackson's ObjectMapper](http://wiki.fasterxml.com/JacksonInFiveMinutes#Examples):
+Modify your test to parse the response using [Jackson's ObjectMapper](https://github.com/FasterXML/jackson-databind/):
 
     @Test
     public void testGet() throws IOException {
@@ -139,19 +139,20 @@ Modify your test to parse the response using [Jackson's ObjectMapper](http://wik
 
 Run your integration tests to verify they're still working.
 
-Recompile, run your server, and call with _curl_:
+Recompile, run your server, and call with curl:
 
     $ curl -v "http://localhost:8080/feature_switch_config?id=123&os=android&version=2.3"
     ...
     {"feature_c":true,"feature_b":false,"feature_a":true}
 
 Observe the _Content-Type_ response header is now "application/json":
+
     ...
     < Content-Type: application/json
     ...
     
 Commit your changes and merge your branch back into your development branch:
 
-    $ git commit -m "Integrat feature selector"
+    $ git commit -m "Integrate feature selector"
     $ git checkout dev
     $ git merge integrate_json
