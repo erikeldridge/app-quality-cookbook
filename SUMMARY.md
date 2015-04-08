@@ -1,7 +1,7 @@
 # Summary
 
 * [Preface](preface.md)
-* [Set up](setup/.md)
+* [Set up](setup/README.md)
    * [Conceptual overview](setup/concepts.md)
    * [Unix](setup/unix.md)
    * [Vim](setup/vim.md)
