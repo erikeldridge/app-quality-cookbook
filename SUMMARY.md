@@ -26,6 +26,7 @@
    * [Communicating intent](maintainability/intent.md)
    * [Adhering to known patterns](maintainability/patterns.md)
    * [Doing one thing well](maintainability/srp.md)
+   * [Conclusion](maintainability/conclusion.md)
 * [Static analysis and continuous integration](static/README.md)
    * [Lint](static/lint.md)
    * [Style checks](static/style.md)
