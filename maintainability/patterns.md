@@ -136,10 +136,10 @@ The `createFeatureMap` function is a bit tricker to test because it reads from a
 The test above assumes src/test/resources/features.yml has the following config:
 
 ```yaml
-    feature_c:
-      os: android
-      version: 2.3
-      percentage: 50
+feature_c:
+  os: android
+  version: 2.3
+  percentage: 50
 ```
 
 After extracting all your methods and composing functions your code may look something like this:
