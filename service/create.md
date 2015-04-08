@@ -228,31 +228,35 @@ index 51afde3..849230e 100644
  
          assertEquals("Hello, Heroku!", responseMsg);
      }
+```
 
 In the terminal, type the _&lt;ctrl&gt; + C_ to stop the server. Recompile and run your server, and functionally test via curl:
 
-    $ curl http://localhost:8080/feature_switch_config
-    Hello, Heroku!
+```nohighlight
+$ curl http://localhost:8080/feature_switch_config
+Hello, Heroku!
+```
 
 See what's changed:
 
-    $ git status
-    On branch master
-    Changes to be committed:
-      (use "git reset HEAD <file>..." to unstage)
+```nohighlight
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
 
-      renamed:    src/main/java/com/example/heroku/MyResource.java -> src/main/java/com/example/featureswitchservice/ConfigResource.java
-      renamed:    src/main/java/com/example/heroku/Main.java -> src/main/java/com/example/featureswitchservice/Main.java
-      renamed:    src/test/java/com/example/heroku/MyResourceTest.java -> src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
+  renamed:    src/main/java/com/example/heroku/MyResource.java -> src/main/java/com/example/featureswitchservice/ConfigResource.java
+  renamed:    src/main/java/com/example/heroku/Main.java -> src/main/java/com/example/featureswitchservice/Main.java
+  renamed:    src/test/java/com/example/heroku/MyResourceTest.java -> src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
 
-    Changes not staged for commit:
-      (use "git add <file>..." to update what will be committed)
-      (use "git checkout -- <file>..." to discard changes in working directory)
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
 
-      modified:   Procfile
-      modified:   pom.xml
-      modified:   src/main/java/com/example/featureswitchservice/ConfigResource.java
-      modified:   src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
+  modified:   Procfile
+  modified:   pom.xml
+  modified:   src/main/java/com/example/featureswitchservice/ConfigResource.java
+  modified:   src/test/java/com/example/featureswitchservice/ConfigResourceTest.java
 ```
 
 Add your changes (using the `--all` flag to include the deleted files):
