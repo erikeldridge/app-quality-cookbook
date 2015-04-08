@@ -33,6 +33,7 @@
    * [Bug checks](static/bugs.md)
    * [Test coverage](static/coverage.md)
    * [Continuous integration](static/ci.md)
+   * [Conclusion](static/conclusion.md)
 * [Service development](service/README.md)
    * [Service creation](service/create.md)
    * [Add feature switch logic](service/add.md)
