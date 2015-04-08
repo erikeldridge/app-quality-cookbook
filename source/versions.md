@@ -1,16 +1,8 @@
-# Managing source code
-
-This section is intended to give you experience with three common tools for maintaining a high-quality code base: version control, issue tracking and code review.
-
-Version control helps us make incremental changes to our code. Issue tracking enables our users to provide feedback. Code review improves the quality of code going into our code base.
-
-We used a few tools to explore these topics: [git](http://git-scm.com/) and [github](https://github.com/).
-
-## Version control
+# Version control
 
 Version control enables us to make incremental changes to our code base. We can then restore previously working versions, compare changes, and recover details about why a change was made.
 
-### Install git
+## Install git
 
 Git should already be installed if you set up your development environment using this project's Vagrantfile, but in case it's not, run the following in your Ubuntu terminal:
 
@@ -19,7 +11,7 @@ Git should already be installed if you set up your development environment using
     $ git --version
     git version 2.0.4
 
-### Diving into Git
+## Diving into Git
 
 * `git init` creates a new repository
 * `git status` lists files that have changed
@@ -36,7 +28,7 @@ Git should already be installed if you set up your development environment using
 * `git push` pushes commits to a remote repository
 * `git clone` makes a local copy of a remote repository
 
-### Create a new repository
+## Create a new repository
 
 1. Create a new directory:
 
@@ -50,7 +42,7 @@ Git should already be installed if you set up your development environment using
 
         $ git init
 
-### See which files have changed
+## See which files have changed
 
     $ git status
     
@@ -60,7 +52,7 @@ Git should already be installed if you set up your development environment using
     
     nothing to commit
 
-### Commit a change to a repository
+## Commit a change to a repository
 
 1. Create a file:
 
@@ -89,7 +81,7 @@ Git should already be installed if you set up your development environment using
         Changes to be committed:
           (use "git rm --cached <file>..." to unstage)
         
-        	new file:   file.txt
+          new file:   file.txt
         ...
 
 1. Finalize the commit.
@@ -109,7 +101,7 @@ Git should already be installed if you set up your development environment using
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
 
-### See all commits in a repository
+## See all commits in a repository
 
     $ git log
     commit c9b26e67839d1e53b017b4a02c55bb8e7f4eefec
@@ -118,7 +110,7 @@ Git should already be installed if you set up your development environment using
     
         Add file
 
-### Show the changes in a commit
+## Show the changes in a commit
 
     $ git show c9b26e67839d1e53b017b4a02c55bb8e7f4eefec
     commit c9b26e67839d1e53b017b4a02c55bb8e7f4eefec
@@ -135,7 +127,7 @@ Git should already be installed if you set up your development environment using
     @@ -0,0 +1 @@
     +hi
 
-### See what's changed
+## See what's changed
 
 1. Create another change, eg:
 
@@ -152,7 +144,7 @@ Git should already be installed if you set up your development environment using
          hi
         +world
 
-### Unstage changes
+## Unstage changes
 
 1. Run `git add` to stage the change made above
 1. Run `git status` to see what's staged for the next commit
@@ -162,7 +154,7 @@ Git should already be installed if you set up your development environment using
         Unstaged changes after reset:
         M file.txt
 
-### Revert a commit
+## Revert a commit
 
 1. Add and commit (using the -m shortcut) the change:
 
@@ -213,7 +205,7 @@ Git should already be installed if you set up your development environment using
         
             Add file
 
-### Create a branch
+## Create a branch
 
 To ensure a repository always contains functional code, we can create a "branch" to encapsulate our work in progress.
 
@@ -228,7 +220,7 @@ By convention, the main branch of a repository is usually called "master".
 
     $ git branch foo
 
-### Select a branch to work in
+## Select a branch to work in
 
 1. Run `git checkout` with a branch name to work in that branch:
 
@@ -261,7 +253,7 @@ By convention, the main branch of a repository is usually called "master".
         
             Add a new change
 
-### Merge branches
+## Merge branches
 
 Merge changes from one branch into another using `git merge`.
 
@@ -281,7 +273,7 @@ Merge changes from one branch into another using `git merge`.
 
         $ git diff master..foo
 
-### Resolve conflicts
+## Resolve conflicts
 
 If Git can't merge branches cleanly, it will indicate conflicting lines and ask us to resolve.
 
@@ -338,7 +330,7 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         Unmerged paths:
           (use "git add <file>..." to mark resolution)
         
-        	both modified:      file.txt
+          both modified:      file.txt
         
         no changes added to commit (use "git add" and/or "git commit -a")
         $ cat file.txt 
@@ -366,7 +358,7 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
             Merge branch 'baz'
             
             Conflicts:
-            	file.txt
+              file.txt
         
         commit e76619db788991b25c68a1290b37848bbc692d17
         Author: Erik Eldridge <erik@example.com>
@@ -470,7 +462,7 @@ If Git can't merge branches cleanly, it will indicate conflicting lines and ask 
         +hi
 
 
-### Remote repositories
+## Remote repositories
 
 We now have experience working with a git repository on our local machine, but what happens if our laptop or virtual machine dies, or we want to coordinate with other developers? We can use a "remote" repository, ie a repository hosted on another machine, to avoid catastrophe and facilitate collaboration.
 
@@ -520,7 +512,7 @@ Follow [Github's documentation for creating a repository](https://help.github.co
 
     $ git remote add origin git@github.com:erikeldridge/cst-395-example.git
 
-### Pushing changes
+## Pushing changes
 
 1. Use `git push` to push your changes to the remote repository you just created, eg:
 
@@ -546,7 +538,7 @@ After your done browsing, use the review group generator we created [earlier](in
 
 Send an email to your review group linking to your repository. You should receive similar emails from the other members of your group. If you don’t, reach out and request one.
 
-### Clone repositories
+## Clone repositories
 
 We "clone" a repository to make a copy we can work with locally.
 
@@ -566,7 +558,7 @@ Build and run them. They should generate the same review group your program did.
     $ java Generator 1 erik@example.com
     [martha@example.com, alex@example.com, erik@example.com]
 
-### Pull changes
+## Pull changes
 
 To pull changes, we need to create a change somewhere other than our local repo. I'll use Github for this example.
 
@@ -588,7 +580,7 @@ To pull changes, we need to create a change somewhere other than our local repo.
          file.txt | 1 +
          1 file changed, 1 insertion(+)
 
-### Best-practices
+## Best-practices
 
 I know we only have a few example commits so far, but keep the following best-practices in mind as we go forward:
 
@@ -598,110 +590,8 @@ I know we only have a few example commits so far, but keep the following best-pr
 * Style commit messages according to [git best-practices](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 * Include [issue tracking](issue_tracking.md) details when available
 
-### Learn more
+## Learn more
 
 * [git - the simple guide](http://rogerdudler.github.io/git-guide/)
 * [Pro Git](http://git-scm.com/book/en/v2)'s chapter on [Git Basics](http://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository)
 * We're using Github for this book, but [Bitbucket](https://bitbucket.org/) is a comparable product
-
-## Issue tracking
-
-Issue tracking tools provide a structured way to collect feedback. In general, an "issue" is a bug you'd like to see fixed or a feature you'd like to see added.
-
-The nature of the product will determine the appropriate tools to use. Since we're focused on software development in this book, we'll use Github's issue tracking to explore the concept.
-
-For example, here's an [issue](https://github.com/Netflix/feign/issues/32) requesting better documentation.
-
-### Creating issues
-
-For each of your group's projects create an issue, as described in [Github's issue tracker documentation](https://guides.github.com/features/issues/). The "feature" you request can be simple, like "Add text to this file".
-
-To get experience creating informative issue reports, include the following details:
-  * A quick summary
-  * What you were trying to do when you noticed the issue
-  * Steps to reproduce the issue
-  * Error details, like a stacktrace, error message, etc
-  * Your environment, eg device type, OS version, app version, etc
-  * Let the project owner figure out details like assignee, milestone, labels, etc
-
-### Learn more
-
-* [Github's issue tracker](https://guides.github.com/features/issues/)
-* For comparison, [Jira](https://www.atlassian.com/software/jira) is another widely used issue tracker.
-* Bitbucket provides an [issue tracker](https://confluence.atlassian.com/display/BITBUCKET/Use+the+issue+tracker) that's very similar to Github's
-
-## Code review
-
-We can improve the quality of the code base by reviewing changes before they are submitted.
-
-Code reviews also serve to distribute liability, facilitating change.
-
-We'll use Github to explore the idea of code review.
-
-### Create a review
-
-Identify your reviewers using the review group generator for section 1:
-
-    $ java Generator erik@example.com 1
-    [joy@example.com, javier@example.com, erik@example.com]
-
-In Github, fork each of your group's repositories.
-
-Clone each forked repo.
-
-In each, create a branch and implement a fix for the issue you reported earlier.
-
-Push the branch to your forked repo.
-
-Create a pull request and mention your reviewers.
-
-For example, [search Square's pull requests for usages of "cc"](https://github.com/search?utf8=%E2%9C%93&q=cc+language%3Ajava+type%3Apr+user%3Asquare&type=Issues&ref=searchresults) to see how people submitting pull requests ask for feedback from specific people.
-
-### Perform a review
-
-If you are a reviewer, click through the “files changed” tab on the pull request to see the diff ([example](https://github.com/square/okhttp/pull/1488/files)). 
-
-If you don’t own the repo you’re reviewing code for, just comment on the pull request saying if it looks good or not.
-
-If you own the repo, and the change looks good, merge the change and close the issue.
-
-### Identify reviewers
-
-Code review involves multiple people, which introduces organizational complexity. We can use the code review group generator to simplify this process. Random assignment ensures teammates maintain experience with the entire code base.
-
-Alternatively, we can pre-identify owners of a code base and automatically add them to a review. Github uses "contributors" for this.
-
-Some projects may define a two-step review process: first a member of my team reviews and then an owner approves.
-
-### Review checklist
-
-We can use a checklist to improve consistency in our reviews.
-
-For example:
-* Prefer consistency
-* Adhere to [style guide](style.md) and [shared principles](../collaboration/principles.md)
-* Pay special attention to:
-	* security-related changes
-	* integrations with remote services
-	* importing 3rd-party code
-* Localization
-* Accessibility
-* No dead code
-* Design review for significant changes
-* Reviewers participate in design review
-* Prefer smaller, milestone commits over monolithic changes
-* Maintain or improve test coverage
-* No surprising changes
-* Add recurring issues to this checklist and static analysis tools
-* Large changes must run locally
-
-### Learn more
-
-* [Misko Hevery's code reviewers guide](http://misko.hevery.com/code-reviewers-guide/)
-* [Github's documentation on forking a respository and submitting a pull request](https://guides.github.com/activities/forking/)
-
-## Conclusion
-
-We now have experience with version control, issue tracking and code review.
-
-The basic ideas are: collaboration and incremental development. We want to develop in a way that can tolerate failure, eg repositories can be re-cloned when a laptop or vm dies, issues can be reported by anyone, bugs can be associated with specific changes, buggy changes can be reverted, works-in-progress can be encapsulated in a branch and transferred from one person to another, etc.

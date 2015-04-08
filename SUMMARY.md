@@ -7,11 +7,11 @@
    * Vim
    * Java
    * IntelliJ
-* [Source code management](source.md)
-   * Git
-   * Github
-   * Issue tracking
-   * Code review
+* [Managing source code](source/README.md)
+   * [Version control](source/version.md)
+   * [Issue tracking](source/issues.md)
+   * [Code review](source/review.md)
+   * [Conclusion](source/conclusion.md)
 * [Testing](testing/README.md)
    * [Unit](testing/unit.md)
    * [Fixtures](testing/fixtures.md)
