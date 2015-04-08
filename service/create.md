@@ -1,4 +1,4 @@
-# Create a Java web service using Jersey
+# Create an HTTP service
 
 [Jersey](https://jersey.java.net/) is a framework we can use for creating HTTP APIs.
 
