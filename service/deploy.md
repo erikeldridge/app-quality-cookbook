@@ -1,4 +1,4 @@
-# Deploy the app to Heroku
+# Deploy your service
 
 Create a free [Heroku](https://www.heroku.com/) account.
 
