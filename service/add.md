@@ -1,4 +1,4 @@
-# Add your feature switch code to this project
+# Add feature switch code
 
 We have a couple options for getting the code we created earlier into our project:
 
