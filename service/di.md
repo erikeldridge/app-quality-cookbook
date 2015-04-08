@@ -1,22 +1,24 @@
 # Modify the app to abstract config as a dependency
 
-Observe we need to deploy to change config
+Our feature switch configuration currently loads from a file bundled with our server. Because our deployed code is immutable, we need to re-deploy our server change configuration.
 
-To accomodate loading config from a dynamic source, abstract your configuration as a dependency.
+To accommodate loading configuration from a dynamic source, abstract your configuration as a dependency.
 
-This will also help us achieve a [hermetic server](http://googletesting.blogspot.com/2012/10/hermetic-servers.html).
+This will also help us achieve a [hermetic server](http://googletesting.blogspot.com/2012/10/hermetic-servers.html). In development, we can load from a local file. In testing we can load a mock object, and in production we can fetch configuration from another service.
 
-We'll use Guice to manage our dependency injection for a few reasons:
+We'll use [Guice](https://github.com/google/guice) to manage our dependency injection for a few reasons:
+
 * it's very mature, so we can easily find documentation
-* we'll be using Dagger DI, which is an iteration on Guice for Android
+* we'll be using Dagger, which is an iteration on Guice, for Android
 * in the near future, we'll use Dagger 2 for client and server DI
 
-Guice defines a few basic concepts:
-* Modules define dependency providers
-* Providers define a function that returns an instance of the dependency we want
-* Injectors inject the dependencies defined by modules into classes
+Guice defines a few [basic concepts](https://github.com/google/guice/wiki/GettingStarted):
 
-In terms of Jersey, we'll configure it to inject our configuration into our request handler. We can then inject different sources of configuration in our development, production, and test environments. For example, we could load from a static variable in development, a mock object in tests, and a remote service in production.
+* _Modules_ define dependency providers
+* _Providers_ define a function that returns an instance of the dependency we want
+* _Injectors_ inject the dependencies defined by modules into classes
+
+In terms of Jersey, we'll configure it to inject our configuration into our request handler. We can then inject different sources of configuration in our development, production, and test environments.
 
 First, define our module:
 
@@ -61,7 +63,7 @@ First, define our module:
       }
     }
 
-Observe we're still calling `createFeatureMap` to load config from our resource file. We'll update that after migrating to Guice, so we can run our existing tests to verify Guice is working as expected.
+Observe we're still calling `createFeatureMap` to load config from our resource file. We'll update that after migrating to Guice, so we can run our existing tests to verify we didn't [regress](http://en.wikipedia.org/wiki/Regression_testing) as a result of the migration.
 
 Functions with the `@Provides` annotation will be called by Guice whenever we try to inject an instance of the class returned by the function.
 
@@ -69,7 +71,7 @@ For example, Guice will call `jacksonJsonProvider` wherever we inject a `Jackson
 
 The `@Named` annotation enables us to differentiate instances of a common class, like `Map` or `String`, by name.
 
-The `@Singleton` annotation tells Guice to only instantiate this object once. A big advantage of DI is [singleton](http://sourcemaking.com/design_patterns/singleton) management. Singletons can be very difficult to test, especially if they are implemented using global variables. With DI, we don't need to maintain the conditional instantiation code, and we can easily override it in our test environment.
+The `@Singleton` annotation tells Guice to only instantiate this object once. [Singleton](http://sourcemaking.com/design_patterns/singleton) management is a big advantage of DI. Singletons can be very difficult to test, especially if they are implemented using global variables. With DI, we don't need to maintain the code to conditionally instantiate a singleton, and we can easily override the singleton instance in our test environment.
 
 Next, modify the `Main` class (generated earlier by the Jersey Heroku archetype) to inject these dependencies:
 
@@ -129,9 +131,9 @@ Next, modify the `Main` class (generated earlier by the Jersey Heroku archetype)
       }
     }
 
-In the code above, I've split out the port normalization, and server instantiation and configuration, to highlight the creation of a `GuiceServletContextListener` object, which configures a Guice injector to load our `ProductionModule`.
+I've also split out the port normalization, and server instantiation and configuration, in the code above to highlight the creation of a `GuiceServletContextListener` object, which configures a Guice injector to load our `ProductionModule`.
 
-Next, configure our resource class to inject its dependencies:
+Configure our resource class to inject its dependencies:
 
     package com.example.featureswitchservice;
 
@@ -248,9 +250,9 @@ Now update the integration tests:
       }
     }
 
-Observe that we're now instantiating a new _injector_, which overrides our config source. Again, we'll modify the source after completing Guice migration.
+Observe that we're now instantiating a new _injector_, which overrides our configuration source. Again, we'll modify the source after completing Guice migration.
 
-Also note that we're running the same server instantiated in `Main`. This allows us to integration test our service. We can also add unit tests for our resource class, but I'll defer that to a follow-up change, so this commit is focused just on migrating to Guice.
+Note we're running the same server instantiated in `Main`. This allows us to integration test our service. We can also add unit tests for our resource class, but I'll defer that to a follow-up change, so this commit is focused just on migrating to Guice.
 
 Modify _web.xml_ to use Guice for all DI:
 
