@@ -12,14 +12,13 @@
    * Github
    * Issue tracking
    * Code review
-* [Testing](testing.md)
-   * Bash
-   * Maven
-   * Unit
-   * Integration
-   * Functional
-   * Fixtures
-   * Githooks
+* [Testing](testing/README.md)
+   * [Unit](testing/unit.md)
+   * [Fixtures](testing/fixtures.md)
+   * [Integration](testing/integration.md)
+   * [Functional](testing/functional.md)
+   * [Githooks](testing/hooks.md)
+   * [Conclusion](testing/conclusion.md)
 * [Maintainability](maintainability/README.md)
    * [Avoiding side effects](maintainability/functional.md)
    * [Dependency injection](maintainability/di.md)
