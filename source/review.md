@@ -10,8 +10,10 @@ We'll use Github to explore the idea of code review.
 
 Identify your reviewers using the review group generator for section 1:
 
-    $ java Generator erik@example.com 1
-    [joy@example.com, javier@example.com, erik@example.com]
+```nohighlight
+$ java Generator erik@example.com 1
+[joy@example.com, javier@example.com, erik@example.com]
+```
 
 In Github, fork each of your group's repositories.
 
@@ -27,7 +29,7 @@ For example, [search Square's pull requests for usages of "cc"](https://github.c
 
 ## Perform a review
 
-If you are a reviewer, click through the “files changed” tab on the pull request to see the diff ([example](https://github.com/square/okhttp/pull/1488/files)). 
+If you are a reviewer, click through the “files changed” tab on the pull request to see the diff ([example](https://github.com/square/okhttp/pull/1488/files)).
 
 If you don’t own the repo you’re reviewing code for, just comment on the pull request saying if it looks good or not.
 
