@@ -80,5 +80,5 @@ Android does an excellent job providing [appropriate resources](http://developer
 
 ## Footnotes
 
-[1] http://developer.android.com/reference/android/app/Activity.html
-[2] For example, [Advocating Against Fragments](https://corner.squareup.com/2014/10/advocating-against-android-fragments.html), [RxJava-based organization](https://twitter.com/jakewharton/status/385898996884971520), [MVP organization](http://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/), and the fact that we launched a hello world app with only an Activity.
+* [1] Quote from [Android's Activity documentation](http://developer.android.com/reference/android/app/Activity.html)
+* [2] For example, [Advocating Against Fragments](https://corner.squareup.com/2014/10/advocating-against-android-fragments.html), [RxJava-based organization](https://twitter.com/jakewharton/status/385898996884971520), [MVP organization](http://fernandocejas.com/2014/09/03/architecting-android-the-clean-way/), and the fact that we launched a hello world app with only an Activity.
