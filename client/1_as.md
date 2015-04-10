@@ -57,7 +57,6 @@ Untracked files:
   settings.gradle
 $ git add .
 $ git commit -m "Create hello world app"
-$ git commit -m "Create hello world app"
 [master (root-commit) ac5df1d] Create hello world app
  24 files changed, 472 insertions(+)
  create mode 100644 .gitignore
