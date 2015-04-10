@@ -14,7 +14,24 @@ emulator-5554 device
 
 Observe your device listed in the output.
 
-Filter by [log level](http://developer.android.com/reference/java/util/logging/Level.html):
+The [logcat](http://developer.android.com/tools/help/logcat.html) command provides us with a way to see the device log:
+
+```
+$ adb logcat
+--------- beginning of main
+W/OpenGLRenderer( 1480): Incorrectly called buildLayer on View: ShortcutAndWidgetContainer, destroying layer...
+--------- beginning of system
+I/ActivityManager( 1234): START u0 {act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x10000000 cmp=com.example.erik.myapplication/.MainActivity (has extras)} from uid 10007 on display 0
+W/AudioTrack( 1234): AUDIO_OUTPUT_FLAG_FAST denied by client
+W/EGL_emulation( 2569): eglSurfaceAttrib not implemented
+W/OpenGLRenderer( 2569): Failed to set EGL_SWAP_BEHAVIOR on surface 0xb45f4380, error=EGL_SUCCESS
+I/ActivityManager( 1234): Displayed com.example.erik.myapplication/.MainActivity: +118ms
+...
+```
+
+It can be noisy, though. Fortunately, logcat enables us to filter by [log level](http://developer.android.com/reference/java/util/logging/Level.html).
+
+For example, we can show only the _error_ level:
 
 ```
 $ adb logcat *:e
