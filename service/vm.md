@@ -41,4 +41,6 @@ Load your service url in a browser on your local machine:
 
 Observe your server running in the VM handles the request.
 
-We used an Ubuntu VM for this book to simplify our initial setup and because we needed a desktop. Going forward, we can use a tool like [Docker](https://www.docker.com/) to just provide a "container" for a service. We can use [Vagrant](http://docs.vagrantup.com/v2/provisioning/docker.html) to host the container locally, and a platform like [AWS](https://aws.amazon.com/blogs/aws/cloud-container-management/) or [Kubernetes](http://kubernetes.io/), to host the container remotely.
+## Learn more
+
+We used an Ubuntu VM for this book to simplify our initial setup and because we needed a desktop for our IDE. Going forward, we can use a tool like [Docker](https://www.docker.com/) to just provide a "container" for a service. We can use [Vagrant](http://docs.vagrantup.com/v2/provisioning/docker.html) or [boot2docker](http://boot2docker.io/) to host the container locally, and a platform like [AWS](https://aws.amazon.com/blogs/aws/cloud-container-management/) or [Kubernetes](http://kubernetes.io/), to host the container remotely.
