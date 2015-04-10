@@ -92,14 +92,14 @@ Conditions allow us to require something to be true:
 ```java
 for (int i = 0; i < 10; i++) {
   if (i % 2 == 0) {
-    System.out.println("even");  
+    System.out.println("even");
   } else {
-    System.out.println("odd");  
+    System.out.println("odd");
   }
 }
 ```
 
-## Functions 
+## Functions
 
 Function allow us to name a set of commands:
 
@@ -107,7 +107,7 @@ Function allow us to name a set of commands:
 static int addOne(int i) {
   return i + 1;
 }
-… 
+…
 System.out.println(addOne(1));
 ```
 
@@ -132,7 +132,7 @@ class Number {
     }
   }
 }
-… 
+…
 class Hi {
     public static void main(String[] args) {
       Number n = new Number(1);
@@ -148,7 +148,7 @@ Imports let us include encapsulated code:
 
 ```java
 import java.util.ArrayList
-… 
+…
 class Main {
     public static void main(String[] args) {
       ArrayList<String> emails = new ArrayList<String>();
@@ -169,4 +169,5 @@ false
 
 ## Learn more
 
-We're in the midst of a golden age for [languages based on the Java Virtual Machine (JVM)](http://en.wikipedia.org/wiki/List_of_JVM_languages), an extremely mature piece of software. Take a look at [Scala](http://www.scala-lang.org/), [Clojure](http://clojure.org/), [Kotlin](http://kotlinlang.org/), and [Groovy](http://groovy-lang.org/)
+* [Learn X in Y minutes' post on Java](http://learnxinyminutes.com/docs/java/)
+* We're in the midst of a golden age for new languages, including several [based on the Java Virtual Machine (JVM)](http://en.wikipedia.org/wiki/List_of_JVM_languages), an extremely mature piece of software. If you're feeling adventurous, take a look at [Scala](http://www.scala-lang.org/), [Clojure](http://clojure.org/), [Kotlin](http://kotlinlang.org/), and [Groovy](http://groovy-lang.org/)
