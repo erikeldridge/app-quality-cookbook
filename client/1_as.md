@@ -46,8 +46,6 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
   .gitignore
-  .idea/
-  MyApplication.iml
   app/
   build.gradle
   gradle.properties
