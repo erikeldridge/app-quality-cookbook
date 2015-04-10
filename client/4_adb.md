@@ -114,3 +114,7 @@ bar.txt          foo.txt
 $ cat bar.txt
 test
 ```
+
+## Learn more
+
+Use [Android's Dalvik Debug Monitor Server (DDMS)](http://developer.android.com/tools/debugging/ddms.html) for dynamic analysis, monitoring, and file system operations.
