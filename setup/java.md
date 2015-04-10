@@ -166,3 +166,7 @@ true
 $ java Main 10 5
 false
 ```
+
+## Learn more
+
+We're in the midst of a golden age for [languages based on the Java Virtual Machine (JVM)](http://en.wikipedia.org/wiki/List_of_JVM_languages), an extremely mature piece of software. Take a look at [Scala](http://www.scala-lang.org/), [Clojure](http://clojure.org/), [Kotlin](http://kotlinlang.org/), and [Groovy](http://groovy-lang.org/)
