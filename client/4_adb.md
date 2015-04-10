@@ -8,7 +8,7 @@ Use ADB to list attached devices:
 
 ```
 ]$ adb devices
-List of devices attached 
+List of devices attached
 emulator-5554 device
 ```
 
@@ -56,6 +56,61 @@ D/MainActivity( 2649): action=android.intent.action.MAIN
 ...
 ```
 
-## Learn more
+## Observe logcat in AS
 
-Use [PID Cat](https://github.com/JakeWharton/pidcat) to pretty print logcat, filtered by package name
+Open the _Android_ window in AS by navigating to _View > Tool Windows > Android_. Click on the _Devices | Logcat_ tab.
+
+Filter by level, tag, and package name.
+
+## Shell
+
+We can log into our device using ADB in a similar way to how we used `vagrant ssh` to log into our Vagrant VM:
+
+```
+$ adb shell
+```
+
+Observe you can use a subset of standard Unix navigation utilities on the device:
+
+```
+# pwd
+/
+# ls
+acct
+cache
+charger
+...
+# cd data/data/com.example.erik.myapplication
+# pwd
+/data/data/com.example.erik.myapplication
+# ls
+cache
+lib
+# exit
+$
+```
+
+## Pulling files
+
+We don't have much on the device at this time, but if we write files from the application, we can pull them onto our host machine for inspection using ADB. To get some experience, push a file, shell in to verify it's there, and then pull it back out.
+
+```
+$ echo "test" > foo.txt
+$ adb push foo.txt /data/data/com.example.erik.myapplication/foo.txt
+1 KB/s (5 bytes in 0.002s)
+$ adb shell
+# cd /data/data/com.example.erik.myapplication
+# ls
+cache
+foo.txt
+lib
+# cat file.txt                                                                   <
+test
+# exit
+$ adb pull /data/data/com.example.erik.myapplication/foo.txt bar.txt
+2 KB/s (5 bytes in 0.002s)
+$ ls
+bar.txt          foo.txt
+$ cat bar.txt
+test
+```
