@@ -13,4 +13,4 @@ This exercise covers five common aspects of maintainable code:
 * adhering to known patterns
 * doing one thing well
 
-We'll build a configuration generator to explore these ideas. We'll start by implementing code with low maintainability and then refactor to make it more maintainable.
+We'll build a configuration generator to explore these ideas. We'll start by implementing code with low maintainability, i.e., "spaghetti" code, and then refactor to make it more maintainable.
