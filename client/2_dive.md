@@ -15,7 +15,7 @@ Conceptually, an Activity corresponds with "a single, focused thing that the use
 
 In AS, open the MainActivity you created above. Set a breakpoint in the `super.onCreate` call in the onCreate method. Note that `setContentView`, which defines the content to show, is called just after this.
 
-Run the debugger by clicking the _debug_ button on it. After the emulator launches and hits your breakpoint, observe no text appears on the emulator screen. Click the _resume program_ button to complete Activity creation and observe your text appears.
+Run the debugger by clicking the _debug_ button on it. After the emulator launches and hits your break point, observe no text appears on the emulator screen. Click the _resume program_ button to complete Activity creation and observe your text appears.
 
 ## Views
 
@@ -23,13 +23,13 @@ Run the debugger by clicking the _debug_ button on it. After the emulator launch
 
 [Layout](http://developer.android.com/guide/topics/ui/declaring-layout.html) classes are views used to position elements on the screen. We can define layouts using Java or XML. You can see a reference to a layout (`R.layout.activity_main`) in the `onCreate` method we looked at above.
 
-Control-click on `R.layout.activity_main`, select _Go To > Declaration_, and observe we're using a `TextView` to show "Hello World!" (via `android:text="@string/hello_world"`).
+Control-click on `R.layout.activity_main`, select _Go To > Declaration_ in the context menu, and observe we're using a `TextView` to show "Hello World!" (via `android:text="@string/hello_world"`).
 
 ## Intents
 
 We use [Intents](http://developer.android.com/guide/components/intents-filters.html) to launch other activities and apps. Intents are literally named. They represent the intent of the app user, e.g., the user intended to share a link, and apps can elect to perform actions in response.
 
-Edit `onCreate` to fetch the intent that launched our app and inject it into our view:
+Edit `onCreate` to reference the intent that launched our app:
 
 ```java
 @Override
@@ -40,11 +40,11 @@ protected void onCreate(Bundle savedInstanceState) {
 }
 ```
 
-Set a breakpoint on the line we call `setContentView` and rerun the debugger.
+Set a break point on the line we call `setContentView` and rerun the debugger.
 
-When the app hits the breakpoint, open the _Evaluate Expression_ window from the _Debug_ panel, as [described in the Android debug documentation](https://developer.android.com/tools/debugging/debugging-studio.html#breakPointsDebug). Use ths window to evaluate `intent.getAction()`.
+When the app hits the breakpoint, open the _Evaluate Expression_ window from the _Debug_ panel, as [described in the Android debug documentation](https://developer.android.com/tools/debugging/debugging-studio.html#breakPointsDebug). Use this window to evaluate `intent.getAction()`.
 
-Observe the action is "android.intent.action.MAIN". In Java terminology, this activity is acting as the _main_ method for the app. In Android terminology, our app has elected to use this activity to handle a launch intent.
+Observe the action is "android.intent.action.MAIN". In Java terminology, this activity is acting as the _main_ method for the app. In Android terminology, our app has elected to use this activity to [handle the launch intent](http://developer.android.com/training/basics/activity-lifecycle/starting.html#launching-activity).
 
 ## Manifests
 
@@ -64,19 +64,19 @@ We've used Maven up until now to manage our Java projects. Android uses somethin
 Maven defines configuration using XML in a file called _pom.xml_. Android defines configuration using [Groovy](http://groovy-lang.org/) in files called [build.gradle](https://developer.android.com/tools/building/configuring-gradle.html#buildFileBasics).
 
 Take a look at the build files in your hello world app. There's one for _module_ settings and one for _project_ settings. Observe the following:
-* Android SDK _target_ and _min_ versions, which supersede those declared in your manifest
-* the _repositories_ and _dependencies_ sections correspond to Maven configuration. Like Maven, Android uses the Maven Central respoitory by default
-* Gradle supports the notion of _build variants_, i.e., build-time configuration for your app 
+* Android SDK _target_ and _min_ versions. We can use these to supersede those declared in your manifest
+* the _repositories_ and _dependencies_ sections correspond to Maven configuration. Like Maven, Android uses the Maven Central repository by default
+* Gradle supports the notion of [build variants](https://developer.android.com/tools/building/configuring-gradle.html#workBuildVariants), i.e., build-time configuration for your app 
 
 ## Resources
 
-Like Maven, Android defines a [standard project structure](https://developer.android.com/tools/projects/index.html#ProjectFiles).Android's resource support is worth mentioning in particular.
+Like Maven, Android defines a [standard project structure](https://developer.android.com/tools/projects/index.html#ProjectFiles). Resource files live in the _main/res/_ directory, as opposed to _src/main/resources_ for a Maven project.
 
-Resource files live in the _main/res/_ directory, as opposed to _src/main/resources_ for a Maven project.
-
-Android generates IDs when a project is compiled that we can use to reference our resources. We've seen this when we referenced `R.layout.activity_main` in `onCreate`, and saw `@string/hello_world` in _activity_main.xml_. The [R](http://developer.android.com/reference/android/R.html) refers to "resources".
+However, Android's resource support is much more comprehensive.
 
 Android does an excellent job providing [appropriate resources](http://developer.android.com/guide/topics/resources/index.html) with respect to [localization](http://developer.android.com/training/basics/supporting-devices/languages.html) and [device capabilities](http://developer.android.com/training/basics/supporting-devices/screens.html).
+
+Android generates IDs when a project is compiled that we can use to reference our resources. We've seen this when we referenced `R.layout.activity_main` (The [R](http://developer.android.com/reference/android/R.html) refers to "resources") in `onCreate`, and observed a reference to `@string/hello_world` in _activity_main.xml_.
 
 ## Footnotes
 

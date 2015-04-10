@@ -46,8 +46,6 @@ Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
   .gitignore
-  .idea/
-  MyApplication.iml
   app/
   build.gradle
   gradle.properties
@@ -56,7 +54,6 @@ Untracked files:
   gradlew.bat
   settings.gradle
 $ git add .
-$ git commit -m "Create hello world app"
 $ git commit -m "Create hello world app"
 [master (root-commit) ac5df1d] Create hello world app
  24 files changed, 472 insertions(+)
