@@ -121,7 +121,7 @@ $ adb shell
 cache
 foo.txt
 lib
-# cat file.txt                                                                   <
+# cat foo.txt                                                                   <
 test
 # exit
 $ adb pull /data/data/com.example.erik.myapplication/foo.txt bar.txt
